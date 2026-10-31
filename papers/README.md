@@ -1,10 +1,10 @@
 # Paper Collections
 
-[Home](../README.md) · [Core papers](core/README.md) · [By year](by-year.md) · [By venue](by-venue.md)
+[Home](../README.md) · [By output](by-task/README.md) · [By year](by-year.md) · [By venue](by-venue.md)
 
-**255 records:** 152 core, 74 background and 29 pending.
+**255 records:** 152 acceleration papers, 74 background papers and 29 pending papers.
 
-## Acceleration Papers
+## Mechanisms
 
 | Category | Papers |
 |---|---:|
@@ -15,13 +15,4 @@
 | [AR 3D-generation acceleration](3d-generation/README.md) | 8 |
 | [Related Test-Time Search Budgets](related-search-budgets/README.md) | 1 |
 
-## Supporting Collections
-
-- [Foundations](foundations/README.md) (52).
-- [Related Surveys](related-surveys/README.md) (5).
-- [Evaluation Resources](evaluation/README.md) (6).
-- [Related Non-AR Masked Generation](related-masked-generation/README.md) (8).
-
-[All background](background/README.md) · [Pending papers](pending/README.md) · [Paper-level source notes](paper-notes.md)
-
-[Browse by generated output](by-task/README.md)
+[Background](background/README.md) · [Pending](pending/README.md)

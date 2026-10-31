@@ -1,181 +1,310 @@
 # AR video-generation acceleration
 
-[Home](../../README.md) · [All categories](../../papers/README.md) · [By year](../../papers/by-year.md)
+[Home](../../README.md) · [Collections](../../papers/README.md)
 
 Acceleration of autoregressive video generation and streaming synthesis.
 
-**43 papers.** Titles link to recorded PDFs or the official paper page.
+**43 papers.**
 
 ## Papers
 
-- [**AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/li26iw.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf) · [Details](../paper-notes.md#aad1video)
-  - **Accelerates:** AR video denoising evaluation budget.
-  - **Approach:** Asymmetric adversarial distillation trains a one-NFE causal student.
+<a id="paper-aad1video"></a>
 
-- [**Accelerating Autoregressive Video Diffusion via History-Guided Cache and Residual Correction**](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#arcachevideo)
-  - **Accelerates:** AR video diffusion recomputation.
-  - **Approach:** History-guided cache timing with enhanced residual correction.
+- [**AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/li26iw.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf)
+  - **Focus:** AR video denoising evaluation budget.
+  - **Mechanism:** Asymmetric adversarial distillation trains a one-NFE causal student.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf#page=6), PDF p. 6.
 
-- [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026). [Paper](https://openreview.net/forum?id=OuFNXESoCO) · [PDF](https://arxiv.org/pdf/2412.07720) · [Details](../paper-notes.md#tmlroufnxesoco)
-  - **Accelerates:** Image and video block-AR conditional diffusion.
-  - **Approach:** Block-causal denoising with reusable past context.
+<a id="paper-arcachevideo"></a>
 
-- [**Avatar Forcing: Real-Time Interactive Head Avatar Generation for Natural Conversation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#avatarforcing)
-  - **Accelerates:** Causal avatar-motion generation latency.
-  - **Approach:** Blockwise causal diffusion forcing with KV reuse replaces a bidirectional motion generator.
+- [**Accelerating Autoregressive Video Diffusion via History-Guided Cache and Residual Correction**](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf)
+  - **Focus:** AR video diffusion recomputation.
+  - **Mechanism:** History-guided cache timing with enhanced residual correction.
+  - **Source:** [Paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf#page=1), PDF p. 1.
 
-- [**Causal Forcing: Autoregressive Diffusion Distillation Done Right for High-Quality Real-Time Interactive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhu26bf/zhu26bf.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/zhu26bf.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhu26bf/zhu26bf.pdf) · [Details](../paper-notes.md#causalforcingvideo)
-  - **Accelerates:** Few-step causal video diffusion generator.
-  - **Approach:** AR-teacher ODE initialization followed by distribution-matching distillation.
+<a id="paper-tmlroufnxesoco"></a>
 
-- [**Context Forcing: Consistent Autoregressive Video Generation with Long Context**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26eu/chen26eu.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/chen26eu.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26eu/chen26eu.pdf) · [Details](../paper-notes.md#contextforcingvideo)
-  - **Accelerates:** AR video context-memory growth.
-  - **Approach:** Bounded slow/fast memory retains selected historical frames.
+- [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026). [Paper](https://openreview.net/forum?id=OuFNXESoCO) · [PDF](https://arxiv.org/pdf/2412.07720)
+  - **Focus:** Image and video block-AR conditional diffusion.
+  - **Mechanism:** Block-causal denoising with reusable past context.
+  - **Source:** [Paper](https://arxiv.org/pdf/2412.07720#page=10), PDF p. 10.
 
-- [**CubeComposer: Spatio-Temporal Autoregressive 4K 360deg Video Generation from Perspective Video**](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#cubecomposervideo)
-  - **Accelerates:** Autoregressive cubemap video synthesis.
-  - **Approach:** Sparse context across cube faces and temporal windows.
+<a id="paper-avatarforcing"></a>
 
-- [**Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/yi26c/yi26c.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/yi26c.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/yi26c/yi26c.pdf) · [Details](../paper-notes.md#deepforcingvideo)
-  - **Accelerates:** AR video historical KV storage.
-  - **Approach:** Persistent sink context with importance-aware KV pruning.
+- [**Avatar Forcing: Real-Time Interactive Head Avatar Generation for Natural Conversation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf)
+  - **Focus:** Causal avatar-motion generation latency.
+  - **Mechanism:** Blockwise causal diffusion forcing with KV reuse replaces a bidirectional motion generator.
+  - **Source:** [Paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf#page=6), PDF p. 3, Eq. 4; PDF p. 4, Figure 4; PDF p. 6, Table 1 and Sections 5.2–5.3.
 
-- [**Doe-2: 3D Representation World Model for Unified Driving Scene Forecasting**](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37235-2_29) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf) · [Details](../paper-notes.md#doe2world)
-  - **Accelerates:** Compact 3D latent prediction with an AR predictor and conditional DiT head.
-  - **Approach:** Section 3.4 conditions next-scene prediction on historical latents Z_{<=t} and ego-actions a_{<=t}; Eqs. (7)–(8) specify historical cross-attention and coarse future-latent prediction. A three-layer conditional DiT head uses Rectified Flow, Eq. (11), to sample the next-scene latent; the temporal AR predictor supplies its conditioning features.
+<a id="paper-causalforcingvideo"></a>
 
-- [**FAST-AR: Fast Autoregressive Video Diffusion and World Models with Temporal Cache Compression and Sparse Attention**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/samuel26a/samuel26a.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/samuel26a.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/samuel26a/samuel26a.pdf) · [Details](../paper-notes.md#fastarvideo)
-  - **Accelerates:** AR video self/cross-attention and KV cache.
-  - **Approach:** Temporal cache compression and approximate-neighbor sparse attention.
+- [**Causal Forcing: Autoregressive Diffusion Distillation Done Right for High-Quality Real-Time Interactive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhu26bf/zhu26bf.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/zhu26bf.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhu26bf/zhu26bf.pdf)
+  - **Focus:** Few-step causal video diffusion generator.
+  - **Mechanism:** AR-teacher ODE initialization followed by distribution-matching distillation.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhu26bf/zhu26bf.pdf#page=8), PDF p. 8.
 
-- [**Fastcar: Cache Attentive Replay for Fast Auto-Regressive Video Generation on the Edge**](https://proceedings.iclr.cc/paper_files/paper/2026/file/8488454077cb0fd9d31772274c78115d-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8488454077cb0fd9d31772274c78115d-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/8488454077cb0fd9d31772274c78115d-Paper-Conference.pdf) · [Details](../paper-notes.md#fastcarvideo)
-  - **Accelerates:** AR video decoder MLP computation.
-  - **Approach:** Replays cached MLP outputs with temporal attention-based selection and FPGA scheduling.
+<a id="paper-contextforcingvideo"></a>
 
-- [**FastSTAR: Spatiotemporal Token Pruning for Efficient Autoregressive Video Synthesis**](https://arxiv.org/pdf/2603.07192) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37098-3_12) · [PDF](https://arxiv.org/pdf/2603.07192) · [Details](../paper-notes.md#faststarvideo)
-  - **Accelerates:** InfinityStar spatiotemporal token refinement.
-  - **Approach:** Prunes converged spatial/temporal tokens with partial residual updates.
+- [**Context Forcing: Consistent Autoregressive Video Generation with Long Context**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26eu/chen26eu.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/chen26eu.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26eu/chen26eu.pdf)
+  - **Focus:** AR video context-memory growth.
+  - **Mechanism:** Bounded slow/fast memory retains selected historical frames.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26eu/chen26eu.pdf#page=6), PDF p. 6.
 
-- [**Flex-Forcing: Towards a Unified Autoregressive and Bidirectional Video Diffusion Model**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/ma26b/ma26b.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/ma26b.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/ma26b/ma26b.pdf) · [Details](../paper-notes.md#flexforcingvideo)
-  - **Accelerates:** AR video generation execution schedule.
-  - **Approach:** Flexible chunks with bidirectional planning and autoregressive within-chunk inference.
+<a id="paper-cubecomposervideo"></a>
 
-- [**Flow Caching for Autoregressive Video Generation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/85dc8f85ff978b9c606d3b2f5b0da69a-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/85dc8f85ff978b9c606d3b2f5b0da69a-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/85dc8f85ff978b9c606d3b2f5b0da69a-Paper-Conference.pdf) · [Details](../paper-notes.md#flowcachevideo)
-  - **Accelerates:** AR video denoising and KV storage.
-  - **Approach:** Independent chunk cache policies with bounded KV compression.
+- [**CubeComposer: Spatio-Temporal Autoregressive 4K 360deg Video Generation from Perspective Video**](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.pdf)
+  - **Focus:** Autoregressive cubemap video synthesis.
+  - **Mechanism:** Sparse context across cube faces and temporal windows.
+  - **Source:** [Paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.pdf#page=8), PDF p. 8.
 
-- [**GeoFlow: Efficient Driving Video Generation via Geometry-Aligned Priors**](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_22) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf) · [Details](../paper-notes.md#geoflowdriving)
-  - **Accelerates:** Geometry-aligned initialization and fewer denoising steps for autoregressive driving-video chunks.
-  - **Approach:** Section 3.5 explicitly specifies short-horizon frame autoregression: each six-frame chunk contains one reference frame and five newly generated frames. Conditional latent Flow Matching inside each video chunk; geometry-warped historical content initializes its source distribution.
+<a id="paper-deepforcingvideo"></a>
 
-- [**HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising**](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_13.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_13) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_13.pdf) · [Details](../paper-notes.md#hiarvideo)
-  - **Accelerates:** Hierarchical denoising and pipelined execution of AR video blocks.
-  - **Approach:** Generate each block using context at the same noise level, enabling pipelined parallel inference across denoising levels.
+- [**Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/yi26c/yi26c.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/yi26c.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/yi26c/yi26c.pdf)
+  - **Focus:** AR video historical KV storage.
+  - **Mechanism:** Persistent sink context with importance-aware KV pruning.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/yi26c/yi26c.pdf#page=1), PDF p. 1.
 
-- [**InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars**](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37032-7_37) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) · [Details](../paper-notes.md#interactiveavatarvideo)
-  - **Accelerates:** Sampling steps in a causal Wan2.2-5B talking-avatar generator.
-  - **Approach:** Apply causal ODE initialization and Self-Forcing DMD to form a few-step AR generator. Use KV caching and separate DiT/VAE devices for streaming execution.
+<a id="paper-doe2world"></a>
 
-- [**Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lv26i/lv26i.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/lv26i.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lv26i/lv26i.pdf) · [Details](../paper-notes.md#lightforcingvideo)
-  - **Accelerates:** AR video attention.
-  - **Approach:** Chunk-aware sparsity allocation with hierarchical sparse attention.
+- [**Doe-2: 3D Representation World Model for Unified Driving Scene Forecasting**](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37235-2_29) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf)
+  - **Focus:** Compact 3D latent prediction with an AR predictor and conditional DiT head.
+  - **Mechanism:** Section 3.4 conditions next-scene prediction on historical latents Z_{<=t} and ego-actions a_{<=t}; Eqs. (7)–(8) specify historical cross-attention and coarse future-latent prediction. A three-layer conditional DiT head uses Rectified Flow, Eq. (11), to sample the next-scene latent; the temporal AR predictor supplies its conditioning features.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf), PDF pp. 7–9, Sections 3.3–3.5, Eqs. (7)–(11); p. 16 Tables 5 and 7.
 
-- [**Live Avatar: Streaming Real-Time Audio-Driven Avatar Generation with Infinite Length**](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37135-5_5) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf) · [Details](../paper-notes.md#liveavatarvideo)
-  - **Accelerates:** Denoising updates and multi-GPU streaming execution in an AR talking-avatar generator.
-  - **Approach:** Distill WanS2V into a causal few-step generator and pipeline denoising timesteps, with VAE parallelization and kernel optimizations.
+<a id="paper-fastarvideo"></a>
 
-- [**Lumos-1: On Autoregressive Video Generation with Discrete Diffusion from a Unified Model Perspective**](https://proceedings.iclr.cc/paper_files/paper/2026/file/59ad89d72559dd4ce557d56f36313724-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/59ad89d72559dd4ce557d56f36313724-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/59ad89d72559dd4ce557d56f36313724-Paper-Conference.pdf) · [Details](../paper-notes.md#lumos1video)
-  - **Accelerates:** LLM-based AR video generation.
-  - **Approach:** Frame-causal masked parallel decoding with KV cache.
+- [**FAST-AR: Fast Autoregressive Video Diffusion and World Models with Temporal Cache Compression and Sparse Attention**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/samuel26a/samuel26a.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/samuel26a.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/samuel26a/samuel26a.pdf)
+  - **Focus:** AR video self/cross-attention and KV cache.
+  - **Mechanism:** Temporal cache compression and approximate-neighbor sparse attention.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/samuel26a/samuel26a.pdf#page=7), PDF p. 7.
 
-- [**Motion-Aware Caching for Efficient Autoregressive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26an/xu26an.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/xu26an.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26an/xu26an.pdf) · [Details](../paper-notes.md#motioncachevideo)
-  - **Accelerates:** AR video diffusion denoising computation.
-  - **Approach:** Motion-weighted token updates after a full-computation warmup.
+<a id="paper-fastcarvideo"></a>
 
-- [**OmniForcing: Unleashing Real-Time Joint Audio-Visual Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37271-0_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) · [Details](../paper-notes.md#omniforcingvideo)
-  - **Accelerates:** Causal audio-video block generation and conditional denoising updates.
-  - **Approach:** Distill a bidirectional LTX-2 teacher into a streaming AR student with block-causal modality alignment and rolling KV caches.
+- [**Fastcar: Cache Attentive Replay for Fast Auto-Regressive Video Generation on the Edge**](https://proceedings.iclr.cc/paper_files/paper/2026/file/8488454077cb0fd9d31772274c78115d-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8488454077cb0fd9d31772274c78115d-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/8488454077cb0fd9d31772274c78115d-Paper-Conference.pdf)
+  - **Focus:** AR video decoder MLP computation.
+  - **Mechanism:** Replays cached MLP outputs with temporal attention-based selection and FPGA scheduling.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/8488454077cb0fd9d31772274c78115d-Paper-Conference.pdf#page=8), PDF p. 8.
 
-- [**PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference**](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37464-6_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) · [Details](../paper-notes.md#packforcingvideo)
-  - **Accelerates:** Stored historical KV entries and historical attention in a Wan2.1-based AR video generator.
-  - **Approach:** Separate sink, compressed middle and recent history. Compress middle blocks and route selected historical blocks into attention, with incremental temporal RoPE adjustment.
+<a id="paper-faststarvideo"></a>
 
-- [**Quant VideoGen: Auto-Regressive Long Video Generation via 2-Bit KV-Cache Quantization**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xi26f/xi26f.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/xi26f.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xi26f/xi26f.pdf) · [Details](../paper-notes.md#quantvideogen)
-  - **Accelerates:** AR video KV storage.
-  - **Approach:** Semantic smoothing and progressive residual cache quantization.
+- [**FastSTAR: Spatiotemporal Token Pruning for Efficient Autoregressive Video Synthesis**](https://arxiv.org/pdf/2603.07192) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37098-3_12) · [PDF](https://arxiv.org/pdf/2603.07192)
+  - **Focus:** InfinityStar spatiotemporal token refinement.
+  - **Mechanism:** Prunes converged spatial/temporal tokens with partial residual updates.
+  - **Source:** [Paper](https://arxiv.org/pdf/2603.07192#page=1), PDF p. 1.
 
-- [**Real-Time Motion-Controllable Autoregressive Video Diffusion**](https://proceedings.iclr.cc/paper_files/paper/2026/file/71c1d6ec1f0003d8ea10bbea4291002d-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c1d6ec1f0003d8ea10bbea4291002d-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/71c1d6ec1f0003d8ea10bbea4291002d-Paper-Conference.pdf) · [Details](../paper-notes.md#ardragvideo)
-  - **Accelerates:** Motion-controlled AR video diffusion.
-  - **Approach:** Few-step causal distillation with motion conditioning.
+<a id="paper-flexforcingvideo"></a>
 
-- [**Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#rewardforcing)
-  - **Accelerates:** Streaming AR video attention and conditional denoising.
-  - **Approach:** Few-step causal distillation with a smaller attention window and fixed-size EMA sink state.
+- [**Flex-Forcing: Towards a Unified Autoregressive and Bidirectional Video Diffusion Model**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/ma26b/ma26b.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/ma26b.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/ma26b/ma26b.pdf)
+  - **Focus:** AR video generation execution schedule.
+  - **Mechanism:** Flexible chunks with bidirectional planning and autoregressive within-chunk inference.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/ma26b/ma26b.pdf#page=6), PDF p. 6.
 
-- [**Rolling Forcing: Autoregressive Long Video Diffusion in Real Time**](https://proceedings.iclr.cc/paper_files/paper/2026/file/935151cc6cb5d8b6816133b75233775a-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/935151cc6cb5d8b6816133b75233775a-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/935151cc6cb5d8b6816133b75233775a-Paper-Conference.pdf) · [Details](../paper-notes.md#rollingforcingvideo)
-  - **Accelerates:** Streaming AR video denoising.
-  - **Approach:** Rolling-frame generation and few-step distillation with extended windows.
+<a id="paper-flowcachevideo"></a>
 
-- [**SANA-Video: Efficient Video Generation with Block Linear Diffusion Transformer**](https://proceedings.iclr.cc/paper_files/paper/2026/file/41b93c59da0d0f835907fd661d419db2-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/41b93c59da0d0f835907fd661d419db2-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/41b93c59da0d0f835907fd661d419db2-Paper-Conference.pdf) · [Details](../paper-notes.md#sanavideo)
-  - **Accelerates:** Long-video AR attention and cache growth.
-  - **Approach:** Linear attention with constant-memory block-causal state.
+- [**Flow Caching for Autoregressive Video Generation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/85dc8f85ff978b9c606d3b2f5b0da69a-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/85dc8f85ff978b9c606d3b2f5b0da69a-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/85dc8f85ff978b9c606d3b2f5b0da69a-Paper-Conference.pdf)
+  - **Focus:** AR video denoising and KV storage.
+  - **Mechanism:** Independent chunk cache policies with bounded KV compression.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/85dc8f85ff978b9c606d3b2f5b0da69a-Paper-Conference.pdf#page=9), PDF p. 9.
 
-- [**ShotStream: Streaming Multi-shot Video Generation for Interactive Storytelling**](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_12) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf) · [Details](../paper-notes.md#shotstreamvideo)
-  - **Accelerates:** Four-step causal multi-shot video generation replacing a multi-step bidirectional teacher.
-  - **Approach:** Section 4.2 and Figure 4 generate shots from previous shots and each shot chunk-by-chunk. Global and local caches store historical context and recently generated frames. A few-step conditional video denoiser operates within the causal chunk-generation procedure; distribution matching distillation replaces the slow teacher.
+<a id="paper-geoflowdriving"></a>
 
-- [**Speculative Coupled Decoding for Training-Free Lossless Acceleration of Autoregressive Visual Generation**](https://arxiv.org/pdf/2510.24211v2) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/so26a.html) · [PDF](https://arxiv.org/pdf/2510.24211v2) · [Details](../paper-notes.md#scd)
-  - **Accelerates:** AR image stochastic speculative execution.
-  - **Approach:** Couples proposal/verification randomness.
+- [**GeoFlow: Efficient Driving Video Generation via Geometry-Aligned Priors**](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_22) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf)
+  - **Focus:** Geometry-aligned initialization and fewer denoising steps for autoregressive driving-video chunks.
+  - **Mechanism:** Section 3.5 explicitly specifies short-horizon frame autoregression: each six-frame chunk contains one reference frame and five newly generated frames. Conditional latent Flow Matching inside each video chunk; geometry-warped historical content initializes its source distribution.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf), PDF pp. 6–10, Sections 3.1–3.5; p. 13 inference efficiency and Table 3.
 
-- [**Streaming Autoregressive Video Generation via Diagonal Distillation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/d899eabc6c8fefd0d4064762aba407e2-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d899eabc6c8fefd0d4064762aba407e2-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/d899eabc6c8fefd0d4064762aba407e2-Paper-Conference.pdf) · [Details](../paper-notes.md#diagonaldistillvideo)
-  - **Accelerates:** Streaming AR video diffusion.
-  - **Approach:** Diagonal distillation restructures few-step frame synthesis.
+<a id="paper-hiarvideo"></a>
 
-- [**Surprise Forcing: What to Remember, When to Skip in Long Video Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) · [Details](../paper-notes.md#surpriseforcingvideo)
-  - **Accelerates:** Conditional denoising updates per AR video chunk and retained historical frames.
-  - **Approach:** Adapt the denoising budget to chunk difficulty and retain selected evicted frames in a bounded memory bank.
+- [**HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising**](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_13.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_13) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_13.pdf)
+  - **Focus:** Hierarchical denoising and pipelined execution of AR video blocks.
+  - **Mechanism:** Generate each block using context at the same noise level, enabling pipelined parallel inference across denoising levels.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_13.pdf), PDF p. 9, Table 1 and Section 4.1; PDF pp. 10–11, Section 4.2.
 
-- [**Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption**](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_25) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf) · [Details](../paper-notes.md#ispavideo)
-  - **Accelerates:** KV-cache storage and attention computation in streaming AR video generators.
-  - **Approach:** Replace selected full-attention layers with local attention after instance-specific closed-form weight modulation absorbs historical context.
+<a id="paper-interactiveavatarvideo"></a>
 
-- [**Towards One-step Causal Video Generation via Adversarial Self-Distillation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/3ae86071c169649bff21188c536163dc-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/3ae86071c169649bff21188c536163dc-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/3ae86071c169649bff21188c536163dc-Paper-Conference.pdf) · [Details](../paper-notes.md#asdcausalvideo)
-  - **Accelerates:** AR video conditional denoising evaluations.
-  - **Approach:** Adversarial self-distillation with extra first-frame updates.
+- [**InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars**](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37032-7_37) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf)
+  - **Focus:** Sampling steps in a causal Wan2.2-5B talking-avatar generator.
+  - **Mechanism:** Apply causal ODE initialization and Self-Forcing DMD to form a few-step AR generator. Use KV caching and separate DiT/VAE devices for streaming execution.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf), PDF p. 11, Sections 3.4 and 4.1; pp. 13–14, Tables 1–2.
 
-- [**Autoregressive Video Generation without Vector Quantization**](https://proceedings.iclr.cc/paper_files/paper/2025/file/6e5112eaa45f8c30b242c5f576213a92-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/6e5112eaa45f8c30b242c5f576213a92-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/6e5112eaa45f8c30b242c5f576213a92-Paper-Conference.pdf) · [Details](../paper-notes.md#novavideo)
-  - **Accelerates:** Temporal/spatial AR video generation.
-  - **Approach:** Frame-wise temporal causality and set-wise spatial generation with continuous tokens.
+<a id="paper-lightforcingvideo"></a>
 
-- [**Ca2-VDM: Efficient Autoregressive Video Diffusion Model with Causal Generation and Cache Sharing**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/gao25m/gao25m.pdf) (ICML, 2025). [Paper](https://proceedings.mlr.press/v267/gao25m.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v267/main/assets/gao25m/gao25m.pdf) · [Details](../paper-notes.md#ca2vdmvideo)
-  - **Accelerates:** AR video conditional-frame recomputation.
-  - **Approach:** Causal feature computation and cache sharing across denoising steps.
+- [**Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lv26i/lv26i.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/lv26i.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lv26i/lv26i.pdf)
+  - **Focus:** AR video attention.
+  - **Mechanism:** Chunk-aware sparsity allocation with hierarchical sparse attention.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lv26i/lv26i.pdf#page=7), PDF p. 7.
 
-- [**From Slow Bidirectional to Fast Autoregressive Video Diffusion Models**](https://openaccess.thecvf.com/content/CVPR2025/papers/Yin_From_Slow_Bidirectional_to_Fast_Autoregressive_Video_Diffusion_Models_CVPR_2025_paper.pdf) (CVPR, 2025). [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Yin_From_Slow_Bidirectional_to_Fast_Autoregressive_Video_Diffusion_Models_CVPR_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2025/papers/Yin_From_Slow_Bidirectional_to_Fast_Autoregressive_Video_Diffusion_Models_CVPR_2025_paper.pdf) · [Details](../paper-notes.md#causvidvideo)
-  - **Accelerates:** Causal video diffusion inference.
-  - **Approach:** Distills a bidirectional many-step teacher into a KV-cached causal few-step generator.
+<a id="paper-liveavatarvideo"></a>
 
-- [**MarDini: Masked Auto-regressive Diffusion for Video Generation at Scale**](https://arxiv.org/pdf/2410.20280) (TMLR, 2025). [Paper](https://openreview.net/forum?id=fuOHI59rUW) · [PDF](https://arxiv.org/pdf/2410.20280) · [Details](../paper-notes.md#mardinivideo)
-  - **Accelerates:** Masked-AR video planning and spatial diffusion.
-  - **Approach:** Low-resolution planning with a lightweight high-resolution diffusion model.
+- [**Live Avatar: Streaming Real-Time Audio-Driven Avatar Generation with Infinite Length**](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37135-5_5) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf)
+  - **Focus:** Denoising updates and multi-GPU streaming execution in an AR talking-avatar generator.
+  - **Mechanism:** Distill WanS2V into a causal few-step generator and pipeline denoising timesteps, with VAE parallelization and kernel optimizations.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf), PDF pp. 2–3, streaming definition; PDF pp. 9–11, execution and setup; PDF p. 13, Table 3.
 
-- [**Neighboring Autoregressive Modeling for Efficient Visual Generation**](https://arxiv.org/pdf/2503.10696) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/papers/He_Neighboring_Autoregressive_Modeling_for_Efficient_Visual_Generation_ICCV_2025_paper.pdf) · [PDF](https://arxiv.org/pdf/2503.10696) · [Details](../paper-notes.md#nar)
-  - **Accelerates:** Image and video AR position decoding.
-  - **Approach:** Neighbor expansion with dimension-oriented parallel prediction heads.
+<a id="paper-lumos1video"></a>
 
-- [**Parallelized Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.pdf) (CVPR, 2025). [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.pdf) · [Details](../paper-notes.md#par)
-  - **Accelerates:** Image and video AR sequential decoding.
-  - **Approach:** Generates spatially distant groups concurrently.
+- [**Lumos-1: On Autoregressive Video Generation with Discrete Diffusion from a Unified Model Perspective**](https://proceedings.iclr.cc/paper_files/paper/2026/file/59ad89d72559dd4ce557d56f36313724-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/59ad89d72559dd4ce557d56f36313724-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/59ad89d72559dd4ce557d56f36313724-Paper-Conference.pdf)
+  - **Focus:** LLM-based AR video generation.
+  - **Mechanism:** Frame-causal masked parallel decoding with KV cache.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/59ad89d72559dd4ce557d56f36313724-Paper-Conference.pdf#page=9), PDF p. 9.
 
-- [**Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion**](https://proceedings.neurips.cc/paper_files/paper/2025/file/f4823f831af67a3ef15e41a85434422a-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/f4823f831af67a3ef15e41a85434422a-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/f4823f831af67a3ef15e41a85434422a-Paper-Conference.pdf) · [Details](../paper-notes.md#selfforcingvideo)
-  - **Accelerates:** Few-step streaming AR video generator.
-  - **Approach:** Self-generated training rollouts with rolling KV-cache inference.
+<a id="paper-motioncachevideo"></a>
 
-- [**Efficiency-optimized Video Diffusion Models**](https://hexiangteng.github.io/papers/ACM%20MM%202023%20EVDM.pdf) (ACM MM, 2023). [Paper](https://dl.acm.org/doi/10.1145/3581783.3612406) · [PDF](https://hexiangteng.github.io/papers/ACM%20MM%202023%20EVDM.pdf) · [Details](../paper-notes.md#evdmacmmm2023)
-  - **Accelerates:** Convolution and attention cost of the MCVD conditional video denoiser used for block-autoregressive generation.
-  - **Approach:** Train smaller denoisers with bottleneck residual paths, channel splitting and a mixed attention algorithm.
+- [**Motion-Aware Caching for Efficient Autoregressive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26an/xu26an.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/xu26an.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26an/xu26an.pdf)
+  - **Focus:** AR video diffusion denoising computation.
+  - **Mechanism:** Motion-weighted token updates after a full-computation warmup.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26an/xu26an.pdf#page=7), PDF p. 7.
 
-- [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017). [Paper](https://proceedings.mlr.press/v70/reed17a.html) · [PDF](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) · [Details](../paper-notes.md#parallelmultiscale2017)
-  - **Accelerates:** Pixel AR sampling dependency depth.
-  - **Approach:** Parallel multiscale density factorization.
+<a id="paper-omniforcingvideo"></a>
+
+- [**OmniForcing: Unleashing Real-Time Joint Audio-Visual Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37271-0_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf)
+  - **Focus:** Causal audio-video block generation and conditional denoising updates.
+  - **Mechanism:** Distill a bidirectional LTX-2 teacher into a streaming AR student with block-causal modality alignment and rolling KV caches.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf), PDF pp. 5–11, method; pp. 12 and 14, timing protocol and Tables 1–2. Tables.
+
+<a id="paper-packforcingvideo"></a>
+
+- [**PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference**](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37464-6_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf)
+  - **Focus:** Stored historical KV entries and historical attention in a Wan2.1-based AR video generator.
+  - **Mechanism:** Separate sink, compressed middle and recent history. Compress middle blocks and route selected historical blocks into attention, with incremental temporal RoPE adjustment.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf), PDF pp. 1 and 5–10, Sections 3.1–3.5 and inference settings; pp. 12–14, quality comparisons and ablations.
+
+<a id="paper-quantvideogen"></a>
+
+- [**Quant VideoGen: Auto-Regressive Long Video Generation via 2-Bit KV-Cache Quantization**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xi26f/xi26f.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/xi26f.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xi26f/xi26f.pdf)
+  - **Focus:** AR video KV storage.
+  - **Mechanism:** Semantic smoothing and progressive residual cache quantization.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xi26f/xi26f.pdf#page=1), PDF p. 1.
+
+<a id="paper-ardragvideo"></a>
+
+- [**Real-Time Motion-Controllable Autoregressive Video Diffusion**](https://proceedings.iclr.cc/paper_files/paper/2026/file/71c1d6ec1f0003d8ea10bbea4291002d-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c1d6ec1f0003d8ea10bbea4291002d-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/71c1d6ec1f0003d8ea10bbea4291002d-Paper-Conference.pdf)
+  - **Focus:** Motion-controlled AR video diffusion.
+  - **Mechanism:** Few-step causal distillation with motion conditioning.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/71c1d6ec1f0003d8ea10bbea4291002d-Paper-Conference.pdf#page=7), PDF p. 7.
+
+<a id="paper-rewardforcing"></a>
+
+- [**Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.pdf)
+  - **Focus:** Streaming AR video attention and conditional denoising.
+  - **Mechanism:** Few-step causal distillation with a smaller attention window and fixed-size EMA sink state.
+  - **Source:** [Paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.pdf#page=6), PDF p. 6, Table 1; PDF p. 8, Figure 6 and Section 4.3.
+
+<a id="paper-rollingforcingvideo"></a>
+
+- [**Rolling Forcing: Autoregressive Long Video Diffusion in Real Time**](https://proceedings.iclr.cc/paper_files/paper/2026/file/935151cc6cb5d8b6816133b75233775a-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/935151cc6cb5d8b6816133b75233775a-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/935151cc6cb5d8b6816133b75233775a-Paper-Conference.pdf)
+  - **Focus:** Streaming AR video denoising.
+  - **Mechanism:** Rolling-frame generation and few-step distillation with extended windows.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/935151cc6cb5d8b6816133b75233775a-Paper-Conference.pdf#page=8), PDF p. 8.
+
+<a id="paper-sanavideo"></a>
+
+- [**SANA-Video: Efficient Video Generation with Block Linear Diffusion Transformer**](https://proceedings.iclr.cc/paper_files/paper/2026/file/41b93c59da0d0f835907fd661d419db2-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/41b93c59da0d0f835907fd661d419db2-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/41b93c59da0d0f835907fd661d419db2-Paper-Conference.pdf)
+  - **Focus:** Long-video AR attention and cache growth.
+  - **Mechanism:** Linear attention with constant-memory block-causal state.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/41b93c59da0d0f835907fd661d419db2-Paper-Conference.pdf#page=7), PDF p. 7.
+
+<a id="paper-shotstreamvideo"></a>
+
+- [**ShotStream: Streaming Multi-shot Video Generation for Interactive Storytelling**](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_12) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf)
+  - **Focus:** Four-step causal multi-shot video generation replacing a multi-step bidirectional teacher.
+  - **Mechanism:** Section 4.2 and Figure 4 generate shots from previous shots and each shot chunk-by-chunk. Global and local caches store historical context and recently generated frames. A few-step conditional video denoiser operates within the causal chunk-generation procedure; distribution matching distillation replaces the slow teacher.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf), PDF pp. 6–8, Section 4 and Figure 4; pp. 10 and 12, Table 1 and efficiency protocol.
+
+<a id="paper-scd"></a>
+
+- [**Speculative Coupled Decoding for Training-Free Lossless Acceleration of Autoregressive Visual Generation**](https://arxiv.org/pdf/2510.24211v2) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/so26a.html) · [PDF](https://arxiv.org/pdf/2510.24211v2)
+  - **Focus:** AR image stochastic speculative execution.
+  - **Mechanism:** Couples proposal/verification randomness.
+  - **Source:** [Paper](https://arxiv.org/pdf/2510.24211v2#page=1), PDF p. 1.
+
+<a id="paper-diagonaldistillvideo"></a>
+
+- [**Streaming Autoregressive Video Generation via Diagonal Distillation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/d899eabc6c8fefd0d4064762aba407e2-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d899eabc6c8fefd0d4064762aba407e2-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/d899eabc6c8fefd0d4064762aba407e2-Paper-Conference.pdf)
+  - **Focus:** Streaming AR video diffusion.
+  - **Mechanism:** Diagonal distillation restructures few-step frame synthesis.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/d899eabc6c8fefd0d4064762aba407e2-Paper-Conference.pdf#page=7), PDF p. 7.
+
+<a id="paper-surpriseforcingvideo"></a>
+
+- [**Surprise Forcing: What to Remember, When to Skip in Long Video Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf)
+  - **Focus:** Conditional denoising updates per AR video chunk and retained historical frames.
+  - **Mechanism:** Adapt the denoising budget to chunk difficulty and retain selected evicted frames in a bounded memory bank.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf), PDF pp. 12–15, Sections 4.1–4.3 and Tables 1 and 4.
+
+<a id="paper-ispavideo"></a>
+
+- [**Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption**](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_25) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf)
+  - **Focus:** KV-cache storage and attention computation in streaming AR video generators.
+  - **Mechanism:** Replace selected full-attention layers with local attention after instance-specific closed-form weight modulation absorbs historical context.
+  - **Source:** [Paper](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf), PDF pp. 2–3 and Section 3; PDF p. 11, Figure 2; PDF pp. 14–15, Figure 7.
+
+<a id="paper-asdcausalvideo"></a>
+
+- [**Towards One-step Causal Video Generation via Adversarial Self-Distillation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/3ae86071c169649bff21188c536163dc-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/3ae86071c169649bff21188c536163dc-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/3ae86071c169649bff21188c536163dc-Paper-Conference.pdf)
+  - **Focus:** AR video conditional denoising evaluations.
+  - **Mechanism:** Adversarial self-distillation with extra first-frame updates.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/file/3ae86071c169649bff21188c536163dc-Paper-Conference.pdf#page=8), PDF p. 8.
+
+<a id="paper-novavideo"></a>
+
+- [**Autoregressive Video Generation without Vector Quantization**](https://proceedings.iclr.cc/paper_files/paper/2025/file/6e5112eaa45f8c30b242c5f576213a92-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/6e5112eaa45f8c30b242c5f576213a92-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/6e5112eaa45f8c30b242c5f576213a92-Paper-Conference.pdf)
+  - **Focus:** Temporal/spatial AR video generation.
+  - **Mechanism:** Frame-wise temporal causality and set-wise spatial generation with continuous tokens.
+  - **Source:** [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/file/6e5112eaa45f8c30b242c5f576213a92-Paper-Conference.pdf#page=7), PDF p. 7.
+
+<a id="paper-ca2vdmvideo"></a>
+
+- [**Ca2-VDM: Efficient Autoregressive Video Diffusion Model with Causal Generation and Cache Sharing**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/gao25m/gao25m.pdf) (ICML, 2025). [Paper](https://proceedings.mlr.press/v267/gao25m.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v267/main/assets/gao25m/gao25m.pdf)
+  - **Focus:** AR video conditional-frame recomputation.
+  - **Mechanism:** Causal feature computation and cache sharing across denoising steps.
+  - **Source:** [Paper](https://raw.githubusercontent.com/mlresearch/v267/main/assets/gao25m/gao25m.pdf#page=8), PDF p. 8.
+
+<a id="paper-causvidvideo"></a>
+
+- [**From Slow Bidirectional to Fast Autoregressive Video Diffusion Models**](https://openaccess.thecvf.com/content/CVPR2025/papers/Yin_From_Slow_Bidirectional_to_Fast_Autoregressive_Video_Diffusion_Models_CVPR_2025_paper.pdf) (CVPR, 2025). [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Yin_From_Slow_Bidirectional_to_Fast_Autoregressive_Video_Diffusion_Models_CVPR_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2025/papers/Yin_From_Slow_Bidirectional_to_Fast_Autoregressive_Video_Diffusion_Models_CVPR_2025_paper.pdf)
+  - **Focus:** Causal video diffusion inference.
+  - **Mechanism:** Distills a bidirectional many-step teacher into a KV-cached causal few-step generator.
+  - **Source:** [Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Yin_From_Slow_Bidirectional_to_Fast_Autoregressive_Video_Diffusion_Models_CVPR_2025_paper.pdf#page=7), PDF p. 7.
+
+<a id="paper-mardinivideo"></a>
+
+- [**MarDini: Masked Auto-regressive Diffusion for Video Generation at Scale**](https://arxiv.org/pdf/2410.20280) (TMLR, 2025). [Paper](https://openreview.net/forum?id=fuOHI59rUW) · [PDF](https://arxiv.org/pdf/2410.20280)
+  - **Focus:** Masked-AR video planning and spatial diffusion.
+  - **Mechanism:** Low-resolution planning with a lightweight high-resolution diffusion model.
+  - **Source:** [Paper](https://arxiv.org/pdf/2410.20280#page=8), PDF p. 8.
+
+<a id="paper-nar"></a>
+
+- [**Neighboring Autoregressive Modeling for Efficient Visual Generation**](https://arxiv.org/pdf/2503.10696) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/papers/He_Neighboring_Autoregressive_Modeling_for_Efficient_Visual_Generation_ICCV_2025_paper.pdf) · [PDF](https://arxiv.org/pdf/2503.10696)
+  - **Focus:** Image and video AR position decoding.
+  - **Mechanism:** Neighbor expansion with dimension-oriented parallel prediction heads.
+  - **Source:** [Paper](https://arxiv.org/pdf/2503.10696#page=8), PDF p. 8.
+
+<a id="paper-par"></a>
+
+- [**Parallelized Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.pdf) (CVPR, 2025). [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.pdf)
+  - **Focus:** Image and video AR sequential decoding.
+  - **Mechanism:** Generates spatially distant groups concurrently.
+  - **Source:** [Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.pdf#page=1), PDF p. 1.
+
+<a id="paper-selfforcingvideo"></a>
+
+- [**Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion**](https://proceedings.neurips.cc/paper_files/paper/2025/file/f4823f831af67a3ef15e41a85434422a-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/f4823f831af67a3ef15e41a85434422a-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/f4823f831af67a3ef15e41a85434422a-Paper-Conference.pdf)
+  - **Focus:** Few-step streaming AR video generator.
+  - **Mechanism:** Self-generated training rollouts with rolling KV-cache inference.
+  - **Source:** [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/file/f4823f831af67a3ef15e41a85434422a-Paper-Conference.pdf#page=7), PDF p. 7.
+
+<a id="paper-evdmacmmm2023"></a>
+
+- [**Efficiency-optimized Video Diffusion Models**](https://hexiangteng.github.io/papers/ACM%20MM%202023%20EVDM.pdf) (ACM MM, 2023). [Paper](https://dl.acm.org/doi/10.1145/3581783.3612406) · [PDF](https://hexiangteng.github.io/papers/ACM%20MM%202023%20EVDM.pdf)
+  - **Focus:** Convolution and attention cost of the MCVD conditional video denoiser used for block-autoregressive generation.
+  - **Mechanism:** Train smaller denoisers with bottleneck residual paths, channel splitting and a mixed attention algorithm.
+  - **Source:** [Paper](https://hexiangteng.github.io/papers/ACM%20MM%202023%20EVDM.pdf), EVDM PDF pp. 5–6, Tables 2–3 and experimental setup; PDF p. 8, Table 9. MCVD original Section 2.1 and Figure 2.
+
+<a id="paper-parallelmultiscale2017"></a>
+
+- [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017). [Paper](https://proceedings.mlr.press/v70/reed17a.html) · [PDF](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf)
+  - **Focus:** Pixel AR sampling dependency depth.
+  - **Mechanism:** Parallel multiscale density factorization.
+  - **Source:** [Paper](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf#page=8), PDF p. 8.

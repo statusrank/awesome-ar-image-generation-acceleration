@@ -2,26 +2,23 @@
 
 **Survey paper: Coming soon...**
 
-A curated paper list on accelerating autoregressive image and visual generation.
+A curated list of papers on accelerating autoregressive image and visual generation.
 
-[English](README.md) · [中文](README.zh-CN.md) · [Core papers](papers/core/README.md) · [BibTeX](core_references.bib)
+[All papers](papers/core/README.md) · [BibTeX](core_references.bib)
 
 ## Contents
 
-[Overview](#overview) · [Generated output](#generated-output) · [Categories](#categories) · [Paper list](#paper-list) · [Background](#background-and-related-work) · [Resources](#resources)
+[Overview](#overview) · [Generated output](#generated-output) · [Categories](#categories) · [Paper list](#paper-list) · [Related work](#related-work) · [Resources](#resources)
 
 ## Overview
 
-This collection organizes acceleration methods by the computation they change. It covers execution improvements to existing generators and efficient generator design, with separate video and 3D collections.
+Methods include faster sampling and decoding, reduced prediction cost, and efficient generator design. Image, video and 3D tasks have separate collections.
 
-**152 core papers.** A paper can appear in more than one category.
-
+**152 acceleration papers.** Papers may appear in multiple categories.
 
 ## Generated Output
 
 [Image generation](papers/by-task/image/README.md) · [Video generation](papers/by-task/video/README.md) · [3D and motion generation](papers/by-task/3d/README.md)
-
-Each task list gives the acceleration intervention and the original-source location. Background and pending records are separate.
 
 ## Categories
 
@@ -31,7 +28,7 @@ Each task list gives the acceleration intervention and the original-source locat
 | [Conditional Computation](papers/conditional-computation/README.md) | Feature reuse and selective execution, including attention-state storage. | 32 |
 | [Learning Efficient Generators](papers/efficient-generators/README.md) | Efficient predictors and representations, including learned sampling procedures. | 63 |
 | [AR video-generation acceleration](papers/video-generation/README.md) | Acceleration of autoregressive video generation and streaming synthesis. | 43 |
-| [AR 3D-generation acceleration](papers/3d-generation/README.md) | Acceleration of autoregressive 3D geometry and layout generation. | 8 |
+| [AR 3D-generation acceleration](papers/3d-generation/README.md) | Acceleration of autoregressive 3D geometry, layouts and human motion. | 8 |
 | [Related Test-Time Search Budgets](papers/related-search-budgets/README.md) | Acceleration under a multi-path generation or test-time search budget. | 1 |
 
 ### Subcategories
@@ -40,7 +37,7 @@ Each task list gives the acceleration intervention and the original-source locat
   - [Parallel and Speculative Candidate Generation](papers/sampling-and-decoding/README.md#parallel-and-speculative-candidate-generation)
   - [Verification and Commitment](papers/sampling-and-decoding/README.md#verification-and-commitment)
   - [Generation Scheduling and Context Organization](papers/sampling-and-decoding/README.md#generation-scheduling-and-context-organization)
-  - [Other verified parallel sampling](papers/sampling-and-decoding/README.md#other-verified-parallel-sampling)
+  - [Other parallel sampling](papers/sampling-and-decoding/README.md#other-parallel-sampling)
 - [Conditional Computation](papers/conditional-computation/README.md)
   - [Feature Reuse and Refresh](papers/conditional-computation/README.md#feature-reuse-and-refresh)
   - [KV-cache Management and Sparse Attention](papers/conditional-computation/README.md#kv-cache-management-and-sparse-attention)
@@ -61,11 +58,9 @@ Each task list gives the acceleration intervention and the original-source locat
 
 ## Paper List
 
-Click a paper title for its recorded PDF link, or its official page when no PDF link is recorded. Category READMEs provide the specific intervention and source details.
-
 ### Sampling and Decoding
 
-[Category README and subcategories](papers/sampling-and-decoding/README.md)
+[Mechanisms and papers](papers/sampling-and-decoding/README.md)
 
 - [**Accelerating Inference of Discrete Autoregressive Normalizing Flows by Selective Jacobi Decoding**](https://arxiv.org/pdf/2505.24791) (TMLR, 2026). [Paper](https://openreview.net/forum?id=xYATz9HpE7) · [PDF](https://arxiv.org/pdf/2505.24791)
 - [**Annealed Relaxation of Speculative Decoding for Faster Autoregressive Image Generation**](https://arxiv.org/pdf/2601.09212) (AAAI, 2026). [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/39489) · [PDF](https://arxiv.org/pdf/2601.09212)
@@ -103,7 +98,7 @@ Click a paper title for its recorded PDF link, or its official page when no PDF 
 
 ### Conditional Computation
 
-[Category README and subcategories](papers/conditional-computation/README.md)
+[Mechanisms and papers](papers/conditional-computation/README.md)
 
 - [**Adaptive Visual Autoregressive Acceleration via Dual-Linkage Entropy Analysis**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26dq/zhang26dq.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/zhang26dq.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26dq/zhang26dq.pdf)
 - [**AMS-KV: Adaptive KV Caching in Multi-Scale Visual Autoregressive Transformers**](https://arxiv.org/pdf/2511.16047) (AAAI, 2026). [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/39936) · [PDF](https://arxiv.org/pdf/2511.16047)
@@ -142,7 +137,7 @@ Click a paper title for its recorded PDF link, or its official page when no PDF 
 
 ### Learning Efficient Generators
 
-[Category README and subcategories](papers/efficient-generators/README.md)
+[Mechanisms and papers](papers/efficient-generators/README.md)
 
 - [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/chapter/10.1007/978-981-92-3378-6_16) (ICIC, 2027). [Paper](https://link.springer.com/chapter/10.1007/978-981-92-3378-6_16)
 - [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026). [Paper](https://openreview.net/forum?id=OuFNXESoCO) · [PDF](https://arxiv.org/pdf/2412.07720)
@@ -212,7 +207,7 @@ Click a paper title for its recorded PDF link, or its official page when no PDF 
 
 ### AR video-generation acceleration
 
-[Category README and subcategories](papers/video-generation/README.md)
+[Mechanisms and papers](papers/video-generation/README.md)
 
 - [**AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/li26iw.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf)
 - [**Accelerating Autoregressive Video Diffusion via History-Guided Cache and Residual Correction**](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf)
@@ -262,7 +257,7 @@ Click a paper title for its recorded PDF link, or its official page when no PDF 
 
 ### AR 3D-generation acceleration
 
-[Category README and subcategories](papers/3d-generation/README.md)
+[Mechanisms and papers](papers/3d-generation/README.md)
 
 - [**FlashMesh: Faster and Better Autoregressive Mesh Synthesis via Structured Speculation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Shen_FlashMesh_Faster_and_Better_Autoregressive_Mesh_Synthesis_via_Structured_Speculation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Shen_FlashMesh_Faster_and_Better_Autoregressive_Mesh_Synthesis_via_Structured_Speculation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Shen_FlashMesh_Faster_and_Better_Autoregressive_Mesh_Synthesis_via_Structured_Speculation_CVPR_2026_paper.pdf)
 - [**NaLA: A 3D Native LLM Layout Agent for High-Quality 3D Scene Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf)
@@ -277,28 +272,24 @@ Click a paper title for its recorded PDF link, or its official page when no PDF 
 
 ### Related Test-Time Search Budgets
 
-[Category README and subcategories](papers/related-search-budgets/README.md)
+[Mechanisms and papers](papers/related-search-budgets/README.md)
 
 - [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/view/25379) (AAAI, 2023). [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/25379)
 
 [↑ Top](#contents)
 
-## Background and Related Work
+## Related Work
 
-- [All background papers](papers/background/README.md) (74).
-- [Foundations](papers/foundations/README.md).
+- [Background and related papers](papers/background/README.md) (74).
 - [Related surveys](papers/related-surveys/README.md).
 - [Evaluation resources](papers/evaluation/README.md).
-- [Related non-AR masked generation](papers/related-masked-generation/README.md).
 - [Pending papers](papers/pending/README.md) (29).
 
 ## Resources
 
-- [All papers](papers/README.md) · [By year](papers/by-year.md) · [By venue](papers/by-venue.md).
-- [Full catalog](data/papers.csv): 255 records. [Core BibTeX](core_references.bib) · [Complete BibTeX](references.bib).
-- [Paper-level source notes](papers/paper-notes.md) · [Coverage](docs/coverage.md) · [Inclusion criteria](docs/inclusion-criteria.md).
-- [Full-directory follow-up](docs/directory-review-20261031.md) · [Per-entry reading status](data/complete_directory_progress_20261031.csv).
-- [Contributing](CONTRIBUTING.md) · [Maintenance](docs/maintenance.md) · [Changelog](CHANGELOG.md).
+- [All collections](papers/README.md) · [By year](papers/by-year.md) · [By venue](papers/by-venue.md).
+- [Catalog](data/papers.csv): 255 records. [Acceleration-paper BibTeX](core_references.bib) · [Complete BibTeX](references.bib).
+- [Reading guide](docs/reading-guide.md) · [Scope](docs/inclusion-criteria.md) · [Contributing](CONTRIBUTING.md).
 
 ## Related Awesome Lists
 
@@ -307,7 +298,3 @@ Click a paper title for its recorded PDF link, or its official page when no PDF 
 - [Awesome Multimodal Large Language Models](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models).
 
 [CC BY 4.0](LICENSE.md) for documentation and catalog arrangement. [MIT](LICENSE-CODE) for maintenance scripts. Linked works retain their own licenses.
-
-[213-candidate source review / 213项候选核查](docs/candidate213-review.md)
-
-[AR dependency and conditional Flow: five-paper recheck / 五篇论文的AR与Flow核查](docs/five-paper-ar-scope.md)

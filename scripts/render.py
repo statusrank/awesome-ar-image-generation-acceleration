@@ -11,40 +11,20 @@ def render(check=False):
     d=json.loads((ROOT/'data/papers.json').read_text(encoding='utf-8'))
     records=d['papers'];output={}
     decisions={k:[p for p in records if p['screening']['decision']==k] for k in ['core','background','pending']}
-    for key,title in [('core','Core acceleration papers'),('background','Background and related work'),('pending','Pending source or eligibility checks')]:
-        lines=[f'# {title}','','[Home](../README.md) · [All records](README.md) · [Paper-level notes](paper-notes.md)', '',f"{len(decisions[key])} records. Last reviewed: {d['updated']}.",'']
-        if key=='core':lines+=['Core admission means that the recorded original-source passages identify an AR visual-generation object and an inference-efficiency result. It does not certify a proof or reproduce an experiment. Efficient new generators are distinguished from execution changes to existing models. Search-budget results have a separate baseline.','', 'Image, video and 3D results are not pooled. Historical papers before 2022 remain labeled as such.','']
-        else:lines+=['These records are excluded from the core acceleration count. A pending record is not a claim that the paper is incorrect or unpublished.','']
-        groups=sorted({p['screening']['visual_output']for p in decisions[key]})
-        for task in groups:
-            lines += [f'## {task}','','| Year | Paper | Specific object | Original-source basis |','|---|---|---|---|']
-            for p in sorted((p for p in decisions[key]if p['screening']['visual_output']==task),key=lambda p:(-p['year'],p['title'].lower())):
-                s=p['screening'];label=f"[Details](paper-notes.md#{anchor(p['id'])}) · [Source]({s['source_url']})"
-                lines.append(f"| {p['year']} | [{safe(p['title'])}]({p['paper_url']}) ({safe(p['venue'])}) | {safe(s['accelerated_object_or_background_role'])} | {safe(s['original_source_basis'])} {label} |")
-            lines+=['']
-        output[f'papers/{key}.md']='\n'.join(lines)
-    lines=['# Paper-level source notes','','[Home](../README.md) · [Core](core.md) · [Background](background.md) · [Pending](pending.md)','','Each note states the reading extent. Selected PDF passages are not a full-proof review or an independent reproduction. PDF page numbers count the downloaded PDF pages, including a cover where present. The reading version can be an author manuscript corresponding to a verified formal publication.','']
-    for p in records:
-        s=p['screening'];lines += [f'<a name="{anchor(p["id"])}"></a>','',f"## {p['id']}",'',f"**{p['title']}**. {p['venue']}, {p['year']}.",'','| Field | Paper-specific finding |','|---|---|']
-        if p.get('publication_note'):lines.append(f"| Publication note | {safe(p['publication_note'])} |")
-        for k,l in [('decision','Decision'),('visual_output','Generated output'),('study_type','Study type'),('accelerated_object_or_background_role','Specific object'),('intervention','Intervention'),('original_source_basis','Original-source basis'),('cost_boundary','Cost boundary'),('reading_extent','Reading extent'),('source_locator','Source location'),('remaining_issue','Unresolved item')]:
-            if s.get(k):lines.append(f'| {l} | {safe(str(s[k]))} |')
-        lines += ['',f"[Reading source]({s['source_url']}) · [Formal publication record]({s['publication_evidence_url']})",'',f"Venue check: {s['venue_eligibility']}",'']
-    output['papers/paper-notes.md']='\n'.join(lines)
-    lines=['# Papers by Year','','[Home](../README.md) · [By mechanism](README.md)','','Year follows the retained publication citation. A proceedings imprint can differ from the conference or first-online year. The source notes and venue index retain that distinction.','']
+    lines=['# Papers by Year','','[Home](../README.md) · [By mechanism](README.md)','','Year follows the retained publication citation. A proceedings imprint can differ from the conference or first-online year. Publication years follow the entries below.','']
     for year in sorted({p['year'] for p in records},reverse=True):
         lines += [f'## {year}','']
         for p in sorted((p for p in records if p['year']==year),key=lambda p:p['title'].lower()):
             lines.append(f"- [{p['title']}]({p['paper_url']}). {p['venue']}."+(f" [Code]({p['code_url']})." if p['code_url'] else '')+(f" Scope: {p['collection_role']}." if p.get('collection_role') else ''))
         lines+=['']
     output['papers/by-year.md']='\n'.join(lines)
-    lines=['# Papers by Publication Venue','','[Home](../README.md) · [By year](by-year.md) · [Search coverage](../docs/coverage.md)','','Venue names identify the publication record. They do not imply a cross-paper performance comparison. Proceedings imprint years can differ from conference and online-publication years.','']
+    lines=['# Papers by Publication Venue','','[Home](../README.md) · [By year](by-year.md)','','Venue names identify the publication record. They do not imply a cross-paper performance comparison. Proceedings imprint years can differ from conference and online-publication years.','']
     venues=collections.defaultdict(list)
     for p in records:venues[p['venue']].append(p)
     for v,ps in sorted(venues.items(),key=lambda z:z[0].casefold()):
         lines += [f'## {v}','','| Year | Paper | Scope or publication note |','|---|---|---|']
         for p in sorted(ps,key=lambda z:(-z['year'],z['title'].lower())):
-            notes=' '.join(filter(None,[p.get('publication_note'),p.get('scope_note')]))
+            notes=p['collection_role']
             lines.append(f"| {p['year']} | [{safe(p['title'])}]({p['paper_url']}) | {safe(notes)} |")
         lines+=['']
     output['papers/by-venue.md']='\n'.join(lines)
@@ -72,12 +52,15 @@ def render(check=False):
     output['core_references.bib']='\n'.join(block for block in output['references.bib'].split('\n\n')if block and re.match(r'@\w+\{([^,]+),',block).group(1)in {p['id']for p in decisions['core']})+'\n'
     resources=json.loads((ROOT/'data/paper_resources.json').read_text(encoding='utf-8'))['papers']
     output.update(build_readmes(d,FILES,anchor,resources))
-    if (ROOT/'docs/candidate213-review.md').exists():
-        for name in ['README.md','README.zh-CN.md']:
-            output[name]+='\n[213-candidate source review / 213项候选核查](docs/candidate213-review.md)\n'
-    if (ROOT/'docs/five-paper-ar-scope.md').exists():
-        for name in ['README.md','README.zh-CN.md']:
-            output[name]+='\n[AR dependency and conditional Flow: five-paper recheck / 五篇论文的AR与Flow核查](docs/five-paper-ar-scope.md)\n'
+    import posixpath
+    from urllib.parse import urlsplit
+    for role in ['core','background','pending']:
+        text=output[f'papers/{role}/README.md']
+        def relocate(m):
+            url=m.group(2)
+            if urlsplit(url).scheme or url.startswith('#'):return m.group(0)
+            return '['+m.group(1)+']('+posixpath.relpath(posixpath.normpath(posixpath.join('papers/'+role,url)),'papers')+')'
+        output[f'papers/{role}.md']=re.sub(r'\[([^\]]+)\]\(([^)]+)\)',relocate,text)
     drift=[]
     for rel,text in output.items():
         p=ROOT/rel

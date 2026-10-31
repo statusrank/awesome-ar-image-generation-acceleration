@@ -64,7 +64,7 @@ def validate():
         copy={**p,'pdf_url':resources.get(p['id'],{}).get('pdf_url','')}
         return f"- [**{md_title(p['title'])}**]({pdf_link(copy)or p['paper_url']})"
     home_checks={}
-    for fn in ['README.md','README.zh-CN.md']:
+    for fn in ['README.md']:
         text=(ROOT/fn).read_text(encoding='utf-8')
         assert text.startswith('# '+SURVEY_TITLE+'\n\n**Survey paper: Coming soon...**'),fn
         for p in ps:
@@ -89,7 +89,7 @@ def validate():
                 explicit=set(re.findall(r'<a\s+(?:name|id)="([^"]+)"',target_text))
                 assert frag in {anchor(h) for h in headings}|explicit,(p,url)
             checked+=1
-    for fn in ['README.md','README.zh-CN.md']:
+    for fn in ['README.md']:
         assert str(len(ps)) in (ROOT/fn).read_text(encoding='utf-8'),fn+' paper count needs update'
     directory_path=ROOT/'data/complete_directory_entries_20261031.csv'
     if directory_path.exists():
@@ -123,13 +123,18 @@ def validate():
     task_sets={}
     for task in ['image','video','3d']:
         text=(ROOT/f'papers/by-task/{task}/README.md').read_text(encoding='utf-8')
-        selected={p['id']for p in ps if f'paper-notes.md#{anchor(p["id"])})'in text}
+        selected={p['id']for p in ps if f'<a id="paper-{anchor(p["id"])}"></a>'in text}
         assert selected and all(p['collection_role']=='core'for p in ps if p['id']in selected),task
         for p in ps:
-            if p['id']in selected:assert p['screening']['source_locator']in text and p['screening']['source_url']in text,p['id']
+            if p['id']in selected:assert p['screening']['source_url']in text,p['id']
         task_sets[task]=selected
     assert set.union(*task_sets.values())=={p['id']for p in ps if p['collection_role']=='core'},'Task navigation misses a core paper'
     assert not(task_sets['3d']&(task_sets['image']|task_sets['video'])),'3D entries mixed with image/video navigation'
+    assert not(ROOT/'README.zh-CN.md').exists(),'Chinese README must not be regenerated'
+    for page in [ROOT/'README.md',*ROOT.glob('papers/**/*.md')]:
+        text=page.read_text(encoding='utf-8')
+        assert not re.search(r'[\u4e00-\u9fff]',text),page
+        assert not re.search(r'(?i)reading extent|selected primary PDF passages|independent (?:proof|reproduction)|source[- ](?:review|recheck)|our (?:audit|verification)|to verify:|inspected (?:main )?(?:text|PDF|passages)|核查|复核',text),page
     assert not list(ROOT.rglob('*.pdf')),'Unexpected PDF in public catalog'
     print(json.dumps({'papers':len(ps),'decisions':dict(decisions),'original_cohort':len(originals),'confirmed_code_links':sum(bool(p['code_url']) for p in ps),'pdf_resource_links':len(resources),'homepages_core_paper_coverage':home_checks,'category_readmes_checked':len(cats),'local_links_checked':checked,'category_counts_overlap':{k:sum(k in p['categories'] for p in ps) for k in cats},'generated_files_match':True},indent=2))
 if __name__=='__main__':validate()

@@ -1,116 +1,397 @@
-# Background and related work
+# Background and Related Work
 
-[Home](../README.md) · [All records](README.md) · [Paper-level notes](paper-notes.md)
+[Home](../README.md) · [Collections](README.md)
 
-74 records. Last reviewed: 2026-10-31.
+**74 papers.**
 
-These records are excluded from the core acceleration count. A pending record is not a claim that the paper is incorrect or unpublished.
+- [3D human motion](#3d-human-motion)
+- [3D human motion and garment simulation](#3d-human-motion-and-garment-simulation)
+- [image](#image)
+- [image; video; multimodal understanding](#image-video-multimodal-understanding)
+- [related visual generation](#related-visual-generation)
+- [supporting reference](#supporting-reference)
+- [video](#video)
 
 ## 3D human motion
 
-| Year | Paper | Specific object | Original-source basis |
-|---|---|---|---|
-| 2024 | [A causal convolutional neural network for multi-subject motion modeling and generation](https://link.springer.com/article/10.1007/s41095-022-0307-3) (Computational Visual Media) | Causal convolutional multi-subject motion modeling | The original abstract emphasizes motion modeling and personalization. PDF p. 2 reports approximately 65 FPS. The inspected passages do not establish a reduction in AR inference cost against a controlled reference generator [Details](paper-notes.md#cvmcausalmotion) · [Source](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) |
+<a id="paper-cvmcausalmotion"></a>
+
+- [**A causal convolutional neural network for multi-subject motion modeling and generation**](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) (Computational Visual Media, 2024). [Paper](https://link.springer.com/article/10.1007/s41095-022-0307-3) · [PDF](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf)
+  - **Focus:** Causal convolutional multi-subject motion modeling.
 
 ## 3D human motion and garment simulation
 
-| Year | Paper | Specific object | Original-source basis |
-|---|---|---|---|
-| 2024 | [Generating diverse clothed 3D human animations via a generative model](https://link.springer.com/article/10.1007/s41095-022-0324-2) (Computational Visual Media) | Learned garment deformation replacing physics-based cloth simulation | Section 5.1 and Table 2 compare the learned simulation with CPU-based ARCSim. The T-shirt entries are 3.9047 s and 0.0123 s per frame. ARCSim is a physics simulator, not an autoregressive image/visual generative model [Details](paper-notes.md#cvmclothedanimation) · [Source](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) |
+<a id="paper-cvmclothedanimation"></a>
+
+- [**Generating diverse clothed 3D human animations via a generative model**](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) (Computational Visual Media, 2024). [Paper](https://link.springer.com/article/10.1007/s41095-022-0324-2) · [PDF](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf)
+  - **Focus:** Learned garment deformation replacing physics-based cloth simulation.
 
 ## image
 
-| Year | Paper | Specific object | Original-source basis |
-|---|---|---|---|
-| 2027 | [Local Autoregression with Finite-Support Random Variables for Image Generation](https://link.springer.com/chapter/10.1007/978-3-032-31654-7_12) (ICPR) | Local image probability model | General generation method. Original abstract does not establish an inference-acceleration experiment [Details](paper-notes.md#localaricpr) · [Source](https://link.springer.com/chapter/10.1007/978-3-032-31654-7_12) |
-| 2026 | [InfoScale: Unleashing Training-free Variable-scaled Image Generation via Effective Utilization of Information](https://openreview.net/forum?id=iB8PzxdpMf) (TMLR) | Diffusion/SDXL variable-resolution generation | Primary source identifies diffusion application, not AR generation [Details](paper-notes.md#tmlrib8pzxdpmf) · [Source](https://openreview.net/forum?id=iB8PzxdpMf) |
-| 2026 | [Lumina-mGPT: Flexible Photorealistic Autoregressive Text-to-Image Generation](https://doi.org/10.1007/s11263-026-02795-2) (IJCV) | Reference high-resolution AR text-to-image generator | General generator. Dedicated inference-acceleration intervention not established in inspected source [Details](paper-notes.md#luminamgptijcv) · [Source](https://doi.org/10.1007/s11263-026-02795-2) |
-| 2026 | [Nativetok: Native Visual Tokenization for Improved Image Generation](https://doi.org/10.1109/icassp55912.2026.11462037) (ICASSP) | Native image tokenization and training | Original abstract supports representation/training improvements, not an established inference-cost result [Details](paper-notes.md#nativetok) · [Source](https://doi.org/10.1109/icassp55912.2026.11462037) |
-| 2026 | [NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale](https://proceedings.iclr.cc/paper_files/paper/2026/hash/974ff7b5bf08dbf9400b5d599a39c77f-Abstract-Conference.html) (ICLR) | Reference continuous-token text-to-image AR model | Inspected source emphasizes generation capability. It does not establish a dedicated inference-acceleration intervention here [Details](paper-notes.md#nextstep) · [Source](https://arxiv.org/pdf/2508.10711v1#page=1) |
-| 2026 | [Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.html) (CVPR) | AR image test-time search budget | Search scaling is relevant context. Fixed quality/budget AR inference savings have not been checked here [Details](paper-notes.md#proceedings43) · [Source](https://openaccess.thecvf.com/content/CVPR2026/papers/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.pdf#page=1) |
-| 2026 | [ScalingAR: Scaling Confidence for Autoregressive Image Generation](https://proceedings.mlr.press/v306/chen26fc.html) (ICML) | AR image test-time search | Official abstract reports visual-token consumption. It does not by itself establish wall-clock savings [Details](paper-notes.md#proceedings112) · [Source](https://proceedings.mlr.press/v306/chen26fc.html) |
-| 2026 | [Spanning Tree Autoregressive Visual Generation](https://link.springer.com/chapter/10.1007/978-3-032-36839-3_15) (ECCV) | AR traversal order and generation quality | Inspected source focuses generation/inpainting behavior, without verified inference-cost reduction [Details](paper-notes.md#star) · [Source](https://arxiv.org/pdf/2511.17089#page=1) |
-| 2026 | [SSDD: Single-Step Diffusion Decoder for Efficient Image Tokenization](https://link.springer.com/chapter/10.1007/978-3-032-37556-8_19) (ECCV) | Single-step diffusion image decoder | Inspected application uses diffusion generators. No AR application established [Details](paper-notes.md#ssdd) · [Source](https://arxiv.org/pdf/2510.04961#page=1) |
-| 2026 | [StructMAR: Structure-Aware Masked Autoregression for Explicit Layout Alignment in Text-to-Image Generation](https://proceedings.mlr.press/v306/cao26ab.html) (ICML) | Layout-conditioned MAR image generation, not an AR inference accelerator | Table 5 reports Plain MAR at 3.56 seconds and StructMAR at 3.85 seconds. The headline 4.05x result compares StructMAR with diffusion-based MIGC, not an accelerated MAR baseline [Details](paper-notes.md#proceedings111) · [Source](https://raw.githubusercontent.com/mlresearch/v306/main/assets/cao26ab/cao26ab.pdf#page=8) |
-| 2026 | [WeTok: Powerful Discrete Tokenization for High-Fidelity Visual Reconstruction](https://proceedings.iclr.cc/paper_files/paper/2026/hash/0b2a58f2b5943b9c356f10db32073275-Abstract-Conference.html) (ICLR) | Visual tokenizer | Reconstruction/tokenizer improvements do not establish AR inference savings [Details](paper-notes.md#proceedings180) · [Source](https://proceedings.iclr.cc/paper_files/paper/2026/file/0b2a58f2b5943b9c356f10db32073275-Paper-Conference.pdf#page=1) |
-| 2025 | [A Spark of Vision-Language Intelligence: 2-Dimensional Autoregressive Transformer for Efficient Finegrained Image Generation](https://proceedings.iclr.cc/paper_files/paper/2025/hash/674ad201bc8fa74b3c9979230aa0c63b-Abstract-Conference.html) (ICLR) | Two-dimensional depth/sequence AR modeling | Source emphasizes image quality at equal backbone size and sequence length. Inference-cost savings not established [Details](paper-notes.md#ccfdnd) · [Source](https://proceedings.iclr.cc/paper_files/paper/2025/file/674ad201bc8fa74b3c9979230aa0c63b-Paper-Conference.pdf#page=2) |
-| 2025 | [Adaptive Length Image Tokenization via Recurrent Allocation](https://proceedings.iclr.cc/paper_files/paper/2025/hash/534ec8dfc0312d96e1c1b357304fadc2-Abstract-Conference.html) (ICLR) | Adaptive image tokenizer | Inspected source validates tokenization and reconstruction. AR inference-cost evidence is not established here [Details](paper-notes.md#ccfalitr) · [Source](https://proceedings.iclr.cc/paper_files/paper/2025/file/534ec8dfc0312d96e1c1b357304fadc2-Paper-Conference.pdf#page=1) |
-| 2025 | [Autoregressive Models in Vision: A Survey](https://openreview.net/forum?id=1BqXkjNEGP) (Transactions on Machine Learning Research) | Visual AR survey | Includes efficiency discussion, not a primary accelerator study [Details](paper-notes.md#surveyvisualartmlr2025) · [Source](https://arxiv.org/pdf/2411.05902v2#page=1) |
-| 2025 | [Bridging Continuous and Discrete Tokens for Autoregressive Visual Generation](https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Bridging_Continuous_and_Discrete_Tokens_for_Autoregressive_Visual_Generation_ICCV_2025_paper.html) (ICCV) | Continuous/discrete AR token representation | Inspected source establishes representation and generation quality. No inference-cost comparison was located [Details](paper-notes.md#ccfbridgetokens) · [Source](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Bridging_Continuous_and_Discrete_Tokens_for_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf#page=1) |
-| 2025 | [CAT: Content-Adaptive Image Tokenization](https://proceedings.neurips.cc/paper_files/paper/2025/hash/014898b821e3ce966ae1db68cb8d9966-Abstract-Conference.html) (NeurIPS) | Content-adaptive tokenizer | Reported throughput gain in the abstract is explicitly training throughput [Details](paper-notes.md#ccfcat) · [Source](https://proceedings.neurips.cc/paper_files/paper/2025/file/014898b821e3ce966ae1db68cb8d9966-Paper-Conference.pdf#page=1) |
-| 2025 | [Democratizing Text-to-Image Masked Generative Models with Compact Text-Aware One-Dimensional Tokens](https://openaccess.thecvf.com/content/ICCV2025/html/Kim_Democratizing_Text-to-Image_Masked_Generative_Models_with_Compact_Text-Aware_One-Dimensional_Tokens_ICCV_2025_paper.html) (ICCV) | Masked text-to-image generator | Inspected experiments concern masked generation, not an identified AR generator [Details](paper-notes.md#ccfmask1d) · [Source](https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_Democratizing_Text-to-Image_Masked_Generative_Models_with_Compact_Text-Aware_One-Dimensional_Tokens_ICCV_2025_paper.pdf#page=1) |
-| 2025 | [Denoising Autoregressive Transformers for Scalable Text-to-Image Generation](https://proceedings.iclr.cc/paper_files/paper/2025/hash/ebd8a977883fd8d5bccf9575e873ce75-Abstract-Conference.html) (ICLR) | Hybrid denoising AR image generator | Inspected source proposes a generation framework. An explicit AR inference-cost reduction is not established [Details](paper-notes.md#proceedings173) · [Source](https://proceedings.iclr.cc/paper_files/paper/2025/file/ebd8a977883fd8d5bccf9575e873ce75-Paper-Conference.pdf#page=1) |
-| 2025 | [Di[M]O: Distilling Masked Diffusion Models into One-step Generator](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_DiMO_Distilling_Masked_Diffusion_Models_into_One-step_Generator_ICCV_2025_paper.pdf) (ICCV) | Masked diffusion image generator distillation | Inspected teacher experiments concern masked diffusion generators, not an identified AR teacher [Details](paper-notes.md#dimo) · [Source](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_DiMO_Distilling_Masked_Diffusion_Models_into_One-step_Generator_ICCV_2025_paper.pdf#page=1) |
-| 2025 | [Efficient Diffusion Models: A Comprehensive Survey From Principles to Practices](https://doi.org/10.1109/tpami.2025.3569700) (IEEE Transactions on Pattern Analysis and Machine Intelligence) | Diffusion efficiency survey | Broader diffusion scope, not a direct acceleration method [Details](paper-notes.md#surveyefficientdiffusiontpami2025) · [Source](https://arxiv.org/pdf/2410.11795v2#page=1) |
-| 2025 | [Efficient Diffusion Models: A Survey](https://openreview.net/forum?id=wHECkBOwyt) (Transactions on Machine Learning Research) | Diffusion efficiency survey | Broader diffusion scope, not a direct acceleration method [Details](paper-notes.md#surveyefficientdiffusiontmlr2025) · [Source](https://arxiv.org/pdf/2502.06805v3#page=1) |
-| 2025 | [FlowAR: Scale-wise Autoregressive Image Generation Meets Flow Matching](https://proceedings.mlr.press/v267/ren25e.html) (ICML) | Continuous next-scale image generator | Inspected source centers modular generation and quality. An explicit inference-cost reduction was not located [Details](paper-notes.md#flowar) · [Source](https://raw.githubusercontent.com/mlresearch/v267/main/assets/ren25e/ren25e.pdf#page=1) |
-| 2025 | [Fluid: Scaling Autoregressive Text-to-image Generative Models with Continuous Tokens](https://proceedings.iclr.cc/paper_files/paper/2025/hash/f8e7248f3e659cfe70c6debcdae1b023-Abstract-Conference.html) (ICLR) | Continuous-token AR text-to-image generator | Source studies model scaling and generation quality, not an identified acceleration intervention [Details](paper-notes.md#proceedings177) · [Source](https://proceedings.iclr.cc/paper_files/paper/2025/file/f8e7248f3e659cfe70c6debcdae1b023-Paper-Conference.pdf#page=1) |
-| 2025 | [GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation](https://openaccess.thecvf.com/content/ICCV2025/html/Xiong_GigaTok_Scaling_Visual_Tokenizers_to_3_Billion_Parameters_for_Autoregressive_ICCV_2025_paper.html) (ICCV) | Visual tokenizer scaling | Inspected source concerns reconstruction/generation quality and training convergence, not a verified inference-cost result [Details](paper-notes.md#gigatok) · [Source](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiong_GigaTok_Scaling_Visual_Tokenizers_to_3_Billion_Parameters_for_Autoregressive_ICCV_2025_paper.pdf#page=1) |
-| 2025 | [GPSToken: Gaussian Parameterized Spatially-adaptive Tokenization for Image Representation and Generation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/10831838f1cdd8fcba90188e88e7a121-Abstract-Conference.html) (NeurIPS) | Spatially adaptive image tokenization | Inspected source focuses representation/reconstruction and generative quality. AR inference-cost savings not established [Details](paper-notes.md#ccfgpstoken) · [Source](https://proceedings.neurips.cc/paper_files/paper/2025/file/10831838f1cdd8fcba90188e88e7a121-Paper-Conference.pdf#page=1) |
-| 2025 | [Halton Scheduler for Masked Generative Image Transformer](https://proceedings.iclr.cc/paper_files/paper/2025/hash/ce29be756db03b0562204265256db075-Abstract-Conference.html) (ICLR) | MaskGIT unmasking scheduler | Source applies to MaskGIT rather than an identified AR reference model [Details](paper-notes.md#halton) · [Source](https://proceedings.iclr.cc/paper_files/paper/2025/file/ce29be756db03b0562204265256db075-Paper-Conference.pdf#page=1) |
-| 2025 | [JetFormer: An autoregressive generative model of raw images and text](https://proceedings.iclr.cc/paper_files/paper/2025/hash/d5a8e37f38a08c68162452dcba89ae9c-Abstract-Conference.html) (ICLR) | Joint raw-image/text AR generator | General multimodal generation model, not a verified inference-cost reduction in inspected material [Details](paper-notes.md#proceedings170) · [Source](https://proceedings.iclr.cc/paper_files/paper/2025/file/d5a8e37f38a08c68162452dcba89ae9c-Paper-Conference.pdf#page=1) |
-| 2025 | [Masked Generative Nested Transformers with Decode Time Scaling](https://proceedings.mlr.press/v267/goyal25a.html) (ICML) | MaskGIT-style image/video masked sampling | Efficiency experiments are present, but the evaluated object is masked non-AR generation [Details](paper-notes.md#magnets) · [Source](https://raw.githubusercontent.com/mlresearch/v267/main/assets/goyal25a/goyal25a.pdf#page=1) |
-| 2025 | [Meissonic: Revitalizing Masked Generative Transformers for Efficient High-Resolution Text-to-Image Synthesis](https://proceedings.iclr.cc/paper_files/paper/2025/hash/b7fd4aa7246ccfe46e61b52884bf1d11-Abstract-Conference.html) (ICLR) | Masked high-resolution text-to-image generation | Related non-AR masked generation [Details](paper-notes.md#ccfmeissonic) · [Source](https://proceedings.iclr.cc/paper_files/paper/2025/file/b7fd4aa7246ccfe46e61b52884bf1d11-Paper-Conference.pdf#page=1) |
-| 2025 | [Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models](https://aclanthology.org/2025.findings-emnlp.716/) (Findings of EMNLP) | Generation-refinement survey | Exact Findings track retained; no main-track CCF equivalence assumed [Details](paper-notes.md#surveymitigatingemnlp2025) · [Source](https://aclanthology.org/2025.findings-emnlp.716.pdf#page=1) |
-| 2025 | [Single-pass Adaptive Image Tokenization for Minimum Program Search](https://proceedings.neurips.cc/paper_files/paper/2025/hash/dc35c593e61f6df62db541b976d09dcf-Abstract-Conference.html) (NeurIPS) | Adaptive image encoding | Tokenizer encoding efficiency does not establish downstream AR-generation inference savings [Details](paper-notes.md#neuripsextra94) · [Source](https://arxiv.org/pdf/2507.07995#page=1) |
-| 2025 | [SoftVQ-VAE: Efficient 1-Dimensional Continuous Tokenizer](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_SoftVQ-VAE_Efficient_1-Dimensional_Continuous_Tokenizer_CVPR_2025_paper.html) (CVPR) | Continuous visual tokenizer used with diffusion/SiT | Inspected source efficiency results do not establish AR-generator acceleration [Details](paper-notes.md#proceedings10) · [Source](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_SoftVQ-VAE_Efficient_1-Dimensional_Continuous_Tokenizer_CVPR_2025_paper.pdf#page=1) |
-| 2025 | [Spectral Image Tokenizer](https://openaccess.thecvf.com/content/ICCV2025/html/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.html) (ICCV) | Image tokenizer | Inspected source establishes tokenization and quality, not a verified AR-inference acceleration result [Details](paper-notes.md#spectraltokenizer) · [Source](https://openaccess.thecvf.com/content/ICCV2025/html/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.html#page=1) |
-| 2025 | [Text to image generation with bidirectional Multiway Transformers](https://www.sciopen.com/article/10.26599/CVM.2025.9450377) (Computational Visual Media) | Non-AR masked-token image generation with bidirectional Multiway Transformers | The original paper explicitly describes its method as non-autoregressive. Sections 1 and 4 compare 24 decoding iterations with a 256-step AR example. No application accelerating an existing AR sampler or distilling its generation process is established [Details](paper-notes.md#cvmmultiwaygeneration) · [Source](https://www.sciopen.com/local/article_pdf/10.26599/CVM.2025.9450377.pdf) |
-| 2025 | [Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html) (NeurIPS) | Visual tokenizer and generation training | Inspected efficiency statement concerns convergence/training, not verified inference cost [Details](paper-notes.md#vfmtok) · [Source](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html#page=1) |
-| 2025 | [When Worse is Better: Navigating the Compression Generation Trade-off In Visual Tokenization](https://proceedings.neurips.cc/paper_files/paper/2025/hash/b6425ecad28e4960cb4a622beb338ffe-Abstract-Conference.html) (NeurIPS) | Tokenizer/prior training compute | The inspected compute-efficiency comparison concerns training compute scaling [Details](paper-notes.md#neuripsextra77) · [Source](https://proceedings.neurips.cc/paper_files/paper/2025/file/b6425ecad28e4960cb4a622beb338ffe-Paper-Conference.pdf#page=1) |
-| 2024 | [AdaNAT: Exploring Adaptive Policy for Token-Based Image Generation](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2478_ECCV_2024_paper.php) (ECCV) | MaskGIT-style non-autoregressive image synthesis | The abstract explicitly identifies NATs as its object. No AR-generator application established here [Details](paper-notes.md#adanat) · [Source](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02478.pdf#page=1) |
-| 2024 | [An Image is Worth 32 Tokens for Reconstruction and Generation](https://proceedings.neurips.cc/paper_files/paper/2024/hash/e91bf7dfba0477554994c6d64833e9d8-Abstract-Conference.html) (NeurIPS) | Compact image tokenizer used with MaskGIT | Fig. 4 and Table 1 explicitly measure MaskGIT-ViT generation. Do not relabel those gains as AR inference results [Details](paper-notes.md#titok) · [Source](https://proceedings.neurips.cc/paper_files/paper/2024/file/e91bf7dfba0477554994c6d64833e9d8-Paper-Conference.pdf#page=7) |
-| 2024 | [Autoregressive Image Generation without Vector Quantization](https://proceedings.nips.cc/paper_files/paper/2024/hash/66e226469f20625aaebddbe47f0ca997-Abstract-Conference.html) (NeurIPS) | Reference continuous masked AR generator | Retained as the reference process accelerated by MAR-specific methods [Details](paper-notes.md#mar) · [Source](https://proceedings.neurips.cc/paper_files/paper/2024/file/66e226469f20625aaebddbe47f0ca997-Paper-Conference.pdf#page=1) |
-| 2024 | [Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation](https://arxiv.org/abs/2406.06525) (arXiv preprint arXiv:2406.06525) | Reference causal AR image generator | Reference model with preprint publication status in the current record [Details](paper-notes.md#llamagen) · [Source](https://arxiv.org/pdf/2406.06525#page=1) |
-| 2024 | [ENAT: Rethinking Spatial-temporal Interactions in Token-based Image Synthesis](https://proceedings.neurips.cc/paper_files/paper/2024/hash/a488aa1a0c00d76db8a922ef7815a786-Abstract-Conference.html) (NeurIPS) | Non-autoregressive masked image generation | Source explicitly frames the method as NAT; no direct AR application established [Details](paper-notes.md#enat) · [Source](https://proceedings.neurips.cc/paper_files/paper/2024/file/a488aa1a0c00d76db8a922ef7815a786-Paper-Conference.pdf#page=1) |
-| 2024 | [Language Model Beats Diffusion: Tokenizer is Key to Visual Generation](https://openreview.net/forum?id=gzqrANCF4g) (ICLR) | Visual tokenizer and generative-model representation | No specific AR inference-cost reduction verified in the inspected source [Details](paper-notes.md#magvitv2) · [Source](https://openreview.net/forum?id=gzqrANCF4g#page=1) |
-| 2024 | [MarkovGen: Structured Prediction for Efficient Text-to-Image Generation](https://openaccess.thecvf.com/content/CVPR2024/html/Jayasumana_MarkovGen_Structured_Prediction_for_Efficient_Text-to-Image_Generation_CVPR_2024_paper.html) (CVPR) | Muse non-AR generation | Original application is Muse, not an identified AR generator [Details](paper-notes.md#markovgen) · [Source](https://openaccess.thecvf.com/content/CVPR2024/papers/Jayasumana_MarkovGen_Structured_Prediction_for_Efficient_Text-to-Image_Generation_CVPR_2024_paper.pdf#page=1) |
-| 2024 | [MaskBit: Embedding-free Image Generation via Bit Tokens](https://openreview.net/forum?id=NYe2JuN3v3) (TMLR) | Masked image generator | Related non-AR generator [Details](paper-notes.md#tmlrnye2jun3v3) · [Source](https://arxiv.org/pdf/2409.16211#page=1) |
-| 2024 | [Revisiting Non-Autoregressive Transformers for Efficient Image Synthesis](https://openaccess.thecvf.com/content/CVPR2024/html/Ni_Revisiting_Non-Autoregressive_Transformers_for_Efficient_Image_Synthesis_CVPR_2024_paper.html) (CVPR) | Non-autoregressive image synthesis | The source explicitly studies NATs, not an accelerated AR reference generator [Details](paper-notes.md#autonat) · [Source](https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Revisiting_Non-Autoregressive_Transformers_for_Efficient_Image_Synthesis_CVPR_2024_paper.pdf#page=1) |
-| 2023 | [MAGE: MAsked Generative Encoder To Unify Representation Learning and Image Synthesis](https://openaccess.thecvf.com/content/CVPR2023/html/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.html) (CVPR) | Masked image representation and synthesis | Related non-AR masked generator [Details](paper-notes.md#ccfmage) · [Source](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.pdf#page=1) |
-| 2023 | [MAGVLT: Masked Generative Vision-and-Language Transformer](https://openaccess.thecvf.com/content/CVPR2023/html/Kim_MAGVLT_Masked_Generative_Vision-and-Language_Transformer_CVPR_2023_paper.html) (CVPR) | Masked vision-language synthesis | Related masked generation, no AR acceleration experiment established [Details](paper-notes.md#ccfmagvlt) · [Source](https://openaccess.thecvf.com/content/CVPR2023/papers/Kim_MAGVLT_Masked_Generative_Vision-and-Language_Transformer_CVPR_2023_paper.pdf#page=1) |
-| 2023 | [Muse: Text-To-Image Generation via Masked Generative Transformers](https://proceedings.mlr.press/v202/chang23b.html) (ICML) | Reference masked text-to-image generation | Related non-AR generator [Details](paper-notes.md#muse) · [Source](https://proceedings.mlr.press/v202/chang23b/chang23b.pdf#page=1) |
-| 2023 | [Text-Conditioned Sampling Framework for Text-to-Image Generation with Masked Generative Models](https://openaccess.thecvf.com/content/ICCV2023/html/Lee_Text-Conditioned_Sampling_Framework_for_Text-to-Image_Generation_with_Masked_Generative_Models_ICCV_2023_paper.html) (ICCV) | Masked text-conditioned image sampling | No direct AR-generation application established [Details](paper-notes.md#ccftcts) · [Source](https://openaccess.thecvf.com/content/ICCV2023/papers/Lee_Text-Conditioned_Sampling_Framework_for_Text-to-Image_Generation_with_Masked_Generative_Models_ICCV_2023_paper.pdf#page=1) |
-| 2022 | [MaskGIT: Masked Generative Image Transformer](https://openaccess.thecvf.com/content/CVPR2022/html/Chang_MaskGIT_Masked_Generative_Image_Transformer_CVPR_2022_paper.html) (CVPR) | Reference masked non-autoregressive generation | Related generation background, not labeled causal AR [Details](paper-notes.md#maskgit) · [Source](https://openaccess.thecvf.com/content/CVPR2022/papers/Chang_MaskGIT_Masked_Generative_Image_Transformer_CVPR_2022_paper.pdf#page=1) |
-| 2022 | [Scaling Autoregressive Models for Content-Rich Text-to-Image Generation](https://openreview.net/forum?id=AFDcYJKhND) (TMLR) | Parti reference text-to-image AR model | General AR generator, not admitted simply for model capability [Details](paper-notes.md#tmlrafdcyjkhnd) · [Source](https://arxiv.org/pdf/2206.10789#page=1) |
-| 2021 | [Taming Transformers for High-Resolution Image Synthesis](https://openaccess.thecvf.com/content/CVPR2021/html/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.html) (CVPR) | Latent AR reference generator | Reference architecture, not admitted merely because it enables generation [Details](paper-notes.md#vqgan) · [Source](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf#page=1) |
-| 2020 | [Generative Pretraining From Pixels](https://proceedings.mlr.press/v119/chen20s.html) (ICML) | Pixel-level generative pretraining | Representation-learning objective, not visual-generation inference acceleration [Details](paper-notes.md#imagegpt) · [Source](https://proceedings.mlr.press/v119/chen20s.html#page=1) |
-| 2019 | [Generating Diverse High-Fidelity Images with VQ-VAE-2](https://proceedings.neurips.cc/paper/2019/hash/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Abstract.html) (NeurIPS) | Hierarchical discrete image latents | General representation/generation reference [Details](paper-notes.md#vqvae2) · [Source](https://proceedings.neurips.cc/paper/2019/hash/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Abstract.html) |
-| 2018 | [Image Transformer](https://proceedings.mlr.press/v80/parmar18a.html) (ICML) | Image AR attention architecture | Reference architecture, no separately established acceleration contribution in this review [Details](paper-notes.md#imagetransformer) · [Source](https://proceedings.mlr.press/v80/parmar18a/parmar18a.pdf#page=1) |
-| 2017 | [Neural Discrete Representation Learning](https://proceedings.neurips.cc/paper/2017/hash/7a98af17e63a0ac09ce2e96d03992fbc-Abstract.html) (NeurIPS) | Discrete latent image representation | Foundation for latent AR generation [Details](paper-notes.md#vqvae) · [Source](https://proceedings.neurips.cc/paper/2017/hash/7a98af17e63a0ac09ce2e96d03992fbc-Abstract.html#page=1) |
-| 2016 | [Pixel Recurrent Neural Networks](https://proceedings.mlr.press/v48/oord16.html) (ICML) | Historical pixel AR image model | Reference architecture, not an acceleration study [Details](paper-notes.md#pixelrnn) · [Source](https://proceedings.mlr.press/v48/oord16.html#page=1) |
+<a id="paper-localaricpr"></a>
+
+- [**Local Autoregression with Finite-Support Random Variables for Image Generation**](https://link.springer.com/chapter/10.1007/978-3-032-31654-7_12) (ICPR, 2027). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-31654-7_12)
+  - **Focus:** Local image probability model.
+
+<a id="paper-tmlrib8pzxdpmf"></a>
+
+- [**InfoScale: Unleashing Training-free Variable-scaled Image Generation via Effective Utilization of Information**](https://openreview.net/forum?id=iB8PzxdpMf) (TMLR, 2026). [Paper](https://openreview.net/forum?id=iB8PzxdpMf)
+  - **Focus:** Diffusion/SDXL variable-resolution generation.
+
+<a id="paper-luminamgptijcv"></a>
+
+- [**Lumina-mGPT: Flexible Photorealistic Autoregressive Text-to-Image Generation**](https://doi.org/10.1007/s11263-026-02795-2) (IJCV, 2026). [Paper](https://doi.org/10.1007/s11263-026-02795-2)
+  - **Focus:** Reference high-resolution AR text-to-image generator.
+
+<a id="paper-nativetok"></a>
+
+- [**Nativetok: Native Visual Tokenization for Improved Image Generation**](https://doi.org/10.1109/icassp55912.2026.11462037) (ICASSP, 2026). [Paper](https://doi.org/10.1109/icassp55912.2026.11462037)
+  - **Focus:** Native image tokenization and training.
+
+<a id="paper-nextstep"></a>
+
+- [**NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale**](https://arxiv.org/pdf/2508.10711v1) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/974ff7b5bf08dbf9400b5d599a39c77f-Abstract-Conference.html) · [PDF](https://arxiv.org/pdf/2508.10711v1)
+  - **Focus:** Reference continuous-token text-to-image AR model.
+
+<a id="paper-proceedings43"></a>
+
+- [**Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.pdf)
+  - **Focus:** AR image test-time search budget.
+
+<a id="paper-proceedings112"></a>
+
+- [**ScalingAR: Scaling Confidence for Autoregressive Image Generation**](https://proceedings.mlr.press/v306/chen26fc.html) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/chen26fc.html)
+  - **Focus:** AR image test-time search.
+
+<a id="paper-star"></a>
+
+- [**Spanning Tree Autoregressive Visual Generation**](https://arxiv.org/pdf/2511.17089) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-36839-3_15) · [PDF](https://arxiv.org/pdf/2511.17089)
+  - **Focus:** AR traversal order and generation quality.
+
+<a id="paper-ssdd"></a>
+
+- [**SSDD: Single-Step Diffusion Decoder for Efficient Image Tokenization**](https://arxiv.org/pdf/2510.04961) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37556-8_19) · [PDF](https://arxiv.org/pdf/2510.04961)
+  - **Focus:** Single-step diffusion image decoder.
+
+<a id="paper-proceedings111"></a>
+
+- [**StructMAR: Structure-Aware Masked Autoregression for Explicit Layout Alignment in Text-to-Image Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/cao26ab/cao26ab.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/cao26ab.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/cao26ab/cao26ab.pdf)
+  - **Focus:** Layout-conditioned MAR image generation, not an AR inference accelerator.
+
+<a id="paper-proceedings180"></a>
+
+- [**WeTok: Powerful Discrete Tokenization for High-Fidelity Visual Reconstruction**](https://proceedings.iclr.cc/paper_files/paper/2026/file/0b2a58f2b5943b9c356f10db32073275-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/0b2a58f2b5943b9c356f10db32073275-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/0b2a58f2b5943b9c356f10db32073275-Paper-Conference.pdf)
+  - **Focus:** Visual tokenizer.
+
+<a id="paper-ccfdnd"></a>
+
+- [**A Spark of Vision-Language Intelligence: 2-Dimensional Autoregressive Transformer for Efficient Finegrained Image Generation**](https://proceedings.iclr.cc/paper_files/paper/2025/file/674ad201bc8fa74b3c9979230aa0c63b-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/674ad201bc8fa74b3c9979230aa0c63b-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/674ad201bc8fa74b3c9979230aa0c63b-Paper-Conference.pdf)
+  - **Focus:** Two-dimensional depth/sequence AR modeling.
+
+<a id="paper-ccfalitr"></a>
+
+- [**Adaptive Length Image Tokenization via Recurrent Allocation**](https://proceedings.iclr.cc/paper_files/paper/2025/file/534ec8dfc0312d96e1c1b357304fadc2-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/534ec8dfc0312d96e1c1b357304fadc2-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/534ec8dfc0312d96e1c1b357304fadc2-Paper-Conference.pdf)
+  - **Focus:** Adaptive image tokenizer.
+
+<a id="paper-surveyvisualartmlr2025"></a>
+
+- [**Autoregressive Models in Vision: A Survey**](https://arxiv.org/pdf/2411.05902v2) (Transactions on Machine Learning Research, 2025). [Paper](https://openreview.net/forum?id=1BqXkjNEGP) · [PDF](https://arxiv.org/pdf/2411.05902v2)
+  - **Focus:** Visual AR survey.
+
+<a id="paper-ccfbridgetokens"></a>
+
+- [**Bridging Continuous and Discrete Tokens for Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Bridging_Continuous_and_Discrete_Tokens_for_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Bridging_Continuous_and_Discrete_Tokens_for_Autoregressive_Visual_Generation_ICCV_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Bridging_Continuous_and_Discrete_Tokens_for_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf)
+  - **Focus:** Continuous/discrete AR token representation.
+
+<a id="paper-ccfcat"></a>
+
+- [**CAT: Content-Adaptive Image Tokenization**](https://proceedings.neurips.cc/paper_files/paper/2025/file/014898b821e3ce966ae1db68cb8d9966-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/014898b821e3ce966ae1db68cb8d9966-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/014898b821e3ce966ae1db68cb8d9966-Paper-Conference.pdf)
+  - **Focus:** Content-adaptive tokenizer.
+
+<a id="paper-ccfmask1d"></a>
+
+- [**Democratizing Text-to-Image Masked Generative Models with Compact Text-Aware One-Dimensional Tokens**](https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_Democratizing_Text-to-Image_Masked_Generative_Models_with_Compact_Text-Aware_One-Dimensional_Tokens_ICCV_2025_paper.pdf) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Kim_Democratizing_Text-to-Image_Masked_Generative_Models_with_Compact_Text-Aware_One-Dimensional_Tokens_ICCV_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_Democratizing_Text-to-Image_Masked_Generative_Models_with_Compact_Text-Aware_One-Dimensional_Tokens_ICCV_2025_paper.pdf)
+  - **Focus:** Masked text-to-image generator.
+
+<a id="paper-proceedings173"></a>
+
+- [**Denoising Autoregressive Transformers for Scalable Text-to-Image Generation**](https://proceedings.iclr.cc/paper_files/paper/2025/file/ebd8a977883fd8d5bccf9575e873ce75-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/ebd8a977883fd8d5bccf9575e873ce75-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/ebd8a977883fd8d5bccf9575e873ce75-Paper-Conference.pdf)
+  - **Focus:** Hybrid denoising AR image generator.
+
+<a id="paper-dimo"></a>
+
+- [**Di\[M\]O: Distilling Masked Diffusion Models into One-step Generator**](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_DiMO_Distilling_Masked_Diffusion_Models_into_One-step_Generator_ICCV_2025_paper.pdf) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_DiMO_Distilling_Masked_Diffusion_Models_into_One-step_Generator_ICCV_2025_paper.pdf) · [PDF](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_DiMO_Distilling_Masked_Diffusion_Models_into_One-step_Generator_ICCV_2025_paper.pdf)
+  - **Focus:** Masked diffusion image generator distillation.
+
+<a id="paper-surveyefficientdiffusiontpami2025"></a>
+
+- [**Efficient Diffusion Models: A Comprehensive Survey From Principles to Practices**](https://arxiv.org/pdf/2410.11795v2) (IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025). [Paper](https://doi.org/10.1109/tpami.2025.3569700) · [PDF](https://arxiv.org/pdf/2410.11795v2)
+  - **Focus:** Diffusion efficiency survey.
+
+<a id="paper-surveyefficientdiffusiontmlr2025"></a>
+
+- [**Efficient Diffusion Models: A Survey**](https://arxiv.org/pdf/2502.06805v3) (Transactions on Machine Learning Research, 2025). [Paper](https://openreview.net/forum?id=wHECkBOwyt) · [PDF](https://arxiv.org/pdf/2502.06805v3)
+  - **Focus:** Diffusion efficiency survey.
+
+<a id="paper-flowar"></a>
+
+- [**FlowAR: Scale-wise Autoregressive Image Generation Meets Flow Matching**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/ren25e/ren25e.pdf) (ICML, 2025). [Paper](https://proceedings.mlr.press/v267/ren25e.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v267/main/assets/ren25e/ren25e.pdf)
+  - **Focus:** Continuous next-scale image generator.
+
+<a id="paper-proceedings177"></a>
+
+- [**Fluid: Scaling Autoregressive Text-to-image Generative Models with Continuous Tokens**](https://proceedings.iclr.cc/paper_files/paper/2025/file/f8e7248f3e659cfe70c6debcdae1b023-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/f8e7248f3e659cfe70c6debcdae1b023-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/f8e7248f3e659cfe70c6debcdae1b023-Paper-Conference.pdf)
+  - **Focus:** Continuous-token AR text-to-image generator.
+
+<a id="paper-gigatok"></a>
+
+- [**GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiong_GigaTok_Scaling_Visual_Tokenizers_to_3_Billion_Parameters_for_Autoregressive_ICCV_2025_paper.pdf) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Xiong_GigaTok_Scaling_Visual_Tokenizers_to_3_Billion_Parameters_for_Autoregressive_ICCV_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiong_GigaTok_Scaling_Visual_Tokenizers_to_3_Billion_Parameters_for_Autoregressive_ICCV_2025_paper.pdf)
+  - **Focus:** Visual tokenizer scaling.
+
+<a id="paper-ccfgpstoken"></a>
+
+- [**GPSToken: Gaussian Parameterized Spatially-adaptive Tokenization for Image Representation and Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/10831838f1cdd8fcba90188e88e7a121-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/10831838f1cdd8fcba90188e88e7a121-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/10831838f1cdd8fcba90188e88e7a121-Paper-Conference.pdf)
+  - **Focus:** Spatially adaptive image tokenization.
+
+<a id="paper-halton"></a>
+
+- [**Halton Scheduler for Masked Generative Image Transformer**](https://proceedings.iclr.cc/paper_files/paper/2025/file/ce29be756db03b0562204265256db075-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/ce29be756db03b0562204265256db075-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/ce29be756db03b0562204265256db075-Paper-Conference.pdf)
+  - **Focus:** MaskGIT unmasking scheduler.
+
+<a id="paper-proceedings170"></a>
+
+- [**JetFormer: An autoregressive generative model of raw images and text**](https://proceedings.iclr.cc/paper_files/paper/2025/file/d5a8e37f38a08c68162452dcba89ae9c-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/d5a8e37f38a08c68162452dcba89ae9c-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/d5a8e37f38a08c68162452dcba89ae9c-Paper-Conference.pdf)
+  - **Focus:** Joint raw-image/text AR generator.
+
+<a id="paper-magnets"></a>
+
+- [**Masked Generative Nested Transformers with Decode Time Scaling**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/goyal25a/goyal25a.pdf) (ICML, 2025). [Paper](https://proceedings.mlr.press/v267/goyal25a.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v267/main/assets/goyal25a/goyal25a.pdf)
+  - **Focus:** MaskGIT-style image/video masked sampling.
+
+<a id="paper-ccfmeissonic"></a>
+
+- [**Meissonic: Revitalizing Masked Generative Transformers for Efficient High-Resolution Text-to-Image Synthesis**](https://proceedings.iclr.cc/paper_files/paper/2025/file/b7fd4aa7246ccfe46e61b52884bf1d11-Paper-Conference.pdf) (ICLR, 2025). [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/b7fd4aa7246ccfe46e61b52884bf1d11-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/b7fd4aa7246ccfe46e61b52884bf1d11-Paper-Conference.pdf)
+  - **Focus:** Masked high-resolution text-to-image generation.
+
+<a id="paper-surveymitigatingemnlp2025"></a>
+
+- [**Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models**](https://aclanthology.org/2025.findings-emnlp.716.pdf) (Findings of EMNLP, 2025). [Paper](https://aclanthology.org/2025.findings-emnlp.716/) · [PDF](https://aclanthology.org/2025.findings-emnlp.716.pdf)
+  - **Focus:** Generation-refinement survey.
+
+<a id="paper-neuripsextra94"></a>
+
+- [**Single-pass Adaptive Image Tokenization for Minimum Program Search**](https://arxiv.org/pdf/2507.07995) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/dc35c593e61f6df62db541b976d09dcf-Abstract-Conference.html) · [PDF](https://arxiv.org/pdf/2507.07995)
+  - **Focus:** Adaptive image encoding.
+
+<a id="paper-proceedings10"></a>
+
+- [**SoftVQ-VAE: Efficient 1-Dimensional Continuous Tokenizer**](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_SoftVQ-VAE_Efficient_1-Dimensional_Continuous_Tokenizer_CVPR_2025_paper.pdf) (CVPR, 2025). [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_SoftVQ-VAE_Efficient_1-Dimensional_Continuous_Tokenizer_CVPR_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_SoftVQ-VAE_Efficient_1-Dimensional_Continuous_Tokenizer_CVPR_2025_paper.pdf)
+  - **Focus:** Continuous visual tokenizer used with diffusion/SiT.
+
+<a id="paper-spectraltokenizer"></a>
+
+- [**Spectral Image Tokenizer**](https://openaccess.thecvf.com/content/ICCV2025/papers/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.pdf) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/ICCV2025/papers/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.pdf)
+  - **Focus:** Image tokenizer.
+
+<a id="paper-cvmmultiwaygeneration"></a>
+
+- [**Text to image generation with bidirectional Multiway Transformers**](https://www.sciopen.com/local/article_pdf/10.26599/CVM.2025.9450377.pdf) (Computational Visual Media, 2025). [Paper](https://www.sciopen.com/article/10.26599/CVM.2025.9450377) · [PDF](https://www.sciopen.com/local/article_pdf/10.26599/CVM.2025.9450377.pdf)
+  - **Focus:** Non-AR masked-token image generation with bidirectional Multiway Transformers.
+
+<a id="paper-vfmtok"></a>
+
+- [**Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/5a829e299ebc1c1615ddb09e98fb6ce8-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/5a829e299ebc1c1615ddb09e98fb6ce8-Paper-Conference.pdf)
+  - **Focus:** Visual tokenizer and generation training.
+
+<a id="paper-neuripsextra77"></a>
+
+- [**When Worse is Better: Navigating the Compression Generation Trade-off In Visual Tokenization**](https://proceedings.neurips.cc/paper_files/paper/2025/file/b6425ecad28e4960cb4a622beb338ffe-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/b6425ecad28e4960cb4a622beb338ffe-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/b6425ecad28e4960cb4a622beb338ffe-Paper-Conference.pdf)
+  - **Focus:** Tokenizer/prior training compute.
+
+<a id="paper-adanat"></a>
+
+- [**AdaNAT: Exploring Adaptive Policy for Token-Based Image Generation**](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02478.pdf) (ECCV, 2024). [Paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2478_ECCV_2024_paper.php) · [PDF](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02478.pdf)
+  - **Focus:** MaskGIT-style non-autoregressive image synthesis.
+
+<a id="paper-titok"></a>
+
+- [**An Image is Worth 32 Tokens for Reconstruction and Generation**](https://proceedings.neurips.cc/paper_files/paper/2024/file/e91bf7dfba0477554994c6d64833e9d8-Paper-Conference.pdf) (NeurIPS, 2024). [Paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/e91bf7dfba0477554994c6d64833e9d8-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2024/file/e91bf7dfba0477554994c6d64833e9d8-Paper-Conference.pdf)
+  - **Focus:** Compact image tokenizer used with MaskGIT.
+
+<a id="paper-mar"></a>
+
+- [**Autoregressive Image Generation without Vector Quantization**](https://proceedings.neurips.cc/paper_files/paper/2024/file/66e226469f20625aaebddbe47f0ca997-Paper-Conference.pdf) (NeurIPS, 2024). [Paper](https://proceedings.nips.cc/paper_files/paper/2024/hash/66e226469f20625aaebddbe47f0ca997-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2024/file/66e226469f20625aaebddbe47f0ca997-Paper-Conference.pdf) · [Code](https://github.com/LTH14/mar)
+  - **Focus:** Reference continuous masked AR generator.
+
+<a id="paper-llamagen"></a>
+
+- [**Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation**](https://arxiv.org/pdf/2406.06525) (arXiv preprint arXiv:2406.06525, 2024). [Paper](https://arxiv.org/abs/2406.06525) · [PDF](https://arxiv.org/pdf/2406.06525) · [Code](https://github.com/FoundationVision/LlamaGen)
+  - **Focus:** Reference causal AR image generator.
+
+<a id="paper-enat"></a>
+
+- [**ENAT: Rethinking Spatial-temporal Interactions in Token-based Image Synthesis**](https://proceedings.neurips.cc/paper_files/paper/2024/file/a488aa1a0c00d76db8a922ef7815a786-Paper-Conference.pdf) (NeurIPS, 2024). [Paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/a488aa1a0c00d76db8a922ef7815a786-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2024/file/a488aa1a0c00d76db8a922ef7815a786-Paper-Conference.pdf)
+  - **Focus:** Non-autoregressive masked image generation.
+
+<a id="paper-magvitv2"></a>
+
+- [**Language Model Beats Diffusion: Tokenizer is Key to Visual Generation**](https://arxiv.org/pdf/2310.05737) (ICLR, 2024). [Paper](https://openreview.net/forum?id=gzqrANCF4g) · [PDF](https://arxiv.org/pdf/2310.05737)
+  - **Focus:** Visual tokenizer and generative-model representation.
+
+<a id="paper-markovgen"></a>
+
+- [**MarkovGen: Structured Prediction for Efficient Text-to-Image Generation**](https://openaccess.thecvf.com/content/CVPR2024/papers/Jayasumana_MarkovGen_Structured_Prediction_for_Efficient_Text-to-Image_Generation_CVPR_2024_paper.pdf) (CVPR, 2024). [Paper](https://openaccess.thecvf.com/content/CVPR2024/html/Jayasumana_MarkovGen_Structured_Prediction_for_Efficient_Text-to-Image_Generation_CVPR_2024_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2024/papers/Jayasumana_MarkovGen_Structured_Prediction_for_Efficient_Text-to-Image_Generation_CVPR_2024_paper.pdf)
+  - **Focus:** Muse non-AR generation.
+
+<a id="paper-tmlrnye2jun3v3"></a>
+
+- [**MaskBit: Embedding-free Image Generation via Bit Tokens**](https://arxiv.org/pdf/2409.16211) (TMLR, 2024). [Paper](https://openreview.net/forum?id=NYe2JuN3v3) · [PDF](https://arxiv.org/pdf/2409.16211)
+  - **Focus:** Masked image generator.
+
+<a id="paper-autonat"></a>
+
+- [**Revisiting Non-Autoregressive Transformers for Efficient Image Synthesis**](https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Revisiting_Non-Autoregressive_Transformers_for_Efficient_Image_Synthesis_CVPR_2024_paper.pdf) (CVPR, 2024). [Paper](https://openaccess.thecvf.com/content/CVPR2024/html/Ni_Revisiting_Non-Autoregressive_Transformers_for_Efficient_Image_Synthesis_CVPR_2024_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Revisiting_Non-Autoregressive_Transformers_for_Efficient_Image_Synthesis_CVPR_2024_paper.pdf)
+  - **Focus:** Non-autoregressive image synthesis.
+
+<a id="paper-ccfmage"></a>
+
+- [**MAGE: MAsked Generative Encoder To Unify Representation Learning and Image Synthesis**](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.pdf) (CVPR, 2023). [Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.pdf)
+  - **Focus:** Masked image representation and synthesis.
+
+<a id="paper-ccfmagvlt"></a>
+
+- [**MAGVLT: Masked Generative Vision-and-Language Transformer**](https://openaccess.thecvf.com/content/CVPR2023/papers/Kim_MAGVLT_Masked_Generative_Vision-and-Language_Transformer_CVPR_2023_paper.pdf) (CVPR, 2023). [Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Kim_MAGVLT_Masked_Generative_Vision-and-Language_Transformer_CVPR_2023_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2023/papers/Kim_MAGVLT_Masked_Generative_Vision-and-Language_Transformer_CVPR_2023_paper.pdf)
+  - **Focus:** Masked vision-language synthesis.
+
+<a id="paper-muse"></a>
+
+- [**Muse: Text-To-Image Generation via Masked Generative Transformers**](https://proceedings.mlr.press/v202/chang23b/chang23b.pdf) (ICML, 2023). [Paper](https://proceedings.mlr.press/v202/chang23b.html) · [PDF](https://proceedings.mlr.press/v202/chang23b/chang23b.pdf)
+  - **Focus:** Reference masked text-to-image generation.
+
+<a id="paper-ccftcts"></a>
+
+- [**Text-Conditioned Sampling Framework for Text-to-Image Generation with Masked Generative Models**](https://openaccess.thecvf.com/content/ICCV2023/papers/Lee_Text-Conditioned_Sampling_Framework_for_Text-to-Image_Generation_with_Masked_Generative_Models_ICCV_2023_paper.pdf) (ICCV, 2023). [Paper](https://openaccess.thecvf.com/content/ICCV2023/html/Lee_Text-Conditioned_Sampling_Framework_for_Text-to-Image_Generation_with_Masked_Generative_Models_ICCV_2023_paper.html) · [PDF](https://openaccess.thecvf.com/content/ICCV2023/papers/Lee_Text-Conditioned_Sampling_Framework_for_Text-to-Image_Generation_with_Masked_Generative_Models_ICCV_2023_paper.pdf)
+  - **Focus:** Masked text-conditioned image sampling.
+
+<a id="paper-maskgit"></a>
+
+- [**MaskGIT: Masked Generative Image Transformer**](https://openaccess.thecvf.com/content/CVPR2022/papers/Chang_MaskGIT_Masked_Generative_Image_Transformer_CVPR_2022_paper.pdf) (CVPR, 2022). [Paper](https://openaccess.thecvf.com/content/CVPR2022/html/Chang_MaskGIT_Masked_Generative_Image_Transformer_CVPR_2022_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Chang_MaskGIT_Masked_Generative_Image_Transformer_CVPR_2022_paper.pdf)
+  - **Focus:** Reference masked non-autoregressive generation.
+
+<a id="paper-tmlrafdcyjkhnd"></a>
+
+- [**Scaling Autoregressive Models for Content-Rich Text-to-Image Generation**](https://arxiv.org/pdf/2206.10789) (TMLR, 2022). [Paper](https://openreview.net/forum?id=AFDcYJKhND) · [PDF](https://arxiv.org/pdf/2206.10789)
+  - **Focus:** Parti reference text-to-image AR model.
+
+<a id="paper-vqgan"></a>
+
+- [**Taming Transformers for High-Resolution Image Synthesis**](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf) (CVPR, 2021). [Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf)
+  - **Focus:** Latent AR reference generator.
+
+<a id="paper-imagegpt"></a>
+
+- [**Generative Pretraining From Pixels**](https://proceedings.mlr.press/v119/chen20s/chen20s.pdf) (ICML, 2020). [Paper](https://proceedings.mlr.press/v119/chen20s.html) · [PDF](https://proceedings.mlr.press/v119/chen20s/chen20s.pdf)
+  - **Focus:** Pixel-level generative pretraining.
+
+<a id="paper-vqvae2"></a>
+
+- [**Generating Diverse High-Fidelity Images with VQ-VAE-2**](https://proceedings.neurips.cc/paper/2019/hash/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Abstract.html) (NeurIPS, 2019). [Paper](https://proceedings.neurips.cc/paper/2019/hash/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Abstract.html)
+  - **Focus:** Hierarchical discrete image latents.
+
+<a id="paper-imagetransformer"></a>
+
+- [**Image Transformer**](https://proceedings.mlr.press/v80/parmar18a/parmar18a.pdf) (ICML, 2018). [Paper](https://proceedings.mlr.press/v80/parmar18a.html) · [PDF](https://proceedings.mlr.press/v80/parmar18a/parmar18a.pdf)
+  - **Focus:** Image AR attention architecture.
+
+<a id="paper-vqvae"></a>
+
+- [**Neural Discrete Representation Learning**](https://proceedings.neurips.cc/paper_files/paper/2017/file/7a98af17e63a0ac09ce2e96d03992fbc-Paper.pdf) (NeurIPS, 2017). [Paper](https://proceedings.neurips.cc/paper/2017/hash/7a98af17e63a0ac09ce2e96d03992fbc-Abstract.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2017/file/7a98af17e63a0ac09ce2e96d03992fbc-Paper.pdf)
+  - **Focus:** Discrete latent image representation.
+
+<a id="paper-pixelrnn"></a>
+
+- [**Pixel Recurrent Neural Networks**](https://proceedings.mlr.press/v48/oord16.pdf) (ICML, 2016). [Paper](https://proceedings.mlr.press/v48/oord16.html) · [PDF](https://proceedings.mlr.press/v48/oord16.pdf)
+  - **Focus:** Historical pixel AR image model.
 
 ## image; video; multimodal understanding
 
-| Year | Paper | Specific object | Original-source basis |
-|---|---|---|---|
-| 2026 | [Multimodal learning with next-token prediction for large multimodal models](https://www.nature.com/articles/s41586-025-10041-x) (Nature) | Reference multimodal AR image/video generator | General multimodal model. No specific inference-acceleration contribution is established for this list [Details](paper-notes.md#emu3) · [Source](https://www.nature.com/articles/s41586-025-10041-x) |
+<a id="paper-emu3"></a>
+
+- [**Multimodal learning with next-token prediction for large multimodal models**](https://www.nature.com/articles/s41586-025-10041-x) (Nature, 2026). [Paper](https://www.nature.com/articles/s41586-025-10041-x)
+  - **Focus:** Reference multimodal AR image/video generator.
 
 ## related visual generation
 
-| Year | Paper | Specific object | Original-source basis |
-|---|---|---|---|
-| 2026 | [MemRoPE: Training-Free Infinite Video Generation via Evolving Memory Tokens](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_14) (ECCV) | Fixed-size AR video history memory with added inference overhead | On A6000, LongLive is 669.60 ms per denoising step and 20.97 GB peak memory; adding MemRoPE adds 3.83 ms and 0.07 GB [Details](paper-notes.md#memropevideo) · [Source](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) |
-| 2026 | [ParaFlow: Parallel Sampling for Flow Matching Models](https://link.springer.com/chapter/10.1007/978-3-032-37038-9_8) (ECCV) | Parallel numerical time steps in SD3 and FLUX flow matching | The original experiments name Stable Diffusion 3 and FLUX. Autoregressive here describes sequential numerical integration; an AR visual-token or AR chunk generator application is not established [Details](paper-notes.md#paraflowrelated) · [Source](https://link.springer.com/content/pdf/10.1007/978-3-032-37038-9_8.pdf) |
+<a id="paper-memropevideo"></a>
+
+- [**MemRoPE: Training-Free Infinite Video Generation via Evolving Memory Tokens**](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_14) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf)
+  - **Focus:** Fixed-size AR video history memory with added inference overhead.
+
+<a id="paper-paraflowrelated"></a>
+
+- [**ParaFlow: Parallel Sampling for Flow Matching Models**](https://link.springer.com/content/pdf/10.1007/978-3-032-37038-9_8.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37038-9_8) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37038-9_8.pdf)
+  - **Focus:** Parallel numerical time steps in SD3 and FLUX flow matching.
 
 ## supporting reference
 
-| Year | Paper | Specific object | Original-source basis |
-|---|---|---|---|
-| 2023 | [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://doi.org/10.1145/3600006.3613165) (SOSP) | LLM serving memory | No visual-generation application verified in this paper [Details](paper-notes.md#pagedattention) · [Source](https://doi.org/10.1145/3600006.3613165#page=1) |
-| 2023 | [Fast Inference from Transformers via Speculative Decoding](https://proceedings.mlr.press/v202/leviathan23a.html) (ICML) | General/text stochastic speculative sampling | Methodological foundation. The inspected source does not establish visual-generation experiments [Details](paper-notes.md#leviathan2023) · [Source](https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf#page=1) |
-| 2023 | [GenEval: An object-focused framework for evaluating text-to-image alignment](https://proceedings.neurips.cc/paper_files/paper/2023/hash/a3bf71c7c63f0c3bcb7ff67c67b1e7b1-Abstract-Datasets_and_Benchmarks.html) (NeurIPS Datasets and Benchmarks) | Text-to-image task evaluation | Evaluation resource [Details](paper-notes.md#geneval) · [Source](https://arxiv.org/pdf/2310.11513#page=1) |
-| 2023 | [SpecTr: Fast Speculative Decoding via Optimal Transport](https://papers.nips.cc/paper_files/paper/2023/hash/6034a661584af6c28fd97a6f23e56c0a-Abstract-Conference.html) (NeurIPS) | General speculative sampling | Methodological background. No AR visual-generation application verified here [Details](paper-notes.md#spectr) · [Source](https://papers.nips.cc/paper_files/paper/2023/hash/6034a661584af6c28fd97a6f23e56c0a-Abstract-Conference.html#page=1) |
-| 2023 | [T2I-CompBench: A Comprehensive Benchmark for Open-world Compositional Text-to-image Generation](https://proceedings.nips.cc/paper_files/paper/2023/hash/f8ad010cdd9143dbb0e9308c093aff24-Abstract-Datasets_and_Benchmarks.html) (NeurIPS Datasets and Benchmarks) | Text-to-image compositional evaluation | Evaluation resource [Details](paper-notes.md#t2icompbench) · [Source](https://proceedings.neurips.cc/paper_files/paper/2023/file/f8ad010cdd9143dbb0e9308c093aff24-Paper-Datasets_and_Benchmarks.pdf#page=1) |
-| 2021 | [Learning Transferable Visual Models From Natural Language Supervision](https://proceedings.mlr.press/v139/radford21a.html) (ICML) | Image-text representation and evaluation support | Not an AR visual-generation accelerator [Details](paper-notes.md#clip) · [Source](https://proceedings.mlr.press/v139/radford21a.html#page=1) |
-| 2021 | [Normalizing Flows for Probabilistic Modeling and Inference](https://jmlr.org/papers/v22/19-1028.html) (Journal of Machine Learning Research) | Normalizing-flow review | Related theoretical background, not a direct accelerator study [Details](paper-notes.md#normalizingflowsjmlr) · [Source](https://jmlr.org/papers/v22/19-1028.html) |
-| 2018 | [The Unreasonable Effectiveness of Deep Features as a Perceptual Metric](https://openaccess.thecvf.com/content_cvpr_2018/html/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.html) (CVPR) | Paired perceptual evaluation | Evaluation resource [Details](paper-notes.md#lpips) · [Source](https://openaccess.thecvf.com/content_cvpr_2018/html/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.html#page=1) |
-| 2017 | [GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium](https://papers.nips.cc/paper_files/paper/2017/hash/8a1d694707eb0fefe65871369074926d-Abstract.html) (NeurIPS) | Image-distribution evaluation | A quality metric source, not an accelerator [Details](paper-notes.md#fid) · [Source](https://papers.nips.cc/paper_files/paper/2017/hash/8a1d694707eb0fefe65871369074926d-Abstract.html#page=1) |
-| 2016 | [Neural Autoregressive Distribution Estimation](https://jmlr.org/papers/v17/16-272.html) (Journal of Machine Learning Research) | Autoregressive density estimation | Historical foundation, not a visual-generation accelerator [Details](paper-notes.md#nadejmlr) · [Source](https://jmlr.org/papers/v17/16-272.html) |
-| 2004 | [Image Quality Assessment: From Error Visibility to Structural Similarity](https://ece.uwaterloo.ca/~z70wang/publications/ssim.html) (IEEE Transactions on Image Processing) | Image reference similarity | Evaluation resource [Details](paper-notes.md#ssim) · [Source](https://ece.uwaterloo.ca/~z70wang/publications/ssim.html#page=1) |
+<a id="paper-pagedattention"></a>
+
+- [**Efficient Memory Management for Large Language Model Serving with PagedAttention**](https://arxiv.org/pdf/2309.06180) (SOSP, 2023). [Paper](https://doi.org/10.1145/3600006.3613165) · [PDF](https://arxiv.org/pdf/2309.06180)
+  - **Focus:** LLM serving memory.
+
+<a id="paper-leviathan2023"></a>
+
+- [**Fast Inference from Transformers via Speculative Decoding**](https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf) (ICML, 2023). [Paper](https://proceedings.mlr.press/v202/leviathan23a.html) · [PDF](https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf)
+  - **Focus:** General/text stochastic speculative sampling.
+
+<a id="paper-geneval"></a>
+
+- [**GenEval: An object-focused framework for evaluating text-to-image alignment**](https://arxiv.org/pdf/2310.11513) (NeurIPS Datasets and Benchmarks, 2023). [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/hash/a3bf71c7c63f0c3bcb7ff67c67b1e7b1-Abstract-Datasets_and_Benchmarks.html) · [PDF](https://arxiv.org/pdf/2310.11513)
+  - **Focus:** Text-to-image task evaluation.
+
+<a id="paper-spectr"></a>
+
+- [**SpecTr: Fast Speculative Decoding via Optimal Transport**](https://proceedings.neurips.cc/paper_files/paper/2023/file/6034a661584af6c28fd97a6f23e56c0a-Paper-Conference.pdf) (NeurIPS, 2023). [Paper](https://papers.nips.cc/paper_files/paper/2023/hash/6034a661584af6c28fd97a6f23e56c0a-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2023/file/6034a661584af6c28fd97a6f23e56c0a-Paper-Conference.pdf)
+  - **Focus:** General speculative sampling.
+
+<a id="paper-t2icompbench"></a>
+
+- [**T2I-CompBench: A Comprehensive Benchmark for Open-world Compositional Text-to-image Generation**](https://proceedings.neurips.cc/paper_files/paper/2023/file/f8ad010cdd9143dbb0e9308c093aff24-Paper-Datasets_and_Benchmarks.pdf) (NeurIPS Datasets and Benchmarks, 2023). [Paper](https://proceedings.nips.cc/paper_files/paper/2023/hash/f8ad010cdd9143dbb0e9308c093aff24-Abstract-Datasets_and_Benchmarks.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2023/file/f8ad010cdd9143dbb0e9308c093aff24-Paper-Datasets_and_Benchmarks.pdf)
+  - **Focus:** Text-to-image compositional evaluation.
+
+<a id="paper-clip"></a>
+
+- [**Learning Transferable Visual Models From Natural Language Supervision**](https://proceedings.mlr.press/v139/radford21a/radford21a.pdf) (ICML, 2021). [Paper](https://proceedings.mlr.press/v139/radford21a.html) · [PDF](https://proceedings.mlr.press/v139/radford21a/radford21a.pdf)
+  - **Focus:** Image-text representation and evaluation support.
+
+<a id="paper-normalizingflowsjmlr"></a>
+
+- [**Normalizing Flows for Probabilistic Modeling and Inference**](https://jmlr.org/papers/v22/19-1028.html) (Journal of Machine Learning Research, 2021). [Paper](https://jmlr.org/papers/v22/19-1028.html)
+  - **Focus:** Normalizing-flow review.
+
+<a id="paper-lpips"></a>
+
+- [**The Unreasonable Effectiveness of Deep Features as a Perceptual Metric**](https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.pdf) (CVPR, 2018). [Paper](https://openaccess.thecvf.com/content_cvpr_2018/html/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.html) · [PDF](https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.pdf)
+  - **Focus:** Paired perceptual evaluation.
+
+<a id="paper-fid"></a>
+
+- [**GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium**](https://arxiv.org/pdf/1706.08500) (NeurIPS, 2017). [Paper](https://papers.nips.cc/paper_files/paper/2017/hash/8a1d694707eb0fefe65871369074926d-Abstract.html) · [PDF](https://arxiv.org/pdf/1706.08500)
+  - **Focus:** Image-distribution evaluation.
+
+<a id="paper-nadejmlr"></a>
+
+- [**Neural Autoregressive Distribution Estimation**](https://jmlr.org/papers/v17/16-272.html) (Journal of Machine Learning Research, 2016). [Paper](https://jmlr.org/papers/v17/16-272.html)
+  - **Focus:** Autoregressive density estimation.
+
+<a id="paper-ssim"></a>
+
+- [**Image Quality Assessment: From Error Visibility to Structural Similarity**](https://ece.uwaterloo.ca/~z70wang/publications/ssim.pdf) (IEEE Transactions on Image Processing, 2004). [Paper](https://ece.uwaterloo.ca/~z70wang/publications/ssim.html) · [PDF](https://ece.uwaterloo.ca/~z70wang/publications/ssim.pdf)
+  - **Focus:** Image reference similarity.
 
 ## video
 
-| Year | Paper | Specific object | Original-source basis |
-|---|---|---|---|
-| 2026 | [Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_27) (ECCV) | Long-term recurrent memory for AR video generation | Table 5 explicitly defines Time as a training step and GPU memory in that training comparison. Table 6 gives one-forward-pass FLOPs and states that the Diffusion Forcing baseline has the cost of only the second stage. These tables do not establish generation acceleration [Details](paper-notes.md#recurrentardiffusion) · [Source](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) |
+<a id="paper-recurrentardiffusion"></a>
+
+- [**Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention**](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_27) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf)
+  - **Focus:** Long-term recurrent memory for AR video generation.

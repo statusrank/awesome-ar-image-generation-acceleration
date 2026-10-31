@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [By mechanism](README.md)
 
-Year follows the retained publication citation. A proceedings imprint can differ from the conference or first-online year. The source notes and venue index retain that distinction.
+Year follows the retained publication citation. A proceedings imprint can differ from the conference or first-online year. Publication years follow the entries below.
 
 ## 2027
 

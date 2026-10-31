@@ -20,4 +20,4 @@ The [efficient-generator collection](../papers/efficient-generators.md) includes
 
 For any reported speedup, identify the baseline and the timed computation. Check whether the measurement includes image reconstruction. Image-quality scores and similarity to paired reference images answer different questions. A sampling-preservation claim needs an identified reference procedure and the conditions of its mathematical argument.
 
-See [evaluation](evaluation.md) for a compact comparison guide. The catalog itself does not certify every source's proof or implementation.
+See [evaluation](evaluation.md) for a compact comparison guide.
