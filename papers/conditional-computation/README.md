@@ -4,7 +4,7 @@
 
 Feature reuse, selective execution and reduced attention-state storage.
 
-**32 papers.**
+**30 papers.**
 
 ## Feature Reuse and Refresh
 
@@ -83,9 +83,6 @@ Feature reuse, selective execution and reduced attention-state storage.
 - [**FasterVAR: Plug-and-Play Acceleration for Visual Autoregressive Models**](https://arxiv.org/pdf/2512.16483) (ICML, 2026).
   Adaptive stage selection and reduced computation at costly scales.
 
-- [**Improved and Accelerated Text-to-Image Generation with Collect, Reflect, and Refine**](https://arxiv.org/pdf/2503.09662v1) (IEEE Transactions on Pattern Analysis and Machine Intelligence, 2026).
-  Weak-model training supports guidance and later replacement of expensive computation.
-
 - [**LazyMAR: Accelerating Masked Autoregressive Models via Feature Caching**](https://openaccess.thecvf.com/content/ICCV2025/papers/Yan_LazyMAR_Accelerating_Masked_Autoregressive_Models_via_Feature_Caching_ICCV_2025_paper.pdf) (ICCV, 2025).
   Caches stable token features and branch differences.
 
@@ -124,9 +121,6 @@ Feature reuse, selective execution and reduced attention-state storage.
 
 - [**Live Avatar: Streaming Real-Time Audio-Driven Avatar Generation with Infinite Length**](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf) (ECCV, 2026).
   Distill WanS2V into a causal few-step generator and pipeline denoising timesteps, with VAE parallelization and kernel optimizations.
-
-- [**VAR-Turbo: Unlocking the Potential of Visual Autoregressive Models Through Dual Redundancy**](https://xplorestaging.ieee.org/ielx8/11408404/11408433/11408607.pdf?arnumber=11408607) (HPCA, 2026).
-  Parallel decoding, token aggregation and bypass with hardware support.
 
 
 ## License

@@ -4,7 +4,7 @@
 
 Early rejection of generation paths in autoregressive image sampling.
 
-**1 papers.**
+**1 paper.**
 
 ## Papers
 

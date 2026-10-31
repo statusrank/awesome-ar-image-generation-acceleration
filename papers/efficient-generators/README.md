@@ -4,7 +4,7 @@
 
 Efficient predictors, compact representations and learned sampling procedures.
 
-**63 papers.**
+**61 papers.**
 
 ## Efficient Conditional Predictors
 
@@ -60,9 +60,6 @@ Efficient predictors, compact representations and learned sampling procedures.
 
 - [**Autoregressive Image Generation with Randomized Parallel Decoding**](https://proceedings.iclr.cc/paper_files/paper/2026/file/267852def1fd0db257622892c7e3be2a-Paper-Conference.pdf) (ICLR, 2026).
   Decouples position guidance and content prediction for grouped decoding.
-
-- [**From Prediction to Perfection: Introducing Refinement to Autoregressive Image Generation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/0ef6ffcb85a2d238fc4761860c31ded4-Paper-Conference.pdf) (ICLR, 2026).
-  Predicts overlapping tensors to refine previous discrete outputs.
 
 - [**Learning to Expand Images for Efficient Visual Autoregressive Modeling**](https://arxiv.org/pdf/2511.15499v1) (ACM MM, 2026).
   Spiral expansion with length-adaptive parallel decoding.
@@ -172,9 +169,6 @@ Efficient predictors, compact representations and learned sampling procedures.
 
 - [**FARMER: Flow AutoRegressive Transformer over Pixels**](https://openaccess.thecvf.com/content/CVPR2026/papers/Zheng_FARMER_Flow_AutoRegressive_Transformer_over_Pixels_CVPR_2026_paper.pdf) (CVPR, 2026).
   Self-supervised dimension reduction reduces sequential sampling burden.
-
-- [**Improved and Accelerated Text-to-Image Generation with Collect, Reflect, and Refine**](https://arxiv.org/pdf/2503.09662v1) (IEEE Transactions on Pattern Analysis and Machine Intelligence, 2026).
-  Weak-model training supports guidance and later replacement of expensive computation.
 
 - [**InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars**](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) (ECCV, 2026).
   Apply causal ODE initialization and Self-Forcing DMD to form a few-step AR generator. Use KV caching and separate DiT/VAE devices for streaming execution.

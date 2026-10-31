@@ -4,7 +4,7 @@
 
 | Output | Papers |
 |---|---:|
-| [Image Generation Acceleration](image/README.md) | 105 |
+| [Image Generation Acceleration](image/README.md) | 102 |
 | [Video Generation Acceleration](video/README.md) | 43 |
 | [3D and Motion Generation Acceleration](3d/README.md) | 9 |
 
