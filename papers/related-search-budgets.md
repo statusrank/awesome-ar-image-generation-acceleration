@@ -10,7 +10,7 @@ Acceleration under a multi-path generation or test-time search budget.
 
 <a id="paper-rejectdecoding"></a>
 
-- [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/view/25379) (AAAI, 2023). [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/25379)
+- [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/download/25379/25151) (AAAI, 2023).
   - **Focus:** Multi-path AR text-to-image search.
   - **Mechanism:** Tiny visual-language scorer terminates poor partial paths early.
-  - **Source:** [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/25379), Official AAAI abstract, multi-path search and time-consumption statements.
+  - **Source location:** Official AAAI abstract, multi-path search and time-consumption statements.

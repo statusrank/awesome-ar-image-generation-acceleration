@@ -42,11 +42,8 @@ def public_location(text):
 def paper_entry(p,note_prefix,details=False):
     pdf=pdf_link(p)
     title=f"[**{md_title(p['title'])}**]({pdf or p['paper_url']})"
-    links=[f"[Paper]({p['paper_url']})"]
-    if pdf:links.append(f'[PDF]({pdf})')
-    if p.get('code_url'):links.append(f"[Code]({p['code_url']})")
     id=re.sub(r'[^a-z0-9 -]','',p['id'].lower()).replace(' ','-')
-    lines=([f'<a id="paper-{id}"></a>','']if details else[])+[f"- {title} ({p['venue']}, {p['year']}). "+' · '.join(links)]
+    lines=([f'<a id="paper-{id}"></a>','']if details else[])+[f"- {title} ({p['venue']}, {p['year']})."]
     if details:
         s=p['screening']
         lines += [f"  - **Focus:** {s['accelerated_object_or_background_role'].rstrip('.')}."]
@@ -55,7 +52,7 @@ def paper_entry(p,note_prefix,details=False):
             if p['id']=='scalemogen_motion':mechanism='Predicts each skeletal-temporal scale from text and completed coarser token maps'
             lines += [f"  - **Mechanism:** {mechanism.rstrip('.')}."]
             location=public_location(s['source_locator'])
-            lines += [f"  - **Source:** [Paper]({s['source_url']})"+(f', {location}.'if location else'.')]
+            if location:lines += [f"  - **Source location:** {location}."]
     return lines
 
 def ordered(ps):

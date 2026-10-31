@@ -1,7 +1,7 @@
 """Generate the public catalog from data/papers.json. Python standard library only."""
 from pathlib import Path
 import csv,json,re,collections,argparse
-from render_readmes import build_readmes
+from render_readmes import build_readmes,pdf_link
 
 ROOT=Path(__file__).resolve().parents[1]
 FILES={'sampling':'sampling-and-decoding','computation':'conditional-computation','learning':'efficient-generators','foundations':'foundations','evaluation':'evaluation','surveys':'related-surveys','adjacent':'related-masked-generation','search':'related-search-budgets','excluded':'outside-core-scope','pending':'pending-mechanism-check','venue_pending':'other-publication-tracks','video':'video-generation','geometry':'3d-generation'}
@@ -9,13 +9,15 @@ def anchor(s):return re.sub(r'[^a-z0-9 -]','',s.lower()).replace(' ','-')
 def safe(s):return s.replace('|','&#124;').replace('\n',' ')
 def render(check=False):
     d=json.loads((ROOT/'data/papers.json').read_text(encoding='utf-8'))
+    resources=json.loads((ROOT/'data/paper_resources.json').read_text(encoding='utf-8'))['papers']
     records=d['papers'];output={}
+    def paper_pdf(p):return pdf_link({**p,'pdf_url':resources.get(p['id'],{}).get('pdf_url','')})or p['paper_url']
     decisions={k:[p for p in records if p['screening']['decision']==k] for k in ['core','background','pending']}
     lines=['# Papers by Year','','[Home](../README.md) · [By mechanism](README.md)','','Year follows the retained publication citation. A proceedings imprint can differ from the conference or first-online year. Publication years follow the entries below.','']
     for year in sorted({p['year'] for p in records},reverse=True):
         lines += [f'## {year}','']
         for p in sorted((p for p in records if p['year']==year),key=lambda p:p['title'].lower()):
-            lines.append(f"- [{p['title']}]({p['paper_url']}). {p['venue']}."+(f" [Code]({p['code_url']})." if p['code_url'] else '')+(f" Scope: {p['collection_role']}." if p.get('collection_role') else ''))
+            lines.append(f"- [{p['title']}]({paper_pdf(p)}). {p['venue']}."+(f" Scope: {p['collection_role']}." if p.get('collection_role') else ''))
         lines+=['']
     output['papers/by-year.md']='\n'.join(lines)
     lines=['# Papers by Publication Venue','','[Home](../README.md) · [By year](by-year.md)','','Venue names identify the publication record. They do not imply a cross-paper performance comparison. Proceedings imprint years can differ from conference and online-publication years.','']
@@ -25,7 +27,7 @@ def render(check=False):
         lines += [f'## {v}','','| Year | Paper | Scope or publication note |','|---|---|---|']
         for p in sorted(ps,key=lambda z:(-z['year'],z['title'].lower())):
             notes=p['collection_role']
-            lines.append(f"| {p['year']} | [{safe(p['title'])}]({p['paper_url']}) | {safe(notes)} |")
+            lines.append(f"| {p['year']} | [{safe(p['title'])}]({paper_pdf(p)}) | {safe(notes)} |")
         lines+=['']
     output['papers/by-venue.md']='\n'.join(lines)
     import io
@@ -50,7 +52,6 @@ def render(check=False):
         bib+=['}','']
     output['references.bib']='\n'.join(bib)
     output['core_references.bib']='\n'.join(block for block in output['references.bib'].split('\n\n')if block and re.match(r'@\w+\{([^,]+),',block).group(1)in {p['id']for p in decisions['core']})+'\n'
-    resources=json.loads((ROOT/'data/paper_resources.json').read_text(encoding='utf-8'))['papers']
     output.update(build_readmes(d,FILES,anchor,resources))
     import posixpath
     from urllib.parse import urlsplit

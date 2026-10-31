@@ -1175,6 +1175,148 @@
       "pdf_url": "https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf",
       "link_source": "Official publisher PDF retrieved; reading extent recorded separately",
       "publication_url": "https://link.springer.com/chapter/10.1007/978-3-032-37531-5_22"
+    },
+    "diagonal_sparsity": {
+      "pdf_url": "https://arxiv.org/pdf/2609.19702",
+      "publication_url": "https://iiswc.org/iiswc2026/program.html",
+      "link_source": "Author arXiv version, exact title matched",
+      "link_source_url": "https://arxiv.org/abs/2609.19702"
+    },
+    "emu3": {
+      "pdf_url": "https://www.nature.com/articles/s41586-025-10041-x.pdf",
+      "publication_url": "https://www.nature.com/articles/s41586-025-10041-x",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://www.nature.com/articles/s41586-025-10041-x"
+    },
+    "proceedings_112": {
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26fc/chen26fc.pdf",
+      "publication_url": "https://proceedings.mlr.press/v306/chen26fc.html",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://proceedings.mlr.press/v306/chen26fc.html"
+    },
+    "nade_jmlr": {
+      "pdf_url": "https://jmlr.org/papers/volume17/16-272/16-272.pdf",
+      "publication_url": "https://jmlr.org/papers/v17/16-272.html",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://jmlr.org/papers/v17/16-272.html"
+    },
+    "normalizing_flows_jmlr": {
+      "pdf_url": "https://jmlr.org/papers/volume22/19-1028/19-1028.pdf",
+      "publication_url": "https://jmlr.org/papers/v22/19-1028.html",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://jmlr.org/papers/v22/19-1028.html"
+    },
+    "tmlr_wkNwPZ0g3G": {
+      "pdf_url": "https://openreview.net/pdf?id=wkNwPZ0g3G",
+      "publication_url": "https://openreview.net/forum?id=wkNwPZ0g3G",
+      "link_source": "Official OpenReview PDF endpoint for the recorded paper identifier",
+      "link_source_url": "https://openreview.net/forum?id=wkNwPZ0g3G"
+    },
+    "tmlr_iB8PzxdpMf": {
+      "pdf_url": "https://arxiv.org/pdf/2509.01421",
+      "publication_url": "https://openreview.net/forum?id=iB8PzxdpMf",
+      "link_source": "Author arXiv version, exact title matched",
+      "link_source_url": "https://arxiv.org/abs/2509.01421",
+      "publisher_pdf_url": "https://openreview.net/pdf?id=iB8PzxdpMf"
+    },
+    "dynamicvar": {
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf",
+      "publication_url": "https://link.springer.com/chapter/10.1007/978-981-92-3378-6_16",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://link.springer.com/chapter/10.1007/978-981-92-3378-6_16"
+    },
+    "local_ar_icpr": {
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/978-3-032-31654-7_12.pdf",
+      "publication_url": "https://link.springer.com/chapter/10.1007/978-3-032-31654-7_12",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://link.springer.com/chapter/10.1007/978-3-032-31654-7_12"
+    },
+    "retrieval_spec_icassp": {
+      "pdf_url": "https://xplorestaging.ieee.org/ielx8/11460365/11460314/11461425.pdf?arnumber=11461425",
+      "publication_url": "https://doi.org/10.1109/icassp55912.2026.11461425",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1109%2Ficassp55912.2026.11461425",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11461425.pdf?arnumber=11461425"
+    },
+    "uncertainty_quant_icassp": {
+      "pdf_url": "https://xplorestaging.ieee.org/ielx8/11460365/11460314/11462147.pdf?arnumber=11462147",
+      "publication_url": "https://doi.org/10.1109/icassp55912.2026.11462147",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1109%2Ficassp55912.2026.11462147",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11462147.pdf?arnumber=11462147"
+    },
+    "var_turbo": {
+      "pdf_url": "https://xplorestaging.ieee.org/ielx8/11408404/11408433/11408607.pdf?arnumber=11408607",
+      "publication_url": "https://doi.org/10.1109/hpca68181.2026.11408607",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1109%2Fhpca68181.2026.11408607",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/11408404/11408433/11408607.pdf?arnumber=11408607"
+    },
+    "tmxvar": {
+      "pdf_url": "https://xplorestaging.ieee.org/ielx8/43/6917053/11695224.pdf?arnumber=11695224",
+      "publication_url": "https://doi.org/10.1109/tcad.2026.3734745",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1109%2Ftcad.2026.3734745",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/43/6917053/11695224.pdf?arnumber=11695224"
+    },
+    "isscc_var_accelerator": {
+      "pdf_url": "https://xplorestaging.ieee.org/ielx8/11408863/11408946/11409075.pdf?arnumber=11409075",
+      "publication_url": "https://doi.org/10.1109/isscc49663.2026.11409075",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1109%2Fisscc49663.2026.11409075",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/11408863/11408946/11409075.pdf?arnumber=11409075"
+    },
+    "varsa": {
+      "pdf_url": "https://xplorestaging.ieee.org/ielx8/11408863/11408946/11409066.pdf?arnumber=11409066",
+      "publication_url": "https://doi.org/10.1109/isscc49663.2026.11409066",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1109%2Fisscc49663.2026.11409066",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/11408863/11408946/11409066.pdf?arnumber=11409066"
+    },
+    "lumina_mgpt_ijcv": {
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11263-026-02795-2.pdf",
+      "publication_url": "https://doi.org/10.1007/s11263-026-02795-2",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://doi.org/10.1007/s11263-026-02795-2"
+    },
+    "scalar_plus": {
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11263-026-02984-z.pdf",
+      "publication_url": "https://doi.org/10.1007/s11263-026-02984-z",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://doi.org/10.1007/s11263-026-02984-z"
+    },
+    "nativetok": {
+      "pdf_url": "https://arxiv.org/pdf/2601.22837",
+      "publication_url": "https://doi.org/10.1109/icassp55912.2026.11462037",
+      "link_source": "Author arXiv version, exact title matched",
+      "link_source_url": "https://arxiv.org/abs/2601.22837",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11462037.pdf?arnumber=11462037",
+      "publisher_pdf_url": "https://xplorestaging.ieee.org/ielx8/11460365/11460314/11462037.pdf?arnumber=11462037"
+    },
+    "vqvae2": {
+      "pdf_url": "https://proceedings.neurips.cc/paper_files/paper/2019/file/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Paper.pdf",
+      "publication_url": "https://proceedings.neurips.cc/paper/2019/hash/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Abstract.html",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://proceedings.neurips.cc/paper/2019/hash/5f8e2fa1718d1bbcadf1cd9c7a54fb8c-Abstract.html"
+    },
+    "reject_decoding": {
+      "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/25379/25151",
+      "publication_url": "https://ojs.aaai.org/index.php/AAAI/article/view/25379",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1609%2Faaai.v37i3.25379"
+    },
+    "stable_control_var": {
+      "pdf_url": "https://xplorestaging.ieee.org/ielx8/10887540/10887541/10890268.pdf?arnumber=10890268",
+      "publication_url": "https://doi.org/10.1109/icassp49660.2025.10890268",
+      "link_source": "Official publisher page or DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1109%2Ficassp49660.2025.10890268",
+      "publisher_metadata_url": "http://xplorestaging.ieee.org/ielx8/10887540/10887541/10890268.pdf?arnumber=10890268"
+    },
+    "grow3d": {
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3820379",
+      "publication_url": "https://doi.org/10.1145/3820379",
+      "link_source": "Publisher PDF URL in Crossref DOI metadata",
+      "link_source_url": "https://api.crossref.org/works/10.1145%2F3820379"
     }
   }
 }

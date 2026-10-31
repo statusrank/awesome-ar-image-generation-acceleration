@@ -126,13 +126,14 @@ def validate():
         selected={p['id']for p in ps if f'<a id="paper-{anchor(p["id"])}"></a>'in text}
         assert selected and all(p['collection_role']=='core'for p in ps if p['id']in selected),task
         for p in ps:
-            if p['id']in selected:assert p['screening']['source_url']in text,p['id']
+            if p['id']in selected:assert entry_prefix(p)in text,p['id']
         task_sets[task]=selected
     assert set.union(*task_sets.values())=={p['id']for p in ps if p['collection_role']=='core'},'Task navigation misses a core paper'
     assert not(task_sets['3d']&(task_sets['image']|task_sets['video'])),'3D entries mixed with image/video navigation'
     assert not(ROOT/'README.zh-CN.md').exists(),'Chinese README must not be regenerated'
     for page in [ROOT/'README.md',*ROOT.glob('papers/**/*.md')]:
         text=page.read_text(encoding='utf-8')
+        assert not re.search(r'\[(?:Paper|PDF|Details|Code)\]\(',text),page
         assert not re.search(r'[\u4e00-\u9fff]',text),page
         assert not re.search(r'(?i)reading extent|selected primary PDF passages|independent (?:proof|reproduction)|source[- ](?:review|recheck)|our (?:audit|verification)|to verify:|inspected (?:main )?(?:text|PDF|passages)|核查|复核',text),page
     assert not list(ROOT.rglob('*.pdf')),'Unexpected PDF in public catalog'
