@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.build/
+.private/
+link_report.json
+*.pdf
+*.zip
+.env
+.env.*
