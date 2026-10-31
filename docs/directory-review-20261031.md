@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Coverage](coverage.md) · [Directory entries](../data/complete_directory_entries_20261031.csv) · [Reading progress](../data/complete_directory_progress_20261031.csv) · [Source decisions](../data/directory_candidate_decisions_20261031.csv)
 
-The local catalog now contains **232 records: 141 core, 68 background and 23 pending**. Five source-checked papers were added to the core. Three formally published candidates remain pending. Image, video and 3D results are kept separate.
+The initial directory pass produced **232 records: 141 core, 68 background and 23 pending**. The historical [245-record continuation](directory-continuation-review.md) is followed by the [213-candidate source review](candidate213-review.md) and [five-paper AR/Flow recheck](five-paper-ar-scope.md). The current catalog has **255 records: 152 core, 74 background and 29 pending**. Remaining source questions are explicitly retained.
 
 ## Conference directories
 
@@ -74,8 +74,8 @@ Propose-and-Complete is recorded outside the core: its 0.116 s network result be
 
 ## Remaining screening
 
-All **91,731** returned title records have a row in the [directory export](../data/complete_directory_entries_20261031.csv). Semantic text similarity was used only to order inspection, never to assign eligibility. **1,355** individual titles have an explicit reading record. **51** records have a new original-source decision. Existing catalog decisions retain their earlier reading extent.
+All **91,731** returned title records have a row in the [directory export](../data/complete_directory_entries_20261031.csv). Semantic text similarity was used only to order inspection, never to assign eligibility. **4,602** individual titles have an explicit reading record. **134** records have an original-source decision. Existing catalog decisions retain their earlier reading extent.
 
-**90,343 entries have not been individually adjudicated.** Retrieval gaps for the requested directories have been substantially repaired, but the requested exhaustive individual screening is unfinished. No zero-result claim is made for an unread venue/year or journal. The per-entry status must be checked before describing coverage as complete.
+**87,110 entries have not been individually screened.** Another 1,451 title-read entries still need source decisions. The continuation also records 3,009 title-stage non-candidates without presenting those decisions as full-text checks. Retrieval gaps for the requested directories have been substantially repaired, but the requested exhaustive individual screening is unfinished. No zero-result claim is made for an unread venue/year or journal. The per-entry status must be checked before describing coverage as complete.
 
 The [source registry](../data/complete_directory_sources_20261031.csv) links every row to its actual directory source. Private downloaded papers and raw source responses stay outside this public repository. The companion Survey has not been edited or compiled.

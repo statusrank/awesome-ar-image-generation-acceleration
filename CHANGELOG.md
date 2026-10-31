@@ -1,4 +1,24 @@
+## Output-specific navigation and source-qualified catalog update, 2026-10-31
+
+Added separate image, video, and 3D/motion collections with the acceleration intervention, original-source location, and measured scope beside each paper. Current inventory: 255 records, comprising 152 core, 74 background and 29 pending. The 213-candidate ledger retains 100 unresolved source questions. Literature screening remains in progress. Survey scope and Sections 3–5 are unchanged.
+
+## Five-paper AR/Flow recheck, 2026-10-31
+
+ActionPlan moved from core to pending until the streaming predictor's complete dependency structure is confirmed. GeoFlow retained as AR video acceleration. Doe-2, ShotStream and ScaleMoGen retain explicit efficient-generator-design labels. Current catalog: 255, comprising 152 core, 74 background and 29 pending. [Source-specific findings](docs/five-paper-ar-scope.md). Earlier counts below are historical. No push or Survey edit.
+
+## Local continuation: 213-candidate source review, 2026-10-31
+
+Added five core papers (ActionPlan, GeoFlow, Doe-2, ShotStream and ScaleMoGen), two background records and three pending records. Current catalog: 255, comprising 153 core, 74 background and 28 pending. The 213-candidate source table retains 99 unresolved questions. No commit, push or Survey edit. See [review](docs/candidate213-review.md).
+
 # Changelog
+
+## 2026-10-31 — Local continuation awaiting review
+
+- Added seven core papers with original-PDF inference evidence, four background studies and two pending records. Updated STAT with its actual token-count evidence. Current catalog: 245 records, 148 core, 72 background and 25 pending.
+- Individually inspected 3,324 original-order titles in this pass. Complete title sets now include ECCV 2026, Computational Visual Media and ACM TACO. Primary-source screening remains incomplete.
+- Added paper-specific source decisions and an explicit queue for unread retained candidates. No Survey edits or GitHub push.
+- See [review of actual changes](docs/directory-continuation-review.md).
+
 
 ## 2026-10-31 complete-directory follow-up
 

@@ -4,7 +4,7 @@
 
 Published candidates with unresolved mechanism or eligibility checks.
 
-**23 papers.** Titles link to recorded PDFs or the official paper page.
+**29 papers.** Titles link to recorded PDFs or the official paper page.
 
 ## Papers
 
@@ -15,6 +15,10 @@ Published candidates with unresolved mechanism or eligibility checks.
 - [**A 28nm 47.3TFLOPs/W 894mJ/Inference Visual Autoregressive Accelerator with Differential-Amplifier Speculation and Chain-Reaction-Like Parallel Generation**](https://doi.org/10.1109/isscc49663.2026.11409075) (ISSCC, 2026). [Paper](https://doi.org/10.1109/isscc49663.2026.11409075) · [Details](../paper-notes.md#issccvaraccelerator)
   - **Context:** Claimed visual AR hardware inference.
   - **To verify:** Formal publication exists. ISSCC eligibility under the supplied CCF directory is not established
+
+- [**ActionPlan: Future-Aware Streaming Motion Synthesis via Frame-Level Action Planning**](https://link.springer.com/content/pdf/10.1007/978-3-032-37225-3_30.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37225-3_30) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37225-3_30.pdf) · [Details](../paper-notes.md#actionplanmotion)
+  - **Context:** Overlapping conditional-denoising updates for streaming motion tokens.
+  - **To verify:** Inspect streaming attention masks and the treatment of clean historical versus provisional future motion latents in the official implementation or supplementary algorithm. Do not infer non-AR or algorithmic error from this missing check
 
 - [**Autoregressive Image Generation with Frequency Progression**](https://arxiv.org/pdf/2503.05305) (TMLR, 2026). [Paper](https://openreview.net/forum?id=cEfd15ouQ1) · [PDF](https://arxiv.org/pdf/2503.05305) · [Details](../paper-notes.md#tmlrcefd15ouq1)
   - **Context:** Frequency-progressive continuous AR image generation.
@@ -61,13 +65,33 @@ Published candidates with unresolved mechanism or eligibility checks.
   - **To verify:** Retrieve the full paper and identify actual inference timing, baseline and hardware. Do not report a numerical speedup from secondary summaries
   - Online publication: 2026-09-14. The publisher metadata assigns volume 46(1) to the 2027 print issue. Listed under the verified online year.
 
+- [**InterCMDM: Block-Causal Diffusion for Autoregressive Human Interaction Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_2.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_2) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_2.pdf) · [Details](../paper-notes.md#intercmdmmotion)
+  - **Context:** Block-causal conditional sampling for streaming human-interaction motion.
+  - **To verify:** Locate an efficiency comparison establishing the saved computation. Do not convert real-time feasibility into an acceleration ratio
+
+- [**Language-Guided Transformer Tokenizer for Human Motion Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37041-9_17.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37041-9_17) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37041-9_17.pdf) · [Details](../paper-notes.md#lgtokmotion)
+  - **Context:** Compact language-aligned discrete motion tokens.
+  - **To verify:** Read the appendix timing and identify the evaluated generator family. Token-count reduction alone is not measured latency
+
+- [**Practice Makes Perfect: From Explicit Decomposition to Reinforced Latent Planning in Text-to-Motion Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37174-4_27.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37174-4_27) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37174-4_27.pdf) · [Details](../paper-notes.md#lactmotion)
+  - **Context:** Replace explicit reasoning text preceding AR motion decoding with continuous latent reasoning.
+  - **To verify:** Retrieve the supplementary timing configuration and compare the same workload. Cross-source explicit-CoT timing is not a controlled speedup
+
 - [**SCALAR++: Efficient Controllable Generation via Scale-wise Visual Autoregressive Learning**](https://doi.org/10.1007/s11263-026-02984-z) (IJCV, 2026). [Paper](https://doi.org/10.1007/s11263-026-02984-z) · [Details](../paper-notes.md#scalarplus)
   - **Context:** Control-conditioned VAR adapter overhead.
   - **To verify:** Publisher abstract claims parameter and memory savings. Inference versus training-memory boundary needs confirmation
 
-- [**Soft Tail-Dropping for Adaptive Visual Tokenization**](https://arxiv.org/pdf/2601.14246) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37553-7_24) · [PDF](https://arxiv.org/pdf/2601.14246) · [Details](../paper-notes.md#stat)
+- [**Soft Tail-Dropping for Adaptive Visual Tokenization**](https://link.springer.com/content/pdf/10.1007/978-3-032-37553-7_24.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37553-7_24) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37553-7_24.pdf) · [Details](../paper-notes.md#stat)
   - **Context:** Adaptive-length AR image tokens.
-  - **To verify:** Inspected Tables 1–2 compare token count and quality. AR runtime/FLOPs savings not established
+  - **To verify:** Locate an actual inference-cost comparison before core admission. The token-count ratio is not a measured speedup
+
+- [**SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_34.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_34) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_34.pdf) · [Details](../paper-notes.md#synccachepending)
+  - **Context:** Reuse DiT backbone residuals while refreshing lightweight audio blocks.
+  - **To verify:** AR/chunk-generation dependency and actual cache lifetime across chunks require verification before core admission
+
+- [**TinyHistory: Lightweight Video History Embeddings Via Two-Stage Context Learning**](https://link.springer.com/content/pdf/10.1007/978-3-032-37189-8_10.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37189-8_10) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37189-8_10.pdf) · [Details](../paper-notes.md#tinyhistoryvideo)
+  - **Context:** Historical conditioning-token count in AR video generation.
+  - **To verify:** Establish runtime, FLOPs or actual inference-memory changes including the added history encoder
 
 - [**TMXVAR: Twin Microscaling Floating-Point Quantization for Efficient Visual Autoregressive Model Inference on FPGA**](https://doi.org/10.1109/tcad.2026.3734745) (IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2026). [Paper](https://doi.org/10.1109/tcad.2026.3734745) · [Details](../paper-notes.md#tmxvar)
   - **Context:** Claimed VAR FPGA numerical inference.

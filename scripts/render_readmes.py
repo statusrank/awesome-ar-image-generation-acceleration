@@ -148,4 +148,39 @@ def build_readmes(d,files,anchor,resources=None):
         lines += [f"- [{cats[cat]['title']}]({files[cat]}/README.md) ({counts[cat]})."]
     lines+=['','[All background](background/README.md) · [Pending papers](pending/README.md) · [Paper-level source notes](paper-notes.md)','']
     out['papers/README.md']='\n'.join(lines)
+    # Task navigation is independent of mechanism categories. Use the retained
+    # explicit output labels, never paper-title keywords or model names.
+    task_labels={
+      'image':['image','image super-resolution'],
+      'video':['video','video view expansion','video avatar','video / scene forecasts'],
+      '3d':['3D layout','3D point cloud','3D mesh','3D shape','3D geometry','3D scene layout','3D human motion','volumetric medical image synthesis'],
+      'image_video':['image; video'],
+    }
+    task_titles={'image':'Image Generation Acceleration','video':'Video Generation Acceleration','3d':'3D and Motion Generation Acceleration'}
+    grouped={k:[]for k in task_titles}
+    for p in ps:
+        if p['collection_role']!='core':continue
+        label=p['screening']['visual_output']
+        matches=[k for k,v in task_labels.items()if label in v]
+        if len(matches)!=1:raise ValueError('Task label needs manual mapping: '+p['id']+' '+label)
+        targets=['image','video']if matches[0]=='image_video'else matches
+        for t in targets:grouped[t].append(p)
+    idx=['# Acceleration Papers by Generated Output','','[Home](../../README.md) · [Mechanisms](../README.md) · [Background](../background/README.md) · [Pending](../pending/README.md)','','| Generated output | Core papers |','|---|---:|']
+    for t,title in task_titles.items():
+        idx.append(f'| [{title}]({t}/README.md) | {len(grouped[t])} |')
+        lines=[f'# {title}','','[Home](../../../README.md) · [By output](../README.md) · [By mechanism](../../README.md) · [Background](../../background/README.md) · [Pending](../../pending/README.md)','',f'**{len(grouped[t])} core papers.** A study with verified image and video applications appears in both task lists. Counts must not be added to obtain unique papers.','']
+        if t=='3d':lines+=['Geometry, scene layouts and human motion remain separate output labels below. Volumetric medical synthesis has its own label. Their metrics and timing results are not pooled.','']
+        for label in sorted({p['screening']['visual_output']for p in grouped[t]}):
+            lines += [f'## {label}','']
+            for p in ordered([p for p in grouped[t]if p['screening']['visual_output']==label]):
+                lines+=paper_entry(p,'../../',True)
+                s=p['screening'];lines += [f"  - **Original-source evidence:** {s['original_source_basis']}.",f"  - **Source location:** {s.get('source_locator','')} · [Original source]({s['source_url']}).",f"  - **Measured scope:** {s.get('cost_boundary','')}. Reading extent: {s['reading_extent']}.",'']
+        out[f'papers/by-task/{t}/README.md']='\n'.join(lines)
+    idx+=['','Only core papers appear here. Background and unresolved candidates retain their separate collections. The Survey continues to focus on image generation.','']
+    out['papers/by-task/README.md']='\n'.join(idx)
+    nav='\n## Generated Output\n\n[Image generation](papers/by-task/image/README.md) · [Video generation](papers/by-task/video/README.md) · [3D and motion generation](papers/by-task/3d/README.md)\n\nEach task list gives the acceleration intervention and the original-source location. Background and pending records are separate.\n'
+    for name in ['README.md','README.zh-CN.md']:
+        out[name]=out[name].replace('## Categories\n',nav+'\n## Categories\n',1)
+        out[name]=out[name].replace('[Categories](#categories)', '[Generated output](#generated-output) · [Categories](#categories)',1)
+    out['papers/README.md']+='\n[Browse by generated output](by-task/README.md)\n'
     return out

@@ -2,14 +2,16 @@
 
 [Home](../../README.md) · [Categories](../README.md) · [Source notes](../paper-notes.md)
 
-**23 papers.**
+**29 papers.**
 
 These entries are separate from the core acceleration list. The outstanding check is stated beside each paper.
 
 - [3D geometry](#3d-geometry)
+- [3D human motion](#3d-human-motion)
 - [3D mesh](#3d-mesh)
 - [image](#image)
 - [video](#video)
+- [video / scene forecasts](#video--scene-forecasts)
 
 ## 3D geometry
 
@@ -17,6 +19,24 @@ These entries are separate from the core acceleration list. The outstanding chec
   - **Context:** Next-scale octree prediction for efficient AR 3D-shape generation.
   - **To verify:** Retrieve the full paper and identify actual inference timing, baseline and hardware. Do not report a numerical speedup from secondary summaries
   - Online publication: 2026-09-14. The publisher metadata assigns volume 46(1) to the 2027 print issue. Listed under the verified online year.
+
+## 3D human motion
+
+- [**ActionPlan: Future-Aware Streaming Motion Synthesis via Frame-Level Action Planning**](https://link.springer.com/content/pdf/10.1007/978-3-032-37225-3_30.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37225-3_30) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37225-3_30.pdf) · [Details](../paper-notes.md#actionplanmotion)
+  - **Context:** Overlapping conditional-denoising updates for streaming motion tokens.
+  - **To verify:** Inspect streaming attention masks and the treatment of clean historical versus provisional future motion latents in the official implementation or supplementary algorithm. Do not infer non-AR or algorithmic error from this missing check
+
+- [**InterCMDM: Block-Causal Diffusion for Autoregressive Human Interaction Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_2.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_2) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_2.pdf) · [Details](../paper-notes.md#intercmdmmotion)
+  - **Context:** Block-causal conditional sampling for streaming human-interaction motion.
+  - **To verify:** Locate an efficiency comparison establishing the saved computation. Do not convert real-time feasibility into an acceleration ratio
+
+- [**Language-Guided Transformer Tokenizer for Human Motion Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37041-9_17.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37041-9_17) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37041-9_17.pdf) · [Details](../paper-notes.md#lgtokmotion)
+  - **Context:** Compact language-aligned discrete motion tokens.
+  - **To verify:** Read the appendix timing and identify the evaluated generator family. Token-count reduction alone is not measured latency
+
+- [**Practice Makes Perfect: From Explicit Decomposition to Reinforced Latent Planning in Text-to-Motion Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37174-4_27.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37174-4_27) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37174-4_27.pdf) · [Details](../paper-notes.md#lactmotion)
+  - **Context:** Replace explicit reasoning text preceding AR motion decoding with continuous latent reasoning.
+  - **To verify:** Retrieve the supplementary timing configuration and compare the same workload. Cross-source explicit-CoT timing is not a controlled speedup
 
 ## 3D mesh
 
@@ -74,9 +94,9 @@ These entries are separate from the core acceleration list. The outstanding chec
   - **Context:** Control-conditioned VAR adapter overhead.
   - **To verify:** Publisher abstract claims parameter and memory savings. Inference versus training-memory boundary needs confirmation
 
-- [**Soft Tail-Dropping for Adaptive Visual Tokenization**](https://arxiv.org/pdf/2601.14246) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37553-7_24) · [PDF](https://arxiv.org/pdf/2601.14246) · [Details](../paper-notes.md#stat)
+- [**Soft Tail-Dropping for Adaptive Visual Tokenization**](https://link.springer.com/content/pdf/10.1007/978-3-032-37553-7_24.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37553-7_24) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37553-7_24.pdf) · [Details](../paper-notes.md#stat)
   - **Context:** Adaptive-length AR image tokens.
-  - **To verify:** Inspected Tables 1–2 compare token count and quality. AR runtime/FLOPs savings not established
+  - **To verify:** Locate an actual inference-cost comparison before core admission. The token-count ratio is not a measured speedup
 
 - [**TMXVAR: Twin Microscaling Floating-Point Quantization for Efficient Visual Autoregressive Model Inference on FPGA**](https://doi.org/10.1109/tcad.2026.3734745) (IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2026). [Paper](https://doi.org/10.1109/tcad.2026.3734745) · [Details](../paper-notes.md#tmxvar)
   - **Context:** Claimed VAR FPGA numerical inference.
@@ -111,3 +131,13 @@ These entries are separate from the core acceleration list. The outstanding chec
 - [**EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiong_EVATok_Adaptive_Length_Video_Tokenization_for_Efficient_Visual_Autoregressive_Generation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Xiong_EVATok_Adaptive_Length_Video_Tokenization_for_Efficient_Visual_Autoregressive_Generation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiong_EVATok_Adaptive_Length_Video_Tokenization_for_Efficient_Visual_Autoregressive_Generation_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#evatokvideo)
   - **Context:** AR video token length.
   - **To verify:** Table 3 reports generation tokens and quality. Inference runtime or FLOPs savings have not been established
+
+- [**TinyHistory: Lightweight Video History Embeddings Via Two-Stage Context Learning**](https://link.springer.com/content/pdf/10.1007/978-3-032-37189-8_10.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37189-8_10) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37189-8_10.pdf) · [Details](../paper-notes.md#tinyhistoryvideo)
+  - **Context:** Historical conditioning-token count in AR video generation.
+  - **To verify:** Establish runtime, FLOPs or actual inference-memory changes including the added history encoder
+
+## video / scene forecasts
+
+- [**SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_34.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_34) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_34.pdf) · [Details](../paper-notes.md#synccachepending)
+  - **Context:** Reuse DiT backbone residuals while refreshing lightweight audio blocks.
+  - **To verify:** AR/chunk-generation dependency and actual cache lifetime across chunks require verification before core admission

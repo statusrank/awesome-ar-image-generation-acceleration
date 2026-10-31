@@ -17,6 +17,7 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [Accelerating Autoregressive Video Diffusion via History-Guided Cache and Residual Correction](https://openaccess.thecvf.com/content/CVPR2026/html/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.html). CVPR. Scope: core.
 - [Accelerating Inference of Discrete Autoregressive Normalizing Flows by Selective Jacobi Decoding](https://openreview.net/forum?id=xYATz9HpE7). TMLR. Scope: core.
 - [ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer](https://openreview.net/forum?id=OuFNXESoCO). TMLR. Scope: core.
+- [ActionPlan: Future-Aware Streaming Motion Synthesis via Frame-Level Action Planning](https://link.springer.com/chapter/10.1007/978-3-032-37225-3_30). ECCV. Scope: pending.
 - [Adaptive Visual Autoregressive Acceleration via Dual-Linkage Entropy Analysis](https://proceedings.mlr.press/v306/zhang26dq.html). ICML. Scope: core.
 - [AMS-KV: Adaptive KV Caching in Multi-Scale Visual Autoregressive Transformers](https://ojs.aaai.org/index.php/AAAI/article/view/39936). AAAI. Scope: core.
 - [Annealed Relaxation of Speculative Decoding for Faster Autoregressive Image Generation](https://ojs.aaai.org/index.php/AAAI/article/view/39489). AAAI. Scope: core.
@@ -37,6 +38,7 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression](https://proceedings.mlr.press/v306/yi26c.html). ICML. Scope: core.
 - [Depth Adaptive Efficient Visual Autoregressive Modeling](https://openaccess.thecvf.com/content/CVPR2026F/html/Li_Depth_Adaptive_Efficient_Visual_Autoregressive_Modeling_CVPRF_2026_paper.html). CVPR Findings. Scope: pending.
 - [DiCoDe: Diffusion-Compressed Deep Tokens for Autoregressive Video Generation with Language Models](https://openreview.net/forum?id=B7a0IAIEXZ). TMLR. Scope: pending.
+- [Doe-2: 3D Representation World Model for Unified Driving Scene Forecasting](https://link.springer.com/chapter/10.1007/978-3-032-37235-2_29). ECCV. Scope: core.
 - [DPAR: Dynamic Patchification for Efficient Autoregressive Visual Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Srivastava_DPAR_Dynamic_Patchification_for_Efficient_Autoregressive_Visual_Generation_CVPR_2026_paper.html). CVPR. Scope: pending.
 - [Drift-AR: Single-Step Visual Autoregressive Generation via Anti-Symmetric Drifting](https://link.springer.com/chapter/10.1007/978-3-032-37174-4_35). ECCV. Scope: core.
 - [Efficient High-Resolution Image Synthesis via Autoregressive Modeling in a Diffusion-Learned Continuous Latent Space](https://openreview.net/forum?id=wkNwPZ0g3G). TMLR. Scope: pending.
@@ -58,12 +60,16 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [Flow Caching for Autoregressive Video Generation](https://proceedings.iclr.cc/paper_files/paper/2026/hash/85dc8f85ff978b9c606d3b2f5b0da69a-Abstract-Conference.html). ICLR. Scope: core.
 - [From Prediction to Perfection: Introducing Refinement to Autoregressive Image Generation](https://proceedings.iclr.cc/paper_files/paper/2026/hash/0ef6ffcb85a2d238fc4761860c31ded4-Abstract-Conference.html). ICLR. Scope: core.
 - [Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d9251dc20346dffe9b6db86dcc6f8cc9-Abstract-Conference.html). ICLR. Scope: core.
+- [GeoFlow: Efficient Driving Video Generation via Geometry-Aligned Priors](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_22). ECCV. Scope: core.
 - [Grow3D: Hierarchical Next-Scale Octree Prediction for Fast and High-Fidelity 3D Shape Generation](https://doi.org/10.1145/3820379). ACM Transactions on Graphics. Scope: pending.
 - [Head-Aware KV Cache Compression for Efficient Visual Autoregressive Modeling](https://ojs.aaai.org/index.php/AAAI/article/view/39686). AAAI. Scope: core.
 - [HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_13). ECCV. Scope: core.
 - [Improved and Accelerated Text-to-Image Generation with Collect, Reflect, and Refine](https://scholars.hkbu.edu.hk/en/publications/improved-and-accelerated-text-to-image-generation-with-collect-re/). IEEE Transactions on Pattern Analysis and Machine Intelligence. Scope: core.
 - [InfoScale: Unleashing Training-free Variable-scaled Image Generation via Effective Utilization of Information](https://openreview.net/forum?id=iB8PzxdpMf). TMLR. Scope: background.
+- [InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars](https://link.springer.com/chapter/10.1007/978-3-032-37032-7_37). ECCV. Scope: core.
+- [InterCMDM: Block-Causal Diffusion for Autoregressive Human Interaction Generation](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_2). ECCV. Scope: pending.
 - [LacTokGen: Latent Consistency Tokenizer for 1024-pixel Image Generation by 256 Tokens](https://openaccess.thecvf.com/content/CVPR2026/html/Xie_LacTokGen_Latent_Consistency_Tokenizer_for_1024-pixel_Image_Generation_by_256_CVPR_2026_paper.html). CVPR. Scope: core.
+- [Language-Guided Transformer Tokenizer for Human Motion Generation](https://link.springer.com/chapter/10.1007/978-3-032-37041-9_17). ECCV. Scope: pending.
 - [LazyVAR: Accelerating Visual Autoregressive Models via Scale-wise Token Pruning and Parallel Group Decoding](https://openaccess.thecvf.com/content/CVPR2026/papers/Mao_LazyVAR_Accelerating_Visual_Autoregressive_Models_via_Scale-wise_Token_Pruning_and_CVPR_2026_paper.pdf). CVPR. Scope: core.
 - [Learning to Expand Images for Efficient Visual Autoregressive Modeling](https://2026.acmmm.org/site/technical-programme.html). ACM MM. Scope: core.
 - [Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention](https://proceedings.mlr.press/v306/lv26i.html). ICML. Scope: core.
@@ -77,15 +83,22 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [MARché: Fast Masked Autoregressive Image Generation with Cache-Aware Attention](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_34). ECCV. Scope: core.
 - [Markovian Scale Prediction: A New Era of Visual Autoregressive Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Markovian_Scale_Prediction_A_New_Era_of_Visual_Autoregressive_Generation_CVPR_2026_paper.html). CVPR. Scope: core.
 - [Masked Auto-Regressive Variational Acceleration: Fast Inference Makes Practical Reinforcement Learning](https://openaccess.thecvf.com/content/CVPR2026/html/Gu_Masked_Auto-Regressive_Variational_Acceleration_Fast_Inference_Makes_Practical_Reinforcement_Learning_CVPR_2026_paper.html). CVPR. Scope: core.
+- [MemRoPE: Training-Free Infinite Video Generation via Evolving Memory Tokens](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_14). ECCV. Scope: background.
 - [MoSs: Mixture of Scales for Efficient High-Resolution Autoregressive Image Generation](https://ojs.aaai.org/index.php/AAAI/article/view/37611). AAAI. Scope: core.
 - [Motion-Aware Caching for Efficient Autoregressive Video Generation](https://proceedings.mlr.press/v306/xu26an.html). ICML. Scope: core.
 - [Multi-Scale Local Speculative Decoding for Image Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Peruzzo_Multi-Scale_Local_Speculative_Decoding_for_Image_Generation_CVPR_2026_paper.html). CVPR. Scope: core.
 - [Multimodal learning with next-token prediction for large multimodal models](https://www.nature.com/articles/s41586-025-10041-x). Nature. Scope: background.
 - [MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian Conditioning](https://proceedings.iclr.cc/paper_files/paper/2026/hash/37c6d0bc4d2917dcbea693b18504bd87-Abstract-Conference.html). ICLR. Scope: core.
+- [NaLA: A 3D Native LLM Layout Agent for High-Quality 3D Scene Generation](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_16). ECCV. Scope: core.
 - [Nativetok: Native Visual Tokenization for Improved Image Generation](https://doi.org/10.1109/icassp55912.2026.11462037). ICASSP. Scope: background.
 - [NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale](https://proceedings.iclr.cc/paper_files/paper/2026/hash/974ff7b5bf08dbf9400b5d599a39c77f-Abstract-Conference.html). ICLR. Scope: background.
+- [OmniForcing: Unleashing Real-Time Joint Audio-Visual Generation](https://link.springer.com/chapter/10.1007/978-3-032-37271-0_31). ECCV. Scope: core.
+- [OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_6). ECCV. Scope: core.
+- [PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference](https://link.springer.com/chapter/10.1007/978-3-032-37464-6_31). ECCV. Scope: core.
+- [ParaFlow: Parallel Sampling for Flow Matching Models](https://link.springer.com/chapter/10.1007/978-3-032-37038-9_8). ECCV. Scope: background.
 - [Parallel Jacobi Decoding for Fast Autoregressive Image Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Liao_Parallel_Jacobi_Decoding_for_Fast_Autoregressive_Image_Generation_CVPR_2026_paper.html). CVPR. Scope: core.
 - [PointNSP: Autoregressive 3D Point Cloud Generation with Next-Scale Level-of-Detail Prediction](https://openaccess.thecvf.com/content/CVPR2026/html/Meng_PointNSP_Autoregressive_3D_Point_Cloud_Generation_with_Next-Scale_Level-of-Detail_Prediction_CVPR_2026_paper.html). CVPR. Scope: core.
+- [Practice Makes Perfect: From Explicit Decomposition to Reinforced Latent Planning in Text-to-Motion Generation](https://link.springer.com/chapter/10.1007/978-3-032-37174-4_27). ECCV. Scope: pending.
 - [Prism-MoE: Efficient Dense-to-MoE Conversion for Visual Autoregressive Generation](https://proceedings.mlr.press/v306/li26gy.html). ICML. Scope: core.
 - [Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.html). CVPR. Scope: background.
 - [Progressive Checkerboards for Autoregressive Multiscale Image Generation](https://openreview.net/forum?id=wkCTCXo1a9). TMLR. Scope: core.
@@ -94,14 +107,17 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [Quant VideoGen: Auto-Regressive Long Video Generation via 2-Bit KV-Cache Quantization](https://proceedings.mlr.press/v306/xi26f.html). ICML. Scope: core.
 - [RADAR: VQ-VAE Decoder of VAR is a Good Student for Restoring Against Degradation by Acceleration](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_RADAR_VQ-VAE_Decoder_of_VAR_is_a_Good_Student_for_CVPR_2026_paper.pdf). CVPR. Scope: core.
 - [Real-Time Motion-Controllable Autoregressive Video Diffusion](https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c1d6ec1f0003d8ea10bbea4291002d-Abstract-Conference.html). ICLR. Scope: core.
+- [Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_27). ECCV. Scope: background.
 - [Repurposing 3D Generative Model for Autoregressive Layout Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Feng_Repurposing_3D_Generative_Model_for_Autoregressive_Layout_Generation_CVPR_2026_paper.html). CVPR. Scope: core.
 - [Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation](https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Reward_Forcing_Efficient_Streaming_Video_Generation_with_Rewarded_Distribution_Matching_CVPR_2026_paper.html). CVPR. Scope: core.
 - [Rolling Forcing: Autoregressive Long Video Diffusion in Real Time](https://proceedings.iclr.cc/paper_files/paper/2026/hash/935151cc6cb5d8b6816133b75233775a-Abstract-Conference.html). ICLR. Scope: core.
 - [SANA-Video: Efficient Video Generation with Block Linear Diffusion Transformer](https://proceedings.iclr.cc/paper_files/paper/2026/hash/41b93c59da0d0f835907fd661d419db2-Abstract-Conference.html). ICLR. Scope: core.
 - [SCALAR++: Efficient Controllable Generation via Scale-wise Visual Autoregressive Learning](https://doi.org/10.1007/s11263-026-02984-z). IJCV. Scope: pending.
+- [ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation](https://link.springer.com/chapter/10.1007/978-3-032-37152-2_24). ECCV. Scope: core.
 - [ScalingAR: Scaling Confidence for Autoregressive Image Generation](https://proceedings.mlr.press/v306/chen26fc.html). ICML. Scope: background.
 - [SCAN: Self-Calibrated AutoregressioN for High-Quality Visual Generation](https://ojs.aaai.org/index.php/AAAI/article/view/37400). AAAI. Scope: core.
 - [Shift-and-Sum Quantization for Visual Autoregressive Models](https://proceedings.iclr.cc/paper_files/paper/2026/hash/89379d5fc6eb34ff98488202fb52b9d0-Abstract-Conference.html). ICLR. Scope: core.
+- [ShotStream: Streaming Multi-shot Video Generation for Interactive Storytelling](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_12). ECCV. Scope: core.
 - [SJD++: Improved Speculative Jacobi Decoding for Training-free Acceleration of Discrete Auto-regressive Text-to-Image Generation](https://doi.org/10.1109/TPAMI.2026.3700227). IEEE Transactions on Pattern Analysis and Machine Intelligence. Scope: core.
 - [SJD-PAC: Accelerating Speculative Jacobi Decoding via Proactive Drafting and Adaptive Continuation](https://openaccess.thecvf.com/content/CVPR2026/html/Kang_SJD-PAC_Accelerating_Speculative_Jacobi_Decoding_via_Proactive_Drafting_and_Adaptive_CVPR_2026_paper.html). CVPR. Scope: core.
 - [SJD-SV: Speculative Jacobi Decoding with Semantics Verification for Autoregressive Image Generation](https://proceedings.mlr.press/v306/zhang26fd.html). ICML. Scope: core.
@@ -114,6 +130,9 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [Streaming Autoregressive Video Generation via Diagonal Distillation](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d899eabc6c8fefd0d4064762aba407e2-Abstract-Conference.html). ICLR. Scope: core.
 - [StructMAR: Structure-Aware Masked Autoregression for Explicit Layout Alignment in Text-to-Image Generation](https://proceedings.mlr.press/v306/cao26ab.html). ICML. Scope: background.
 - [SuperVoxelGPT: Adaptive and Ordered 3D Tokenization for Autoregressive Shape Generation](https://link.springer.com/chapter/10.1007/978-3-032-37577-3_22). ECCV. Scope: core.
+- [Surprise Forcing: What to Remember, When to Skip in Long Video Generation](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_16). ECCV. Scope: core.
+- [SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_34). ECCV. Scope: pending.
+- [TinyHistory: Lightweight Video History Embeddings Via Two-Stage Context Learning](https://link.springer.com/chapter/10.1007/978-3-032-37189-8_10). ECCV. Scope: pending.
 - [TMXVAR: Twin Microscaling Floating-Point Quantization for Efficient Visual Autoregressive Model Inference on FPGA](https://doi.org/10.1109/tcad.2026.3734745). IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. Scope: pending.
 - [ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware Semantic Analysis and Sparsity Optimization](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8edb116d5b288b6a9bba4c16ab647702-Abstract-Conference.html). ICLR. Scope: core.
 - [Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_25). ECCV. Scope: core.
@@ -121,6 +140,7 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [Towards Sequence Modeling Alignment between Tokenizer and Autoregressive Model](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d649dd586dba64672a96beff24178125-Abstract-Conference.html). ICLR. Scope: core.
 - [Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation](https://iiswc.org/iiswc2026/program.html). IISWC. Scope: pending.
 - [UniCompress: Token Compression for Unified Vision-Language Understanding and Generation](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_UniCompress_Token_Compression_for_Unified_Vision-Language_Understanding_and_Generation_CVPR_2026_paper.html). CVPR. Scope: core.
+- [Unified Multi-plane Autoregressive Diffusion for 3D Multi-contrast MRI Synthesis](https://link.springer.com/chapter/10.1007/978-3-032-37450-9_16). ECCV. Scope: core.
 - [Unified Multimodal Autoregressive Modeling with Shared Context—Visual Tokenizer is Key to Unification](https://proceedings.mlr.press/v306/peng26k.html). ICML. Scope: core.
 - [VAR-Turbo: Unlocking the Potential of Visual Autoregressive Models Through Dual Redundancy](https://doi.org/10.1109/hpca68181.2026.11408607). HPCA. Scope: core.
 - [VibeToken: Scaling 1D Image Tokenizers and Autoregressive Models for Dynamic Resolution Generations](https://openaccess.thecvf.com/content/CVPR2026/html/Patel_VibeToken_Scaling_1D_Image_Tokenizers_and_Autoregressive_Models_for_Dynamic_CVPR_2026_paper.html). CVPR. Scope: core.
@@ -196,6 +216,7 @@ Year follows the retained publication citation. A proceedings imprint can differ
 - [SpectralAR: Spectral Autoregressive Visual Generation](https://openaccess.thecvf.com/content/ICCV2025/html/Huang_SpectralAR_Spectral_Autoregressive_Visual_Generation_ICCV_2025_paper.html). ICCV. Scope: core.
 - [Speculative Jacobi-Denoising Decoding for Accelerating Autoregressive Text-to-image Generation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/726ab29b61a749b36d2593648716ae3c-Abstract-Conference.html). NeurIPS. Scope: core.
 - [Stable Control Visual AutoRegressive Model: Precise and Efficient Image Generation via Scale Alignment](https://doi.org/10.1109/icassp49660.2025.10890268). ICASSP. Scope: pending.
+- [Text to image generation with bidirectional Multiway Transformers](https://www.sciopen.com/article/10.26599/CVM.2025.9450377). Computational Visual Media. Scope: background.
 - [Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy](https://proceedings.neurips.cc/paper_files/paper/2025/hash/2d1c26fa38f31aca8712055758194bac-Abstract-Conference.html). NeurIPS. Scope: core.
 - [TreeMeshGPT: Artistic Mesh Generation with Autoregressive Tree Sequencing](https://openaccess.thecvf.com/content/CVPR2025/html/Lionar_TreeMeshGPT_Artistic_Mesh_Generation_with_Autoregressive_Tree_Sequencing_CVPR_2025_paper.html). CVPR. Scope: pending.
 - [Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html). NeurIPS. Scope: background.
@@ -204,11 +225,13 @@ Year follows the retained publication citation. A proceedings imprint can differ
 
 ## 2024
 
+- [A causal convolutional neural network for multi-subject motion modeling and generation](https://link.springer.com/article/10.1007/s41095-022-0307-3). Computational Visual Media. Scope: background.
 - [AdaNAT: Exploring Adaptive Policy for Token-Based Image Generation](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2478_ECCV_2024_paper.php). ECCV. Scope: background.
 - [An Image is Worth 32 Tokens for Reconstruction and Generation](https://proceedings.neurips.cc/paper_files/paper/2024/hash/e91bf7dfba0477554994c6d64833e9d8-Abstract-Conference.html). NeurIPS. Scope: background.
 - [Autoregressive Image Generation without Vector Quantization](https://proceedings.nips.cc/paper_files/paper/2024/hash/66e226469f20625aaebddbe47f0ca997-Abstract-Conference.html). NeurIPS. [Code](https://github.com/LTH14/mar). Scope: background.
 - [Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation](https://arxiv.org/abs/2406.06525). arXiv preprint arXiv:2406.06525. [Code](https://github.com/FoundationVision/LlamaGen). Scope: background.
 - [ENAT: Rethinking Spatial-temporal Interactions in Token-based Image Synthesis](https://proceedings.neurips.cc/paper_files/paper/2024/hash/a488aa1a0c00d76db8a922ef7815a786-Abstract-Conference.html). NeurIPS. Scope: background.
+- [Generating diverse clothed 3D human animations via a generative model](https://link.springer.com/article/10.1007/s41095-022-0324-2). Computational Visual Media. Scope: background.
 - [Language Model Beats Diffusion: Tokenizer is Key to Visual Generation](https://openreview.net/forum?id=gzqrANCF4g). ICLR. Scope: background.
 - [MarkovGen: Structured Prediction for Efficient Text-to-Image Generation](https://openaccess.thecvf.com/content/CVPR2024/html/Jayasumana_MarkovGen_Structured_Prediction_for_Efficient_Text-to-Image_Generation_CVPR_2024_paper.html). CVPR. Scope: background.
 - [MaskBit: Embedding-free Image Generation via Bit Tokens](https://openreview.net/forum?id=NYe2JuN3v3). TMLR. Scope: background.

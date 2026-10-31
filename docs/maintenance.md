@@ -40,7 +40,7 @@ Review the repository name and license choices. Add a public survey URL only aft
 
 Update `publication_status` and `publication_evidence_url` alongside bibliographic fields. Keep metadata verification distinct from reading status. Record access failures as unresolved access, not evidence that a paper was never published. Keep conference year, first online date and proceedings imprint year distinct when they differ. See [coverage and limits](coverage.md).
 
-The current venue policy admits formally published CCF-venue papers and explicitly allows TMLR. Do not label TMLR as CCF to implement this exception. Workshop-only publications stay excluded. Findings and other tracks remain separate until their eligibility is established. The current 232-record inventory includes 141 core, 68 background and 23 pending records. Do not advertise the full inventory size as a core-accelerator count.
+The current venue policy admits formally published CCF-venue papers and explicitly allows TMLR. Do not label TMLR as CCF to implement this exception. Workshop-only publications stay excluded. Findings and other tracks remain separate until their eligibility is established. The current 255-record inventory includes 152 core, 74 background and 29 pending records. Do not advertise the full inventory size as a core-accelerator count.
 
 The 69-entry retrospective scope review has separate source-reading and relevance fields. Reclassifying navigation does not alter original publication metadata. Preserve the source of each decision when updating these fields.
 
@@ -58,3 +58,5 @@ Do not place background or pending papers in a core mechanism list. Memory reduc
 ## Directory-screening status
 
 Retain all directory entries, not only keyword matches. The 31 October directory export records actual individual reading separately from retrieval. Semantic ordering does not establish relevance or irrelevance. Do not remove unread records or claim a venue has no eligible paper because a search returned no candidate. New paper-level admissions require original-source grounds.
+
+The [213-candidate review](candidate213-review.md) records the current findings and unresolved original-source questions.

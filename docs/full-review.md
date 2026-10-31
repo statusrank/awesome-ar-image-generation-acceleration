@@ -4,11 +4,11 @@
 
 ## What changed
 
-All 186 original records received a paper-specific decision. There are 103 core papers, 68 background records and 15 pending records in that cohort. Formal-publication follow-up adds 46 records, of which 38 are core and eight remain pending. The current catalog has 232 records: 141 core, 68 background and 23 pending.
+All 186 original records received a paper-specific decision. There are 103 core papers, 68 background records and 15 pending records in that cohort. Formal-publication follow-up adds 69 records, including 49 core, six background and fourteen pending. The current catalog has 255 records: 152 core, 74 background and 29 pending. The [213-candidate review](candidate213-review.md) and [AR/Flow recheck](five-paper-ar-scope.md) give the current classification. Earlier continuation notes retain their historical counts.
 
 Admission depends on the generated output and the source-reported inference intervention. A formal venue or the word “autoregressive” in a title does not suffice. Efficient new generators qualify when the original source connects the design to an inference-cost result or a model-evaluation budget. Their results remain distinct from accelerating a fixed model.
 
-Each record includes an operation-level description, reading extent and source location. The findings are selected-passage checks rather than full proof reviews. Core evidence comes from selected PDF passages for 138 records. DynamicVAR, VAR-Turbo and Reject Decoding retain abstract/selected-text limits without an inspected full performance table. No theorem is certified from an abstract.
+Each record includes an operation-level description, reading extent and source location. The findings are selected-passage checks rather than full proof reviews. Core evidence comes from selected PDF passages for 145 records. DynamicVAR, VAR-Turbo and Reject Decoding retain abstract/selected-text limits without an inspected full performance table. No theorem is certified from an abstract.
 
 ## Consequential decisions
 
@@ -34,8 +34,10 @@ The paper-level notes give the original passages supporting these decisions. No 
 
 Workshop-only work is excluded. TMLR is included by author permission. Findings records do not automatically inherit main-track eligibility. Formal publication identity and the reading version are separate fields. A source with an old under-review header can still have a verified later publication.
 
-The [coverage note](coverage.md) describes proceedings and journal searches. The [15 earlier unadmitted candidates](../data/unresolved_search_candidates.csv) remain outside the 232-record catalog. The original 69-entry review is historical and is superseded for admission decisions.
+The [coverage note](coverage.md) describes proceedings and journal searches. The [15 earlier unadmitted candidates](../data/unresolved_search_candidates.csv) remain outside the 255-record catalog. The original 69-entry review is historical and is superseded for admission decisions.
 
 Bibliographic identity fields of the original 186 are preserved. The companion manuscript and bibliography are protected from changes in this task. Potential Survey issues are recorded locally for author review, not implemented.
 
 The later [complete-directory follow-up](directory-review-20261031.md) records five additional core admissions and three pending papers. It explicitly separates directory enumeration from unfinished individual screening.
+
+The [213-candidate review](candidate213-review.md) records the current findings and unresolved original-source questions.

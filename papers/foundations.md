@@ -4,7 +4,7 @@
 
 Reference generators and supporting methods.
 
-**48 papers.** Titles link to recorded PDFs or the official paper page.
+**52 papers.** Titles link to recorded PDFs or the official paper page.
 
 ## Papers
 
@@ -14,6 +14,9 @@ Reference generators and supporting methods.
 
 - [**Lumina-mGPT: Flexible Photorealistic Autoregressive Text-to-Image Generation**](https://doi.org/10.1007/s11263-026-02795-2) (IJCV, 2026). [Paper](https://doi.org/10.1007/s11263-026-02795-2) · [Details](paper-notes.md#luminamgptijcv)
   - **Context:** Reference high-resolution AR text-to-image generator.
+
+- [**MemRoPE: Training-Free Infinite Video Generation via Evolving Memory Tokens**](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_14) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) · [Details](paper-notes.md#memropevideo)
+  - **Context:** Fixed-size AR video history memory with added inference overhead.
 
 - [**Multimodal learning with next-token prediction for large multimodal models**](https://www.nature.com/articles/s41586-025-10041-x) (Nature, 2026). [Paper](https://www.nature.com/articles/s41586-025-10041-x) · [Details](paper-notes.md#emu3)
   - **Context:** Reference multimodal AR image/video generator.
@@ -26,6 +29,9 @@ Reference generators and supporting methods.
 
 - [**Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Park_Progress_by_Pieces_Test-Time_Scaling_for_Autoregressive_Image_Generation_CVPR_2026_paper.pdf) · [Details](paper-notes.md#proceedings43)
   - **Context:** AR image test-time search budget.
+
+- [**Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention**](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_27) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) · [Details](paper-notes.md#recurrentardiffusion)
+  - **Context:** Long-term recurrent memory for AR video generation.
 
 - [**ScalingAR: Scaling Confidence for Autoregressive Image Generation**](https://proceedings.mlr.press/v306/chen26fc.html) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/chen26fc.html) · [Details](paper-notes.md#proceedings112)
   - **Context:** AR image test-time search.
@@ -90,6 +96,10 @@ Reference generators and supporting methods.
 - [**When Worse is Better: Navigating the Compression Generation Trade-off In Visual Tokenization**](https://proceedings.neurips.cc/paper_files/paper/2025/file/b6425ecad28e4960cb4a622beb338ffe-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/b6425ecad28e4960cb4a622beb338ffe-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/b6425ecad28e4960cb4a622beb338ffe-Paper-Conference.pdf) · [Details](paper-notes.md#neuripsextra77)
   - **Context:** Tokenizer/prior training compute.
 
+- [**A causal convolutional neural network for multi-subject motion modeling and generation**](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) (Computational Visual Media, 2024). [Paper](https://link.springer.com/article/10.1007/s41095-022-0307-3) · [PDF](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) · [Details](paper-notes.md#cvmcausalmotion)
+  - **Context:** Causal convolutional multi-subject motion modeling.
+  - First online 30 November 2023. Volume 10, issue 1, pages 45–59 belongs to the 2024 print issue.
+
 - [**AdaNAT: Exploring Adaptive Policy for Token-Based Image Generation**](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02478.pdf) (ECCV, 2024). [Paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2478_ECCV_2024_paper.php) · [PDF](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02478.pdf) · [Details](paper-notes.md#adanat)
   - **Context:** MaskGIT-style non-autoregressive image synthesis.
 
@@ -104,6 +114,9 @@ Reference generators and supporting methods.
 
 - [**ENAT: Rethinking Spatial-temporal Interactions in Token-based Image Synthesis**](https://proceedings.neurips.cc/paper_files/paper/2024/file/a488aa1a0c00d76db8a922ef7815a786-Paper-Conference.pdf) (NeurIPS, 2024). [Paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/a488aa1a0c00d76db8a922ef7815a786-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2024/file/a488aa1a0c00d76db8a922ef7815a786-Paper-Conference.pdf) · [Details](paper-notes.md#enat)
   - **Context:** Non-autoregressive masked image generation.
+
+- [**Generating diverse clothed 3D human animations via a generative model**](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) (Computational Visual Media, 2024). [Paper](https://link.springer.com/article/10.1007/s41095-022-0324-2) · [PDF](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) · [Details](paper-notes.md#cvmclothedanimation)
+  - **Context:** Learned garment deformation replacing physics-based cloth simulation.
 
 - [**Language Model Beats Diffusion: Tokenizer is Key to Visual Generation**](https://arxiv.org/pdf/2310.05737) (ICLR, 2024). [Paper](https://openreview.net/forum?id=gzqrANCF4g) · [PDF](https://arxiv.org/pdf/2310.05737) · [Details](paper-notes.md#magvitv2)
   - **Context:** Visual tokenizer and generative-model representation.

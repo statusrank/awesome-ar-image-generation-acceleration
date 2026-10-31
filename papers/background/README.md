@@ -2,11 +2,26 @@
 
 [Home](../../README.md) · [Categories](../README.md) · [Source notes](../paper-notes.md)
 
-**68 papers.**
+**74 papers.**
 
+- [3D human motion](#3d-human-motion)
+- [3D human motion and garment simulation](#3d-human-motion-and-garment-simulation)
 - [image](#image)
 - [image; video; multimodal understanding](#image-video-multimodal-understanding)
+- [related visual generation](#related-visual-generation)
 - [supporting reference](#supporting-reference)
+- [video](#video)
+
+## 3D human motion
+
+- [**A causal convolutional neural network for multi-subject motion modeling and generation**](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) (Computational Visual Media, 2024). [Paper](https://link.springer.com/article/10.1007/s41095-022-0307-3) · [PDF](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) · [Details](../paper-notes.md#cvmcausalmotion)
+  - **Context:** Causal convolutional multi-subject motion modeling.
+  - First online 30 November 2023. Volume 10, issue 1, pages 45–59 belongs to the 2024 print issue.
+
+## 3D human motion and garment simulation
+
+- [**Generating diverse clothed 3D human animations via a generative model**](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) (Computational Visual Media, 2024). [Paper](https://link.springer.com/article/10.1007/s41095-022-0324-2) · [PDF](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) · [Details](../paper-notes.md#cvmclothedanimation)
+  - **Context:** Learned garment deformation replacing physics-based cloth simulation.
 
 ## image
 
@@ -110,6 +125,9 @@
 - [**Spectral Image Tokenizer**](https://openaccess.thecvf.com/content/ICCV2025/papers/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.pdf) (ICCV, 2025). [Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.html) · [PDF](https://openaccess.thecvf.com/content/ICCV2025/papers/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.pdf) · [Details](../paper-notes.md#spectraltokenizer)
   - **Context:** Image tokenizer.
 
+- [**Text to image generation with bidirectional Multiway Transformers**](https://www.sciopen.com/local/article_pdf/10.26599/CVM.2025.9450377.pdf) (Computational Visual Media, 2025). [Paper](https://www.sciopen.com/article/10.26599/CVM.2025.9450377) · [PDF](https://www.sciopen.com/local/article_pdf/10.26599/CVM.2025.9450377.pdf) · [Details](../paper-notes.md#cvmmultiwaygeneration)
+  - **Context:** Non-AR masked-token image generation with bidirectional Multiway Transformers.
+
 - [**Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/5a829e299ebc1c1615ddb09e98fb6ce8-Paper-Conference.pdf) (NeurIPS, 2025). [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html) · [PDF](https://proceedings.neurips.cc/paper_files/paper/2025/file/5a829e299ebc1c1615ddb09e98fb6ce8-Paper-Conference.pdf) · [Details](../paper-notes.md#vfmtok)
   - **Context:** Visual tokenizer and generation training.
 
@@ -184,6 +202,14 @@
 - [**Multimodal learning with next-token prediction for large multimodal models**](https://www.nature.com/articles/s41586-025-10041-x) (Nature, 2026). [Paper](https://www.nature.com/articles/s41586-025-10041-x) · [Details](../paper-notes.md#emu3)
   - **Context:** Reference multimodal AR image/video generator.
 
+## related visual generation
+
+- [**MemRoPE: Training-Free Infinite Video Generation via Evolving Memory Tokens**](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_14) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) · [Details](../paper-notes.md#memropevideo)
+  - **Context:** Fixed-size AR video history memory with added inference overhead.
+
+- [**ParaFlow: Parallel Sampling for Flow Matching Models**](https://link.springer.com/content/pdf/10.1007/978-3-032-37038-9_8.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37038-9_8) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37038-9_8.pdf) · [Details](../paper-notes.md#paraflowrelated)
+  - **Context:** Parallel numerical time steps in SD3 and FLUX flow matching.
+
 ## supporting reference
 
 - [**Efficient Memory Management for Large Language Model Serving with PagedAttention**](https://arxiv.org/pdf/2309.06180) (SOSP, 2023). [Paper](https://doi.org/10.1145/3600006.3613165) · [PDF](https://arxiv.org/pdf/2309.06180) · [Details](../paper-notes.md#pagedattention)
@@ -218,3 +244,8 @@
 
 - [**Image Quality Assessment: From Error Visibility to Structural Similarity**](https://ece.uwaterloo.ca/~z70wang/publications/ssim.pdf) (IEEE Transactions on Image Processing, 2004). [Paper](https://ece.uwaterloo.ca/~z70wang/publications/ssim.html) · [PDF](https://ece.uwaterloo.ca/~z70wang/publications/ssim.pdf) · [Details](../paper-notes.md#ssim)
   - **Context:** Image reference similarity.
+
+## video
+
+- [**Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention**](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_27) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) · [Details](../paper-notes.md#recurrentardiffusion)
+  - **Context:** Long-term recurrent memory for AR video generation.

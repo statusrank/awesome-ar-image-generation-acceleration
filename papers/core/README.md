@@ -2,25 +2,35 @@
 
 [Home](../../README.md) · [Categories](../README.md) · [Source notes](../paper-notes.md)
 
-**141 papers.**
+**152 papers.**
 
 - [3D geometry](#3d-geometry)
+- [3D human motion](#3d-human-motion)
 - [3D layout](#3d-layout)
 - [3D mesh](#3d-mesh)
 - [3D point cloud](#3d-point-cloud)
+- [3D scene layout](#3d-scene-layout)
 - [3D shape](#3d-shape)
 - [image](#image)
 - [image super-resolution](#image-super-resolution)
 - [image; video](#image-video)
 - [video](#video)
+- [video / scene forecasts](#video--scene-forecasts)
 - [video avatar](#video-avatar)
 - [video view expansion](#video-view-expansion)
+- [volumetric medical image synthesis](#volumetric-medical-image-synthesis)
 
 ## 3D geometry
 
 - [**SuperVoxelGPT: Adaptive and Ordered 3D Tokenization for Autoregressive Shape Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37577-3_22.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37577-3_22) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37577-3_22.pdf) · [Details](../paper-notes.md#supervoxelgpt)
   - **Accelerates:** Shape-token sequence length and sequential AR transformer evaluations.
   - **Approach:** Use adaptive ordered supervoxels and Jacobi decoding of a Qwen2.5-0.5B shape-token predictor, followed by SuperVoxelVAE decoding.
+
+## 3D human motion
+
+- [**ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37152-2_24.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37152-2_24) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37152-2_24.pdf) · [Details](../paper-notes.md#scalemogenmotion)
+  - **Accelerates:** Seven scale-wise AR stages for motion synthesis.
+  - **Approach:** Section 3.2 conditions each skeletal-temporal scale on text and a prefix formed from completed coarser token maps. Section 4.7 specifies seven sequential scale stages. No Flow Matching head is part of the inspected next-scale bitwise-token prediction mechanism.
 
 ## 3D layout
 
@@ -43,6 +53,12 @@
 - [**PointNSP: Autoregressive 3D Point Cloud Generation with Next-Scale Level-of-Detail Prediction**](https://openaccess.thecvf.com/content/CVPR2026/papers/Meng_PointNSP_Autoregressive_3D_Point_Cloud_Generation_with_Next-Scale_Level-of-Detail_Prediction_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Meng_PointNSP_Autoregressive_3D_Point_Cloud_Generation_with_Next-Scale_Level-of-Detail_Prediction_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Meng_PointNSP_Autoregressive_3D_Point_Cloud_Generation_with_Next-Scale_Level-of-Detail_Prediction_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#pointnsp3d)
   - **Accelerates:** AR point-cloud sampling.
   - **Approach:** Next-scale level-of-detail prediction replaces next-point progression.
+
+## 3D scene layout
+
+- [**NaLA: A 3D Native LLM Layout Agent for High-Quality 3D Scene Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf) · [Details](../paper-notes.md#nalalayout)
+  - **Accelerates:** AR asset-pose output tokens and repeated optimization in 3D layout generation.
+  - **Approach:** Encode room/asset point clouds, generate coarse discrete poses and refine them with a continuous regression head.
 
 ## 3D shape
 
@@ -201,6 +217,10 @@
 - [**MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian Conditioning**](https://proceedings.iclr.cc/paper_files/paper/2026/file/37c6d0bc4d2917dcbea693b18504bd87-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/37c6d0bc4d2917dcbea693b18504bd87-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/37c6d0bc4d2917dcbea693b18504bd87-Paper-Conference.pdf) · [Details](../paper-notes.md#mvar)
   - **Accelerates:** VAR spatial and scale context.
   - **Approach:** Restricts conditioning to adjacent scales and local neighborhoods.
+
+- [**OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_6.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_6) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_6.pdf) · [Details](../paper-notes.md#omnimamba)
+  - **Accelerates:** Autoregressive image-token prediction with a Mamba-2 state-space backbone.
+  - **Approach:** Train a unified next-token image/text generator with Mamba-2 and modality-specific vocabularies and adapters.
 
 - [**Parallel Jacobi Decoding for Fast Autoregressive Image Generation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Liao_Parallel_Jacobi_Decoding_for_Fast_Autoregressive_Image_Generation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Liao_Parallel_Jacobi_Decoding_for_Fast_Autoregressive_Image_Generation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Liao_Parallel_Jacobi_Decoding_for_Fast_Autoregressive_Image_Generation_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#pjd)
   - **Accelerates:** AR image Jacobi candidate refinement.
@@ -520,6 +540,10 @@
   - **Accelerates:** Hierarchical denoising and pipelined execution of AR video blocks.
   - **Approach:** Generate each block using context at the same noise level, enabling pipelined parallel inference across denoising levels.
 
+- [**InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars**](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37032-7_37) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) · [Details](../paper-notes.md#interactiveavatarvideo)
+  - **Accelerates:** Sampling steps in a causal Wan2.2-5B talking-avatar generator.
+  - **Approach:** Apply causal ODE initialization and Self-Forcing DMD to form a few-step AR generator. Use KV caching and separate DiT/VAE devices for streaming execution.
+
 - [**Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lv26i/lv26i.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/lv26i.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lv26i/lv26i.pdf) · [Details](../paper-notes.md#lightforcingvideo)
   - **Accelerates:** AR video attention.
   - **Approach:** Chunk-aware sparsity allocation with hierarchical sparse attention.
@@ -535,6 +559,14 @@
 - [**Motion-Aware Caching for Efficient Autoregressive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26an/xu26an.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/xu26an.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26an/xu26an.pdf) · [Details](../paper-notes.md#motioncachevideo)
   - **Accelerates:** AR video diffusion denoising computation.
   - **Approach:** Motion-weighted token updates after a full-computation warmup.
+
+- [**OmniForcing: Unleashing Real-Time Joint Audio-Visual Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37271-0_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) · [Details](../paper-notes.md#omniforcingvideo)
+  - **Accelerates:** Causal audio-video block generation and conditional denoising updates.
+  - **Approach:** Distill a bidirectional LTX-2 teacher into a streaming AR student with block-causal modality alignment and rolling KV caches.
+
+- [**PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference**](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37464-6_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) · [Details](../paper-notes.md#packforcingvideo)
+  - **Accelerates:** Stored historical KV entries and historical attention in a Wan2.1-based AR video generator.
+  - **Approach:** Separate sink, compressed middle and recent history. Compress middle blocks and route selected historical blocks into attention, with incremental temporal RoPE adjustment.
 
 - [**Quant VideoGen: Auto-Regressive Long Video Generation via 2-Bit KV-Cache Quantization**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xi26f/xi26f.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/xi26f.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/xi26f/xi26f.pdf) · [Details](../paper-notes.md#quantvideogen)
   - **Accelerates:** AR video KV storage.
@@ -559,6 +591,10 @@
 - [**Streaming Autoregressive Video Generation via Diagonal Distillation**](https://proceedings.iclr.cc/paper_files/paper/2026/file/d899eabc6c8fefd0d4064762aba407e2-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d899eabc6c8fefd0d4064762aba407e2-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/d899eabc6c8fefd0d4064762aba407e2-Paper-Conference.pdf) · [Details](../paper-notes.md#diagonaldistillvideo)
   - **Accelerates:** Streaming AR video diffusion.
   - **Approach:** Diagonal distillation restructures few-step frame synthesis.
+
+- [**Surprise Forcing: What to Remember, When to Skip in Long Video Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) · [Details](../paper-notes.md#surpriseforcingvideo)
+  - **Accelerates:** Conditional denoising updates per AR video chunk and retained historical frames.
+  - **Approach:** Adapt the denoising budget to chunk difficulty and retain selected evicted frames in a bounded memory bank.
 
 - [**Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption**](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_25) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf) · [Details](../paper-notes.md#ispavideo)
   - **Accelerates:** KV-cache storage and attention computation in streaming AR video generators.
@@ -592,6 +628,20 @@
   - **Accelerates:** Convolution and attention cost of the MCVD conditional video denoiser used for block-autoregressive generation.
   - **Approach:** Train smaller denoisers with bottleneck residual paths, channel splitting and a mixed attention algorithm.
 
+## video / scene forecasts
+
+- [**Doe-2: 3D Representation World Model for Unified Driving Scene Forecasting**](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37235-2_29) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf) · [Details](../paper-notes.md#doe2world)
+  - **Accelerates:** Compact 3D latent prediction with an AR predictor and conditional DiT head.
+  - **Approach:** Section 3.4 conditions next-scene prediction on historical latents Z_{<=t} and ego-actions a_{<=t}; Eqs. (7)–(8) specify historical cross-attention and coarse future-latent prediction. A three-layer conditional DiT head uses Rectified Flow, Eq. (11), to sample the next-scene latent; the temporal AR predictor supplies its conditioning features.
+
+- [**GeoFlow: Efficient Driving Video Generation via Geometry-Aligned Priors**](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_22) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf) · [Details](../paper-notes.md#geoflowdriving)
+  - **Accelerates:** Geometry-aligned initialization and fewer denoising steps for autoregressive driving-video chunks.
+  - **Approach:** Section 3.5 explicitly specifies short-horizon frame autoregression: each six-frame chunk contains one reference frame and five newly generated frames. Conditional latent Flow Matching inside each video chunk; geometry-warped historical content initializes its source distribution.
+
+- [**ShotStream: Streaming Multi-shot Video Generation for Interactive Storytelling**](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_12) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf) · [Details](../paper-notes.md#shotstreamvideo)
+  - **Accelerates:** Four-step causal multi-shot video generation replacing a multi-step bidirectional teacher.
+  - **Approach:** Section 4.2 and Figure 4 generate shots from previous shots and each shot chunk-by-chunk. Global and local caches store historical context and recently generated frames. A few-step conditional video denoiser operates within the causal chunk-generation procedure; distribution matching distillation replaces the slow teacher.
+
 ## video avatar
 
 - [**Avatar Forcing: Real-Time Interactive Head Avatar Generation for Natural Conversation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#avatarforcing)
@@ -603,3 +653,9 @@
 - [**CubeComposer: Spatio-Temporal Autoregressive 4K 360deg Video Generation from Perspective Video**](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_CubeComposer_Spatio-Temporal_Autoregressive_4K_360deg_Video_Generation_from_Perspective_Video_CVPR_2026_paper.pdf) · [Details](../paper-notes.md#cubecomposervideo)
   - **Accelerates:** Autoregressive cubemap video synthesis.
   - **Approach:** Sparse context across cube faces and temporal windows.
+
+## volumetric medical image synthesis
+
+- [**Unified Multi-plane Autoregressive Diffusion for 3D Multi-contrast MRI Synthesis**](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37450-9_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) · [Details](../paper-notes.md#mpadmri)
+  - **Accelerates:** Volumetric denoising and cross-plane sampling in an AR MRI-synthesis generator.
+  - **Approach:** Replace full 3D denoising with plane-wise 2D conditional diffusion. Reuse previous-plane volumes as priors for fewer subsequent-plane updates.

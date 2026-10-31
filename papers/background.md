@@ -2,9 +2,21 @@
 
 [Home](../README.md) · [All records](README.md) · [Paper-level notes](paper-notes.md)
 
-68 records. Last reviewed: 2026-10-31.
+74 records. Last reviewed: 2026-10-31.
 
 These records are excluded from the core acceleration count. A pending record is not a claim that the paper is incorrect or unpublished.
+
+## 3D human motion
+
+| Year | Paper | Specific object | Original-source basis |
+|---|---|---|---|
+| 2024 | [A causal convolutional neural network for multi-subject motion modeling and generation](https://link.springer.com/article/10.1007/s41095-022-0307-3) (Computational Visual Media) | Causal convolutional multi-subject motion modeling | The original abstract emphasizes motion modeling and personalization. PDF p. 2 reports approximately 65 FPS. The inspected passages do not establish a reduction in AR inference cost against a controlled reference generator [Details](paper-notes.md#cvmcausalmotion) · [Source](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) |
+
+## 3D human motion and garment simulation
+
+| Year | Paper | Specific object | Original-source basis |
+|---|---|---|---|
+| 2024 | [Generating diverse clothed 3D human animations via a generative model](https://link.springer.com/article/10.1007/s41095-022-0324-2) (Computational Visual Media) | Learned garment deformation replacing physics-based cloth simulation | Section 5.1 and Table 2 compare the learned simulation with CPU-based ARCSim. The T-shirt entries are 3.9047 s and 0.0123 s per frame. ARCSim is a physics simulator, not an autoregressive image/visual generative model [Details](paper-notes.md#cvmclothedanimation) · [Source](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) |
 
 ## image
 
@@ -43,6 +55,7 @@ These records are excluded from the core acceleration count. A pending record is
 | 2025 | [Single-pass Adaptive Image Tokenization for Minimum Program Search](https://proceedings.neurips.cc/paper_files/paper/2025/hash/dc35c593e61f6df62db541b976d09dcf-Abstract-Conference.html) (NeurIPS) | Adaptive image encoding | Tokenizer encoding efficiency does not establish downstream AR-generation inference savings [Details](paper-notes.md#neuripsextra94) · [Source](https://arxiv.org/pdf/2507.07995#page=1) |
 | 2025 | [SoftVQ-VAE: Efficient 1-Dimensional Continuous Tokenizer](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_SoftVQ-VAE_Efficient_1-Dimensional_Continuous_Tokenizer_CVPR_2025_paper.html) (CVPR) | Continuous visual tokenizer used with diffusion/SiT | Inspected source efficiency results do not establish AR-generator acceleration [Details](paper-notes.md#proceedings10) · [Source](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_SoftVQ-VAE_Efficient_1-Dimensional_Continuous_Tokenizer_CVPR_2025_paper.pdf#page=1) |
 | 2025 | [Spectral Image Tokenizer](https://openaccess.thecvf.com/content/ICCV2025/html/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.html) (ICCV) | Image tokenizer | Inspected source establishes tokenization and quality, not a verified AR-inference acceleration result [Details](paper-notes.md#spectraltokenizer) · [Source](https://openaccess.thecvf.com/content/ICCV2025/html/Esteves_Spectral_Image_Tokenizer_ICCV_2025_paper.html#page=1) |
+| 2025 | [Text to image generation with bidirectional Multiway Transformers](https://www.sciopen.com/article/10.26599/CVM.2025.9450377) (Computational Visual Media) | Non-AR masked-token image generation with bidirectional Multiway Transformers | The original paper explicitly describes its method as non-autoregressive. Sections 1 and 4 compare 24 decoding iterations with a 256-step AR example. No application accelerating an existing AR sampler or distilling its generation process is established [Details](paper-notes.md#cvmmultiwaygeneration) · [Source](https://www.sciopen.com/local/article_pdf/10.26599/CVM.2025.9450377.pdf) |
 | 2025 | [Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html) (NeurIPS) | Visual tokenizer and generation training | Inspected efficiency statement concerns convergence/training, not verified inference cost [Details](paper-notes.md#vfmtok) · [Source](https://proceedings.neurips.cc/paper_files/paper/2025/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html#page=1) |
 | 2025 | [When Worse is Better: Navigating the Compression Generation Trade-off In Visual Tokenization](https://proceedings.neurips.cc/paper_files/paper/2025/hash/b6425ecad28e4960cb4a622beb338ffe-Abstract-Conference.html) (NeurIPS) | Tokenizer/prior training compute | The inspected compute-efficiency comparison concerns training compute scaling [Details](paper-notes.md#neuripsextra77) · [Source](https://proceedings.neurips.cc/paper_files/paper/2025/file/b6425ecad28e4960cb4a622beb338ffe-Paper-Conference.pdf#page=1) |
 | 2024 | [AdaNAT: Exploring Adaptive Policy for Token-Based Image Generation](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2478_ECCV_2024_paper.php) (ECCV) | MaskGIT-style non-autoregressive image synthesis | The abstract explicitly identifies NATs as its object. No AR-generator application established here [Details](paper-notes.md#adanat) · [Source](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02478.pdf#page=1) |
@@ -73,6 +86,13 @@ These records are excluded from the core acceleration count. A pending record is
 |---|---|---|---|
 | 2026 | [Multimodal learning with next-token prediction for large multimodal models](https://www.nature.com/articles/s41586-025-10041-x) (Nature) | Reference multimodal AR image/video generator | General multimodal model. No specific inference-acceleration contribution is established for this list [Details](paper-notes.md#emu3) · [Source](https://www.nature.com/articles/s41586-025-10041-x) |
 
+## related visual generation
+
+| Year | Paper | Specific object | Original-source basis |
+|---|---|---|---|
+| 2026 | [MemRoPE: Training-Free Infinite Video Generation via Evolving Memory Tokens](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_14) (ECCV) | Fixed-size AR video history memory with added inference overhead | On A6000, LongLive is 669.60 ms per denoising step and 20.97 GB peak memory; adding MemRoPE adds 3.83 ms and 0.07 GB [Details](paper-notes.md#memropevideo) · [Source](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) |
+| 2026 | [ParaFlow: Parallel Sampling for Flow Matching Models](https://link.springer.com/chapter/10.1007/978-3-032-37038-9_8) (ECCV) | Parallel numerical time steps in SD3 and FLUX flow matching | The original experiments name Stable Diffusion 3 and FLUX. Autoregressive here describes sequential numerical integration; an AR visual-token or AR chunk generator application is not established [Details](paper-notes.md#paraflowrelated) · [Source](https://link.springer.com/content/pdf/10.1007/978-3-032-37038-9_8.pdf) |
+
 ## supporting reference
 
 | Year | Paper | Specific object | Original-source basis |
@@ -88,3 +108,9 @@ These records are excluded from the core acceleration count. A pending record is
 | 2017 | [GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium](https://papers.nips.cc/paper_files/paper/2017/hash/8a1d694707eb0fefe65871369074926d-Abstract.html) (NeurIPS) | Image-distribution evaluation | A quality metric source, not an accelerator [Details](paper-notes.md#fid) · [Source](https://papers.nips.cc/paper_files/paper/2017/hash/8a1d694707eb0fefe65871369074926d-Abstract.html#page=1) |
 | 2016 | [Neural Autoregressive Distribution Estimation](https://jmlr.org/papers/v17/16-272.html) (Journal of Machine Learning Research) | Autoregressive density estimation | Historical foundation, not a visual-generation accelerator [Details](paper-notes.md#nadejmlr) · [Source](https://jmlr.org/papers/v17/16-272.html) |
 | 2004 | [Image Quality Assessment: From Error Visibility to Structural Similarity](https://ece.uwaterloo.ca/~z70wang/publications/ssim.html) (IEEE Transactions on Image Processing) | Image reference similarity | Evaluation resource [Details](paper-notes.md#ssim) · [Source](https://ece.uwaterloo.ca/~z70wang/publications/ssim.html#page=1) |
+
+## video
+
+| Year | Paper | Specific object | Original-source basis |
+|---|---|---|---|
+| 2026 | [Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_27) (ECCV) | Long-term recurrent memory for AR video generation | Table 5 explicitly defines Time as a training step and GPU memory in that training comparison. Table 6 gives one-forward-pass FLOPs and states that the Diffusion Forcing baseline has the cost of only the second stage. These tables do not establish generation acceleration [Details](paper-notes.md#recurrentardiffusion) · [Source](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) |

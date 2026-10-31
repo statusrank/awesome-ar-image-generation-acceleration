@@ -110,6 +110,26 @@ def validate():
         directory_decisions=list(csv.DictReader((ROOT/'data/directory_candidate_decisions_20261031.csv').open(encoding='utf-8')))
         assert len({x['directory_id']for x in directory_decisions})==len(directory_decisions),'Duplicate source decision'
         assert all(x['directory_id']in directory_ids and x['original_source_basis']and x['source_locator']for x in directory_decisions),'Missing source-specific decision grounds'
+        continuation_path=ROOT/'data/continuation_title_screening_20261031.csv'
+        if continuation_path.exists():
+            continuation=list(csv.DictReader(continuation_path.open(encoding='utf-8')))
+            assert len({x['directory_id']for x in continuation})==len(continuation),'Duplicate continuation title'
+            by_directory_id={x['directory_id']:x for x in entries}
+            assert all(x['directory_id']in by_directory_id and by_directory_id[x['directory_id']]['title_individually_inspected']=='yes'for x in continuation),'Continuation reading missing from directory status'
+            queued=list(csv.DictReader((ROOT/'data/continuation_source_queue_20261031.csv').open(encoding='utf-8')))
+            decided={x['directory_id']for x in directory_decisions}
+            assert all(x['directory_id']in directory_ids and x['directory_id']not in decided and not by_directory_id[x['directory_id']]['catalog_id']for x in queued),'Resolved or catalogued entry remains in new-source queue'
+    # Generated-output navigation must cover exactly the admitted core papers.
+    task_sets={}
+    for task in ['image','video','3d']:
+        text=(ROOT/f'papers/by-task/{task}/README.md').read_text(encoding='utf-8')
+        selected={p['id']for p in ps if f'paper-notes.md#{anchor(p["id"])})'in text}
+        assert selected and all(p['collection_role']=='core'for p in ps if p['id']in selected),task
+        for p in ps:
+            if p['id']in selected:assert p['screening']['source_locator']in text and p['screening']['source_url']in text,p['id']
+        task_sets[task]=selected
+    assert set.union(*task_sets.values())=={p['id']for p in ps if p['collection_role']=='core'},'Task navigation misses a core paper'
+    assert not(task_sets['3d']&(task_sets['image']|task_sets['video'])),'3D entries mixed with image/video navigation'
     assert not list(ROOT.rglob('*.pdf')),'Unexpected PDF in public catalog'
     print(json.dumps({'papers':len(ps),'decisions':dict(decisions),'original_cohort':len(originals),'confirmed_code_links':sum(bool(p['code_url']) for p in ps),'pdf_resource_links':len(resources),'homepages_core_paper_coverage':home_checks,'category_readmes_checked':len(cats),'local_links_checked':checked,'category_counts_overlap':{k:sum(k in p['categories'] for p in ps) for k in cats},'generated_files_match':True},indent=2))
 if __name__=='__main__':validate()

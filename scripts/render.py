@@ -72,6 +72,12 @@ def render(check=False):
     output['core_references.bib']='\n'.join(block for block in output['references.bib'].split('\n\n')if block and re.match(r'@\w+\{([^,]+),',block).group(1)in {p['id']for p in decisions['core']})+'\n'
     resources=json.loads((ROOT/'data/paper_resources.json').read_text(encoding='utf-8'))['papers']
     output.update(build_readmes(d,FILES,anchor,resources))
+    if (ROOT/'docs/candidate213-review.md').exists():
+        for name in ['README.md','README.zh-CN.md']:
+            output[name]+='\n[213-candidate source review / 213项候选核查](docs/candidate213-review.md)\n'
+    if (ROOT/'docs/five-paper-ar-scope.md').exists():
+        for name in ['README.md','README.zh-CN.md']:
+            output[name]+='\n[AR dependency and conditional Flow: five-paper recheck / 五篇论文的AR与Flow核查](docs/five-paper-ar-scope.md)\n'
     drift=[]
     for rel,text in output.items():
         p=ROOT/rel

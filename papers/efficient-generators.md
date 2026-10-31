@@ -4,7 +4,7 @@
 
 Efficient predictors and representations, including learned sampling procedures.
 
-**58 papers.** Titles link to recorded PDFs or the official paper page.
+**63 papers.** Titles link to recorded PDFs or the official paper page.
 
 ## Contents
 
@@ -25,6 +25,14 @@ Efficient predictors and representations, including learned sampling procedures.
   - **Accelerates:** Next-scale VAR parameter and execution cost.
   - **Approach:** Structured pruning with scale-aware compensation and distillation.
 
+- [**NaLA: A 3D Native LLM Layout Agent for High-Quality 3D Scene Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf) · [Details](paper-notes.md#nalalayout)
+  - **Accelerates:** AR asset-pose output tokens and repeated optimization in 3D layout generation.
+  - **Approach:** Encode room/asset point clouds, generate coarse discrete poses and refine them with a continuous regression head.
+
+- [**OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_6.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_6) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_6.pdf) · [Details](paper-notes.md#omnimamba)
+  - **Accelerates:** Autoregressive image-token prediction with a Mamba-2 state-space backbone.
+  - **Approach:** Train a unified next-token image/text generator with Mamba-2 and modality-specific vocabularies and adapters.
+
 - [**Prism-MoE: Efficient Dense-to-MoE Conversion for Visual Autoregressive Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26gy/li26gy.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/li26gy.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26gy/li26gy.pdf) · [Details](paper-notes.md#prismmoe)
   - **Accelerates:** Dense visual AR predictor computation.
   - **Approach:** Dense-to-MoE conversion with sparse expert activation.
@@ -32,6 +40,10 @@ Efficient predictors and representations, including learned sampling procedures.
 - [**Progressive Supernet Training for Efficient Visual Autoregressive Modeling**](https://arxiv.org/pdf/2511.16546) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Chen_Progressive_Supernet_Training_for_Efficient_Visual_Autoregressive_Modeling_CVPR_2026_paper.html) · [PDF](https://arxiv.org/pdf/2511.16546) · [Details](paper-notes.md#variant)
   - **Accelerates:** VAR inference depth and memory.
   - **Approach:** Progressive supernet training permits scale-dependent subnet execution.
+
+- [**Unified Multi-plane Autoregressive Diffusion for 3D Multi-contrast MRI Synthesis**](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37450-9_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) · [Details](paper-notes.md#mpadmri)
+  - **Accelerates:** Volumetric denoising and cross-plane sampling in an AR MRI-synthesis generator.
+  - **Approach:** Replace full 3D denoising with plane-wise 2D conditional diffusion. Reuse previous-plane volumes as priors for fewer subsequent-plane updates.
 
 - [**Visual Implicit Autoregressive Modeling**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/jiang26ah/jiang26ah.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/jiang26ah.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/jiang26ah/jiang26ah.pdf) · [Details](paper-notes.md#viar)
   - **Accelerates:** Next-scale visual AR stack.
@@ -228,6 +240,10 @@ Efficient predictors and representations, including learned sampling procedures.
   - **Accelerates:** LlamaGen guidance computation.
   - **Approach:** Weak-model training supports guidance and later replacement of expensive computation.
 
+- [**InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars**](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37032-7_37) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) · [Details](paper-notes.md#interactiveavatarvideo)
+  - **Accelerates:** Sampling steps in a causal Wan2.2-5B talking-avatar generator.
+  - **Approach:** Apply causal ODE initialization and Self-Forcing DMD to form a few-step AR generator. Use KV caching and separate DiT/VAE devices for streaming execution.
+
 - [**Live Avatar: Streaming Real-Time Audio-Driven Avatar Generation with Infinite Length**](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37135-5_5) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf) · [Details](paper-notes.md#liveavatarvideo)
   - **Accelerates:** Denoising updates and multi-GPU streaming execution in an AR talking-avatar generator.
   - **Approach:** Distill WanS2V into a causal few-step generator and pipeline denoising timesteps, with VAE parallelization and kernel optimizations.
@@ -235,6 +251,10 @@ Efficient predictors and representations, including learned sampling procedures.
 - [**Masked Auto-Regressive Variational Acceleration: Fast Inference Makes Practical Reinforcement Learning**](https://openaccess.thecvf.com/content/CVPR2026/papers/Gu_Masked_Auto-Regressive_Variational_Acceleration_Fast_Inference_Makes_Practical_Reinforcement_Learning_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Gu_Masked_Auto-Regressive_Variational_Acceleration_Fast_Inference_Makes_Practical_Reinforcement_Learning_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Gu_Masked_Auto-Regressive_Variational_Acceleration_Fast_Inference_Makes_Practical_Reinforcement_Learning_CVPR_2026_paper.pdf) · [Details](paper-notes.md#marval)
   - **Accelerates:** MAR iterative conditional sampling.
   - **Approach:** Distills a faster sampler while retaining a masked AR generation organization.
+
+- [**OmniForcing: Unleashing Real-Time Joint Audio-Visual Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37271-0_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) · [Details](paper-notes.md#omniforcingvideo)
+  - **Accelerates:** Causal audio-video block generation and conditional denoising updates.
+  - **Approach:** Distill a bidirectional LTX-2 teacher into a streaming AR student with block-causal modality alignment and rolling KV caches.
 
 - [**XYZFlow: Scaling Multidimensional Shortcut Flows for Efficient Generative Modeling**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26ck/liu26ck.pdf) (ICML, 2026). [Paper](https://proceedings.mlr.press/v306/liu26ck.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26ck/liu26ck.pdf) · [Details](paper-notes.md#xyzflow)
   - **Accelerates:** MAR conditional-head sampling and AR teachers.

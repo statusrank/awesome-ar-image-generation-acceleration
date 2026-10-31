@@ -4,7 +4,7 @@
 
 Feature reuse and selective execution, including attention-state storage.
 
-**30 papers.** Titles link to recorded PDFs or the official paper page.
+**32 papers.** Titles link to recorded PDFs or the official paper page.
 
 ## Contents
 
@@ -48,6 +48,10 @@ Feature reuse and selective execution, including attention-state storage.
   - **Accelerates:** Causal visual AR KV storage.
   - **Approach:** Progressively evicts historical lines outside retained dependency regions.
 
+- [**PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference**](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37464-6_31) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) · [Details](paper-notes.md#packforcingvideo)
+  - **Accelerates:** Stored historical KV entries and historical attention in a Wan2.1-based AR video generator.
+  - **Approach:** Separate sink, compressed middle and recent history. Compress middle blocks and route selected historical blocks into attention, with incremental temporal RoPE adjustment.
+
 - [**RADAR: VQ-VAE Decoder of VAR is a Good Student for Restoring Against Degradation by Acceleration**](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_RADAR_VQ-VAE_Decoder_of_VAR_is_a_Good_Student_for_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_RADAR_VQ-VAE_Decoder_of_VAR_is_a_Good_Student_for_CVPR_2026_paper.pdf) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_RADAR_VQ-VAE_Decoder_of_VAR_is_a_Good_Student_for_CVPR_2026_paper.pdf) · [Details](paper-notes.md#radar)
   - **Accelerates:** VAR sparse attention plus decoded images.
   - **Approach:** Cost-constrained sparse prediction and decoder adaptation.
@@ -55,6 +59,10 @@ Feature reuse and selective execution, including attention-state storage.
 - [**SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration**](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_SparVAR_Exploring_Sparsity_in_Visual_AutoRegressive_Modeling_for_Training-Free_Acceleration_CVPR_2026_paper.pdf) (CVPR, 2026). [Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Li_SparVAR_Exploring_Sparsity_in_Visual_AutoRegressive_Modeling_for_Training-Free_Acceleration_CVPR_2026_paper.html) · [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_SparVAR_Exploring_Sparsity_in_Visual_AutoRegressive_Modeling_for_Training-Free_Acceleration_CVPR_2026_paper.pdf) · [Details](paper-notes.md#sparvar)
   - **Accelerates:** Next-scale VAR attention.
   - **Approach:** Predicts sparse attention patterns from earlier scales.
+
+- [**Surprise Forcing: What to Remember, When to Skip in Long Video Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) · [Details](paper-notes.md#surpriseforcingvideo)
+  - **Accelerates:** Conditional denoising updates per AR video chunk and retained historical frames.
+  - **Approach:** Adapt the denoising budget to chunk difficulty and retain selected evicted frames in a bounded memory bank.
 
 - [**Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption**](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37026-6_25) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37026-6_25.pdf) · [Details](paper-notes.md#ispavideo)
   - **Accelerates:** KV-cache storage and attention computation in streaming AR video generators.
@@ -129,6 +137,10 @@ Feature reuse and selective execution, including attention-state storage.
 - [**Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling**](https://proceedings.iclr.cc/paper_files/paper/2026/file/d9251dc20346dffe9b6db86dcc6f8cc9-Paper-Conference.pdf) (ICLR, 2026). [Paper](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d9251dc20346dffe9b6db86dcc6f8cc9-Abstract-Conference.html) · [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/d9251dc20346dffe9b6db86dcc6f8cc9-Paper-Conference.pdf) · [Details](paper-notes.md#gtr)
   - **Accelerates:** MAR stages and inner sampling budget.
   - **Approach:** Separates structure generation and detail reconstruction with frequency-weighted selection.
+
+- [**Surprise Forcing: What to Remember, When to Skip in Long Video Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) · [Details](paper-notes.md#surpriseforcingvideo)
+  - **Accelerates:** Conditional denoising updates per AR video chunk and retained historical frames.
+  - **Approach:** Adapt the denoising budget to chunk difficulty and retain selected evicted frames in a bounded memory bank.
 
 - [**Effective and Efficient Masked Image Generation Models**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/you25d/you25d.pdf) (ICML, 2025). [Paper](https://proceedings.mlr.press/v267/you25d.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v267/main/assets/you25d/you25d.pdf) · [Details](paper-notes.md#emigm)
   - **Accelerates:** Continuous masked image generation including MAR.

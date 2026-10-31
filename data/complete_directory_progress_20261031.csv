@@ -7,11 +7,11 @@ ACM Computing Surveys,2026,313,1,0,0,312
 ACM MM,2022,829,42,0,0,787
 ACM MM,2023,1014,42,1,1,972
 ACM MM,2024,1151,42,1,0,1109
-ACM TACO,2022,67,0,0,0,67
-ACM TACO,2023,51,1,0,0,50
-ACM TACO,2024,87,0,0,0,87
-ACM TACO,2025,169,1,0,0,168
-ACM TACO,2026,198,0,0,0,198
+ACM TACO,2022,67,67,2,0,0
+ACM TACO,2023,51,51,1,0,0
+ACM TACO,2024,87,87,1,0,0
+ACM TACO,2025,169,169,6,0,0
+ACM TACO,2026,198,198,15,0,0
 ACM TOG,2022,282,5,0,0,277
 ACM TOG,2023,268,8,0,0,260
 ACM TOG,2024,279,15,0,0,264
@@ -23,17 +23,17 @@ ACM TOMM,2024,363,2,0,0,361
 ACM TOMM,2025,324,0,0,0,324
 ACM TOMM,2026,370,0,0,0,370
 BMVC,2023,267,267,24,0,0
-Computational Visual Media,2022,43,3,0,0,40
-Computational Visual Media,2023,54,2,0,0,52
-Computational Visual Media,2024,76,6,0,0,70
-Computational Visual Media,2025,85,6,0,0,79
-Computational Visual Media,2026,89,8,0,0,81
+Computational Visual Media,2022,43,43,2,0,0
+Computational Visual Media,2023,54,54,2,0,0
+Computational Visual Media,2024,76,76,5,2,0
+Computational Visual Media,2025,85,85,5,1,0
+Computational Visual Media,2026,89,89,7,0,0
 Computer Graphics Forum,2022,282,5,0,0,277
 Computer Graphics Forum,2023,255,5,0,0,250
 Computer Graphics Forum,2024,271,8,0,0,263
 Computer Graphics Forum,2025,308,10,0,0,298
 Computer Graphics Forum,2026,280,11,0,0,269
-ECCV,2026,2835,480,17,15,2341
+ECCV,2026,2835,2835,168,35,0
 ICASSP,2022,1865,53,0,0,1812
 ICASSP,2023,2688,45,0,0,2643
 ICASSP,2025,3301,53,1,1,3248
@@ -100,7 +100,7 @@ Pattern Recognition,2024,866,4,0,0,862
 Pattern Recognition,2025,900,0,0,0,900
 Pattern Recognition,2026,1554,0,0,0,1554
 Pattern Recognition Letters,2022,317,0,0,0,317
-Pattern Recognition Letters,2023,303,1,1,0,301
+Pattern Recognition Letters,2023,303,1,1,0,302
 Pattern Recognition Letters,2024,307,1,0,0,306
 Pattern Recognition Letters,2025,329,0,0,0,329
 Pattern Recognition Letters,2026,311,1,0,0,310

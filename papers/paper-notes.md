@@ -3038,13 +3038,13 @@ Venue check: CCF-listed venue name, checked against retained 2026 directory mirr
 | Study type | not admitted to core |
 | Specific object | Adaptive-length AR image tokens |
 | Intervention | Soft tail dropping predicts how many visual tokens to retain |
-| Original-source basis | Inspected Tables 1–2 compare token count and quality. AR runtime/FLOPs savings not established |
-| Cost boundary | Token count only in inspected results |
+| Original-source basis | Sections 3.3 and 4.2 use a causal LlamaGen backbone with adaptive EoS termination. Table 4 reports 229 generated tokens for the 3B STAT model versus 576 for the comparable LlamaGen-3B baseline, alongside image quality. The inspected comparison does not report measured generation latency, throughput or inference FLOPs |
+| Cost boundary | Adaptive AR token count and image quality. No measured runtime or total inference-memory saving established |
 | Reading extent | selected primary PDF passages |
-| Source location | PDF p. 7; abstract/selected method and performance passages |
-| Unresolved item | Inspected Tables 1–2 compare token count and quality. AR runtime/FLOPs savings not established |
+| Source location | Official ECCV PDF pp. 8 and 11–13, Sections 3.3 and 4.2, Tables 3–5. Table 4 visually checked |
+| Unresolved item | Locate an actual inference-cost comparison before core admission. The token-count ratio is not a measured speedup |
 
-[Reading source](https://arxiv.org/pdf/2601.14246#page=7) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37553-7_24)
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37553-7_24.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37553-7_24)
 
 Venue check: CCF-listed venue name, checked against retained 2026 directory mirror; official-host copy unavailable
 
@@ -5139,3 +5139,533 @@ Venue check: Formal online journal publication. CCF venue-name check follows the
 [Reading source](https://ijcai.org/proceedings/2025/0167.pdf) · [Formal publication record](https://ijcai.org/proceedings/2025/167)
 
 Venue check: Formal main proceedings, Workshop excluded
+
+<a name="omnimamba"></a>
+
+## omnimamba
+
+**OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | image |
+| Study type | efficient learned generator |
+| Specific object | Autoregressive image-token prediction with a Mamba-2 state-space backbone |
+| Intervention | Train a unified next-token image/text generator with Mamba-2 and modality-specific vocabularies and adapters |
+| Original-source basis | Section 4.5 separates text output from image output. Table 4 reports 5.68 images/s and 2.81 s for OmniMamba, 0.81 images/s and 19.66 s for Show-o, and 1.02 images/s and 15.64 s for JanusFlow. The image experiment uses one RTX 4090, FP16, batch 16 and 256-resolution output |
+| Cost boundary | Reported batched image-generation timing for different trained generators. The 119.2x headline and 63% memory result concern image-conditioned text output, not image generation. Inclusion of encoding and image decoding in Table 4 timing is not explicitly established |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 3, 12–13, Section 4.5 and Table 4. Table 4 visually checked |
+| Unresolved item | Do not transfer the long-text speed or memory results to images. The compared generator architectures differ |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_6.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_6)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="omniforcingvideo"></a>
+
+## omniforcing_video
+
+**OmniForcing: Unleashing Real-Time Joint Audio-Visual Generation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | video |
+| Study type | efficient learned generator |
+| Specific object | Causal audio-video block generation and conditional denoising updates |
+| Intervention | Distill a bidirectional LTX-2 teacher into a streaming AR student with block-causal modality alignment and rolling KV caches |
+| Original-source basis | Section 4.2 and Table 1 report 5.7 s for a five-second 480p audio-video clip versus 197 s for the offline teacher. Section 4.1 specifies a single H200, bf16, three warmups and 100 iterations, and includes VAE decoding and vocoder processing. The measured median TTFC and throughput are separately 0.71 s and 24.8 FPS |
+| Cost boundary | Efficient learned AR generator compared with a bidirectional teacher. Full-clip runtime, time to first chunk and steady streaming FPS are distinct measurements |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 5–11, method; pp. 12 and 14, timing protocol and Tables 1–2. Tables visually checked |
+| Unresolved item | The student changes generation dependencies. Perceptual metrics do not establish equality to the teacher sampling distribution |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37271-0_31.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37271-0_31)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="packforcingvideo"></a>
+
+## packforcing_video
+
+**PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | video |
+| Study type | learned history compression and execution optimization |
+| Specific object | Stored historical KV entries and historical attention in a Wan2.1-based AR video generator |
+| Intervention | Separate sink, compressed middle and recent history. Compress middle blocks and route selected historical blocks into attention, with incremental temporal RoPE adjustment |
+| Original-source basis | Section 3.1 identifies linear cache growth. Sections 3.2–3.5 define bounded history partitions, dual-branch compression and top-k context selection. The abstract reports approximately 32x compression of middle-history tokens and 14–16 FPS for 832x480 video on one H200. These are not whole-system speedup measurements |
+| Cost boundary | Historical KV/context storage reduction and source-reported streaming throughput. The compression factor applies to the middle-history representation, not total GPU memory or complete-video runtime |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 1 and 5–10, Sections 3.1–3.5 and inference settings; pp. 12–14, quality comparisons and ablations |
+| Unresolved item | No controlled whole-generator latency reduction is established by the inspected main-paper tables. Training and history encoders introduce additional work |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37464-6_31.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37464-6_31)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="surpriseforcingvideo"></a>
+
+## surprise_forcing_video
+
+**Surprise Forcing: What to Remember, When to Skip in Long Video Generation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | video |
+| Study type | execution optimization |
+| Specific object | Conditional denoising updates per AR video chunk and retained historical frames |
+| Intervention | Adapt the denoising budget to chunk difficulty and retain selected evicted frames in a bounded memory bank |
+| Original-source basis | The method builds on LongLive/Wan2.1-T2V-1.3B. Table 4 varies the skip ratio and reports an Acc. Ratio of 15.8% at the default 0.4 setting. The accompanying text describes denoising-compute reduction. Table 1 separately reports 16.45/17.18 FPS on short/long videos versus LongLive's 18.01/18.01 FPS |
+| Cost boundary | Component-level update/compute reduction. The complete configuration is slower than LongLive in the reported FPS table. Do not describe the 15.8% component figure as a measured end-to-end speedup |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 12–15, Sections 4.1–4.3 and Tables 1 and 4. Table 4 visually checked |
+| Unresolved item | Exact GPU model and complete timing boundary are not specified in the inspected main-paper setup. The meaning of Acc. Ratio is described through compute reduction rather than a published latency pair |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_16.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37419-6_16)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="nalalayout"></a>
+
+## nala_layout
+
+**NaLA: A 3D Native LLM Layout Agent for High-Quality 3D Scene Generation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | 3D scene layout |
+| Study type | efficient learned generator |
+| Specific object | AR asset-pose output tokens and repeated optimization in 3D layout generation |
+| Intervention | Encode room/asset point clouds, generate coarse discrete poses and refine them with a continuous regression head |
+| Original-source basis | Section 4 describes AR pose codes followed by continuous refinement. Section 5.6 and Figure 7d compare inference time against asset count for NaLA, LayoutGPT, Holodeck and LayoutVLM, and show lower reported generation time for NaLA. The baseline methods are run with their official configurations |
+| Cost boundary | Source-reported layout-generation runtime curves for different complete agents. The figure does not isolate token representation from backbone or optimization changes. No numeric ratio is inferred from plotted points |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 7–8, token construction; pp. 10 and 12–13, baseline setup, Section 5.6 and Figure 7d. Figure visually checked |
+| Unresolved item | Common hardware, model-service conditions and detailed timing boundaries are not established by the inspected passages. Layout output is separate from mesh or RGB image generation |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_16)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="interactiveavatarvideo"></a>
+
+## interactive_avatar_video
+
+**InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | video |
+| Study type | efficient learned generator |
+| Specific object | Sampling steps in a causal Wan2.2-5B talking-avatar generator |
+| Intervention | Apply causal ODE initialization and Self-Forcing DMD to form a few-step AR generator. Use KV caching and separate DiT/VAE devices for streaming execution |
+| Original-source basis | Section 3.4 identifies the distillation stages. Table 2 reports 1.27 FPS without DMD and 26.68 FPS for the complete model. Section 4.1 states 576p output and places DiT and VAE on different GPU devices. It separately reports approximately 2.6 s TTFF including an LLM audio-response stage |
+| Cost boundary | Source-reported streaming FPS with parallel execution. The 2.6 s conversational TTFF includes additional components. Neither value is a single-GPU complete-video latency |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF p. 11, Sections 3.4 and 4.1; pp. 13–14, Tables 1–2. Table 2 visually checked |
+| Unresolved item | The main setup does not provide the precise GPU count and timing scope for each table row. Memory compression adds computation: the no-LSVM ablation runs faster |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37032-7_37)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="mpadmri"></a>
+
+## mpad_mri
+
+**Unified Multi-plane Autoregressive Diffusion for 3D Multi-contrast MRI Synthesis**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | volumetric medical image synthesis |
+| Study type | efficient learned generator |
+| Specific object | Volumetric denoising and cross-plane sampling in an AR MRI-synthesis generator |
+| Intervention | Replace full 3D denoising with plane-wise 2D conditional diffusion. Reuse previous-plane volumes as priors for fewer subsequent-plane updates |
+| Original-source basis | Figure 1 compares LDM-3D, ALDM and MPAD on ADNI. MPAD reports 23.6 TFLOPs per volume, 4.6 s and 3.0 GB peak memory, versus LDM-3D's 68.4 TFLOPs, 5.2 s and 18.1 GB. Section 4.2 uses ten DDIM steps for the first plane and two for later planes |
+| Cost boundary | Efficient learned AR generator compared with volumetric diffusion baselines. The approximately threefold FLOPs reduction is distinct from the much smaller reported runtime difference. Task is cross-contrast MRI synthesis, not general text-to-image generation |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF p. 2, Figure 1; p. 9, Section 4.2; pp. 14–15, reduced-refinement discussion. Figure 1 visually checked |
+| Unresolved item | GPU and exact timing inclusions are not established in the inspected main-paper setup. The separately mentioned 1.8 s setting uses fewer refinement iterations and is not the Figure 1 default |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37450-9_16)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="recurrentardiffusion"></a>
+
+## recurrent_ar_diffusion
+
+**Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | background |
+| Generated output | video |
+| Study type | AR visual-generation background |
+| Specific object | Long-term recurrent memory for AR video generation |
+| Intervention | Add recurrent blocks to local-attention diffusion for memory update and retrieval |
+| Original-source basis | Table 5 explicitly defines Time as a training step and GPU memory in that training comparison. Table 6 gives one-forward-pass FLOPs and states that the Diffusion Forcing baseline has the cost of only the second stage. These tables do not establish generation acceleration |
+| Cost boundary | Training-resource comparison and added-forward-computation analysis, not measured AR generation latency reduction |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 15–16, Section 5.5 and Tables 5–6 |
+| Unresolved item | No inference-cost reduction established from the inspected comparison |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_27.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37627-5_27)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="tinyhistoryvideo"></a>
+
+## tinyhistory_video
+
+**TinyHistory: Lightweight Video History Embeddings Via Two-Stage Context Learning**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | pending |
+| Generated output | video |
+| Study type | candidate learned history encoder |
+| Specific object | Historical conditioning-token count in AR video generation |
+| Intervention | Learn a history encoder using two-stage context training and condition an AR diffusion generator on its embeddings |
+| Original-source basis | Table 1 and its explanation compare 195 or 780 history tokens/s with a 6240-token/s full-history baseline on Wan2.1 at 480p. Table 3 discusses KV-cache compatibility and quality changes. The selected tables do not report wall-clock generation or measured peak-memory savings |
+| Cost boundary | Conditioning-token budget and output consistency. Token-count ratios are not measured speedup or total GPU-memory ratios |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 10–11, Table 1 and CTX/s definition; p. 14, Table 3 |
+| Unresolved item | Establish runtime, FLOPs or actual inference-memory changes including the added history encoder |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37189-8_10.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37189-8_10)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="intercmdmmotion"></a>
+
+## intercmdm_motion
+
+**InterCMDM: Block-Causal Diffusion for Autoregressive Human Interaction Generation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | pending |
+| Generated output | 3D human motion |
+| Study type | candidate streaming AR generator |
+| Specific object | Block-causal conditional sampling for streaming human-interaction motion |
+| Intervention | Use a shared single-stream transformer with block-causal/multi-task attention masks and latent motion decoding |
+| Original-source basis | The computational-efficiency paragraph reports 1.014 s for a 90-frame sequence on one A100, a 0.662 s first block and 50.3 ms later blocks under 20 diffusion steps. The inspected tables primarily compare generation quality and attention variants |
+| Cost boundary | Absolute source-reported streaming measurements. A demonstrated reduction against an explicit AR inference baseline has not been established |
+| Reading extent | selected primary PDF passages |
+| Source location | Official ECCV PDF pp. 12–15, attention comparisons and computational-efficiency paragraph |
+| Unresolved item | Locate an efficiency comparison establishing the saved computation. Do not convert real-time feasibility into an acceleration ratio |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_2.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_2)
+
+Venue check: Formal ECCV main-conference chapter, matched to the enumerated main proceedings. Workshop excluded
+
+<a name="cvmmultiwaygeneration"></a>
+
+## cvm_multiway_generation
+
+**Text to image generation with bidirectional Multiway Transformers**. Computational Visual Media, 2025.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | background |
+| Generated output | image |
+| Study type | related non-AR generator |
+| Specific object | Non-AR masked-token image generation with bidirectional Multiway Transformers |
+| Intervention | Restore masked visual tokens using bidirectional text-image encoding and iterative parallel inference |
+| Original-source basis | The original paper explicitly describes its method as non-autoregressive. Sections 1 and 4 compare 24 decoding iterations with a 256-step AR example. No application accelerating an existing AR sampler or distilling its generation process is established |
+| Cost boundary | Related non-AR generator design. Its iteration count is not an AR speedup or a measured full-image latency ratio |
+| Reading extent | selected primary PDF passages |
+| Source location | Official SciOpen PDF pp. 1–2, 4 and 8, method description and Table 5 |
+| Unresolved item | Keep outside the core AR acceleration list |
+
+[Reading source](https://www.sciopen.com/local/article_pdf/10.26599/CVM.2025.9450377.pdf) · [Formal publication record](https://www.sciopen.com/article/10.26599/CVM.2025.9450377)
+
+Venue check: Formal Computational Visual Media journal article. No new CCF grade asserted
+
+<a name="cvmcausalmotion"></a>
+
+## cvm_causal_motion
+
+**A causal convolutional neural network for multi-subject motion modeling and generation**. Computational Visual Media, 2024.
+
+| Field | Paper-specific finding |
+|---|---|
+| Publication note | First online 30 November 2023. Volume 10, issue 1, pages 45–59 belongs to the 2024 print issue. |
+| Decision | background |
+| Generated output | 3D human motion |
+| Study type | AR visual-generation background |
+| Specific object | Causal convolutional multi-subject motion modeling |
+| Intervention | Condition causal convolutions on skeleton characteristics for personalized sequential motion synthesis |
+| Original-source basis | The original abstract emphasizes motion modeling and personalization. PDF p. 2 reports approximately 65 FPS. The inspected passages do not establish a reduction in AR inference cost against a controlled reference generator |
+| Cost boundary | AR motion-generation background with an absolute performance statement, not an established AR acceleration result |
+| Reading extent | selected primary PDF passages |
+| Source location | Original Springer PDF pp. 1–2 and official abstract. Volume 10, pp. 45–59 is the 2024 issue, first online 30 November 2023 |
+| Unresolved item | Do not treat realtime output alone as evidence of acceleration |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/s41095-022-0307-3.pdf) · [Formal publication record](https://link.springer.com/article/10.1007/s41095-022-0307-3)
+
+Venue check: Formal Computational Visual Media journal article. No new CCF grade asserted
+
+<a name="cvmclothedanimation"></a>
+
+## cvm_clothed_animation
+
+**Generating diverse clothed 3D human animations via a generative model**. Computational Visual Media, 2024.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | background |
+| Generated output | 3D human motion and garment simulation |
+| Study type | related generative animation |
+| Specific object | Learned garment deformation replacing physics-based cloth simulation |
+| Intervention | Combine a latent body-motion generator with a transformer garment simulator and learned sequence initialization |
+| Original-source basis | Section 5.1 and Table 2 compare the learned simulation with CPU-based ARCSim. The T-shirt entries are 3.9047 s and 0.0123 s per frame. ARCSim is a physics simulator, not an autoregressive image/visual generative model |
+| Cost boundary | Simulation-surrogate timing across CPU physics and GPU neural implementations. The reported ratios are not acceleration of an AR visual generator |
+| Reading extent | selected primary PDF passages |
+| Source location | Original Springer PDF pp. 8–9, Section 5.1 and Table 2 |
+| Unresolved item | Preserve the physics-versus-learned baseline identity and hardware distinction |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/s41095-022-0324-2.pdf) · [Formal publication record](https://link.springer.com/article/10.1007/s41095-022-0324-2)
+
+Venue check: Formal Computational Visual Media journal article. No new CCF grade asserted
+
+<a name="geoflowdriving"></a>
+
+## geoflow_driving
+
+**GeoFlow: Efficient Driving Video Generation via Geometry-Aligned Priors**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | video / scene forecasts |
+| Study type | Acceleration of an AR video flow generator |
+| Specific object | Geometry-aligned initialization and fewer denoising steps for autoregressive driving-video chunks |
+| Intervention | Section 3.5 explicitly specifies short-horizon frame autoregression: each six-frame chunk contains one reference frame and five newly generated frames. Conditional latent Flow Matching inside each video chunk; geometry-warped historical content initializes its source distribution |
+| Original-source basis | Retain as AR driving-video generation acceleration through fewer within-chunk sampling updates. It does not concern static-image AR decoding. Reported 4.2 times compares 16-frame generation with eight steps over four passes against 40 steps over one pass. Chunk sizes and solver budgets change. The five-step six-frame Table 3 timing is separate |
+| Cost boundary | Reported 4.2 times compares 16-frame generation with eight steps over four passes against 40 steps over one pass. Chunk sizes and solver budgets change. The five-step six-frame Table 3 timing is separate |
+| Reading extent | selected primary PDF passages |
+| Source location | Original PDF pp. 6–10, Sections 3.1–3.5; p. 13 inference efficiency and Table 3 |
+| Unresolved item | The inspected main text delegates the precise OpenDWM baseline configuration to supplementary material. Retain this missing configuration detail |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37531-5_22.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_22)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="actionplanmotion"></a>
+
+## actionplan_motion
+
+**ActionPlan: Future-Aware Streaming Motion Synthesis via Frame-Level Action Planning**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | pending |
+| Generated output | 3D human motion |
+| Study type | Streaming motion rectified flow; AR dependency unresolved |
+| Specific object | Overlapping conditional-denoising updates for streaming motion tokens |
+| Intervention | Section 3.4 activates motion latents in raster temporal order and overlaps denoising intervals. Section 3.3 Eq. (2) feeds noisy motion and action-plan latents to a shared denoiser. Section 3.1 establishes causal encoding/decoding; the inspected main text does not establish the complete attention and access restrictions of the streaming predictor. Rectified Flow velocity prediction, Eq. (2); multiple active motion latents are updated concurrently |
+| Original-source basis | Verified streaming motion-generation efficiency. AR visual-generation core admission remains pending implementation-level dependency confirmation. The measured 146 ms first token and 40 ms later tokens do not by themselves establish the autoregressive conditional structure. Causal TAE and temporal activation alone are insufficient to certify the complete predictor |
+| Cost boundary | The measured 146 ms first token and 40 ms later tokens do not by themselves establish the autoregressive conditional structure. Causal TAE and temporal activation alone are insufficient to certify the complete predictor |
+| Reading extent | selected primary PDF passages |
+| Source location | Original PDF pp. 6–8, Sections 3.1–3.4, Eq. (2); pp. 10–11 runtime comparison |
+| Unresolved item | Inspect streaming attention masks and the treatment of clean historical versus provisional future motion latents in the official implementation or supplementary algorithm. Do not infer non-AR or algorithmic error from this missing check |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37225-3_30.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37225-3_30)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="memropevideo"></a>
+
+## memrope_video
+
+**MemRoPE: Training-Free Infinite Video Generation via Evolving Memory Tokens**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | background |
+| Generated output | related visual generation |
+| Study type | related or unresolved source |
+| Specific object | Fixed-size AR video history memory with added inference overhead |
+| Intervention | EMA aggregation of historical keys plus dynamic application of RoPE to unrotated keys |
+| Original-source basis | On A6000, LongLive is 669.60 ms per denoising step and 20.97 GB peak memory; adding MemRoPE adds 3.83 ms and 0.07 GB |
+| Cost boundary | The measured comparison adds runtime and memory relative to the fixed-window baseline. The paper supports context retention, not a demonstrated speedup in this comparison |
+| Reading extent | selected primary PDF passages |
+| Source location | PDF pp. 5–9 and 15, Table 5 |
+| Unresolved item | The measured comparison adds runtime and memory relative to the fixed-window baseline. The paper supports context retention, not a demonstrated speedup in this comparison |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37356-4_14.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_14)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="doe2world"></a>
+
+## doe2_world
+
+**Doe-2: 3D Representation World Model for Unified Driving Scene Forecasting**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | video / scene forecasts |
+| Study type | Efficient hybrid AR world-model design |
+| Specific object | Compact 3D latent prediction with an AR predictor and conditional DiT head |
+| Intervention | Section 3.4 conditions next-scene prediction on historical latents Z_{<=t} and ego-actions a_{<=t}; Eqs. (7)–(8) specify historical cross-attention and coarse future-latent prediction. A three-layer conditional DiT head uses Rectified Flow, Eq. (11), to sample the next-scene latent; the temporal AR predictor supplies its conditioning features |
+| Original-source basis | Retain only as efficient hybrid AR visual world-model design, supported by representation-compression ablations. It is not an execution-only accelerator for an unchanged AR generator. Table 5 reports about 2.3 to 4.0 FPS as latent dimension changes from 768 to 64. Table 7 pure AR is about 6.0 FPS, hybrid 4.0 and pure DiT 1.9. Adding the conditional head is not faster than the pure-AR ablation |
+| Cost boundary | Table 5 reports about 2.3 to 4.0 FPS as latent dimension changes from 768 to 64. Table 7 pure AR is about 6.0 FPS, hybrid 4.0 and pure DiT 1.9. Adding the conditional head is not faster than the pure-AR ablation |
+| Reading extent | selected primary PDF passages |
+| Source location | Original PDF pp. 7–9, Sections 3.3–3.5, Eqs. (7)–(11); p. 16 Tables 5 and 7 |
+| Unresolved item | The inspected text specifies training on eight A800 GPUs but does not establish that as the inference timing hardware. Keep inference hardware and complete timing inclusions unresolved |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37235-2_29.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37235-2_29)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="shotstreamvideo"></a>
+
+## shotstream_video
+
+**ShotStream: Streaming Multi-shot Video Generation for Interactive Storytelling**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | video / scene forecasts |
+| Study type | Learned efficient causal AR video generator |
+| Specific object | Four-step causal multi-shot video generation replacing a multi-step bidirectional teacher |
+| Intervention | Section 4.2 and Figure 4 generate shots from previous shots and each shot chunk-by-chunk. Global and local caches store historical context and recently generated frames. A few-step conditional video denoiser operates within the causal chunk-generation procedure; distribution matching distillation replaces the slow teacher |
+| Original-source basis | Retain as efficient AR video-generator design through distillation. The principal slow comparators and teacher are bidirectional models. Single H200 Table 1: ShotStream 15.95 FPS, Self Forcing 16.36 and LongLive 16.55. Do not report the bidirectional-to-causal throughput gain as a gain over these fast AR baselines |
+| Cost boundary | Single H200 Table 1: ShotStream 15.95 FPS, Self Forcing 16.36 and LongLive 16.55. Do not report the bidirectional-to-causal throughput gain as a gain over these fast AR baselines |
+| Reading extent | selected primary PDF passages |
+| Source location | Original PDF pp. 6–8, Section 4 and Figure 4; pp. 10 and 12, Table 1 and efficiency protocol |
+| Unresolved item | Decoder inclusion in the reported FPS is not explicit in the inspected passages; no preservation of the bidirectional teacher distribution is independently established |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_12.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_12)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="synccachepending"></a>
+
+## synccache_pending
+
+**SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | pending |
+| Generated output | video / scene forecasts |
+| Study type | related or unresolved source |
+| Specific object | Reuse DiT backbone residuals while refreshing lightweight audio blocks |
+| Intervention | Spatially asymmetric probing and modality-decoupled caching for portrait animation |
+| Original-source basis | Timing uses eight A800 GPUs. The named models are HunyuanVideo-Avatar and Wan-S2V. The inspected passages establish diffusion caching but do not yet establish the exact AR inference configuration |
+| Cost boundary | AR/chunk-generation dependency and actual cache lifetime across chunks require verification before core admission |
+| Reading extent | selected primary PDF passages |
+| Source location | PDF pp. 8–13, Tables 1–3 and implementation details |
+| Unresolved item | AR/chunk-generation dependency and actual cache lifetime across chunks require verification before core admission |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37261-1_34.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37261-1_34)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="lactmotion"></a>
+
+## lact_motion
+
+**Practice Makes Perfect: From Explicit Decomposition to Reinforced Latent Planning in Text-to-Motion Generation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | pending |
+| Generated output | 3D human motion |
+| Study type | related or unresolved source |
+| Specific object | Replace explicit reasoning text preceding AR motion decoding with continuous latent reasoning |
+| Intervention | Use supervised explicit reasoning, latent internalization, then GRPO |
+| Original-source basis | Figure 1 notes that explicit-planning time is cited from Motion-R1. The main text delegates the detailed latency analysis to supplementary material |
+| Cost boundary | Retrieve the supplementary timing configuration and compare the same workload. Cross-source explicit-CoT timing is not a controlled speedup |
+| Reading extent | selected primary PDF passages |
+| Source location | PDF pp. 3, 5 and 12–14, Figure 1 caption and latency discussion |
+| Unresolved item | Retrieve the supplementary timing configuration and compare the same workload. Cross-source explicit-CoT timing is not a controlled speedup |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37174-4_27.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37174-4_27)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="scalemogenmotion"></a>
+
+## scalemogen_motion
+
+**ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | core |
+| Generated output | 3D human motion |
+| Study type | Efficient scale-wise AR motion-generator design |
+| Specific object | Seven scale-wise AR stages for motion synthesis |
+| Intervention | Section 3.2 conditions each skeletal-temporal scale on text and a prefix formed from completed coarser token maps. Section 4.7 specifies seven sequential scale stages. No Flow Matching head is part of the inspected next-scale bitwise-token prediction mechanism |
+| Original-source basis | Retain as efficient AR 3D human-motion generation. Its output is motion, not static RGB images or a mesh-generation task. Single RTX 4090, SnapMoGen: seven stages and 0.071 s/sample versus T2M-GPT 40 stages and 0.239 s. MoMask++ reports 0.051 s. The source table does not establish that the fewest stages gives the fastest method |
+| Cost boundary | Single RTX 4090, SnapMoGen: seven stages and 0.071 s/sample versus T2M-GPT 40 stages and 0.239 s. MoMask++ reports 0.051 s. The source table does not establish that the fewest stages gives the fastest method |
+| Reading extent | selected primary PDF passages |
+| Source location | Original PDF pp. 5–8, Sections 3.1–3.2; pp. 15–16, Table 6 and Section 4.7 |
+| Unresolved item | Different trained models are compared; complete motion decoding inclusion is not stated. No unchanged-reference distribution preservation is asserted |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37152-2_24.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37152-2_24)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="paraflowrelated"></a>
+
+## paraflow_related
+
+**ParaFlow: Parallel Sampling for Flow Matching Models**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | background |
+| Generated output | related visual generation |
+| Study type | related or unresolved source |
+| Specific object | Parallel numerical time steps in SD3 and FLUX flow matching |
+| Intervention | Solve triangular numerical sampling equations through step parallelism and velocity approximation |
+| Original-source basis | The original experiments name Stable Diffusion 3 and FLUX. Autoregressive here describes sequential numerical integration; an AR visual-token or AR chunk generator application is not established |
+| Cost boundary | General flow-sampling background. The source abstract does not establish application to an autoregressive visual generator |
+| Reading extent | official abstract and selected primary PDF formulation |
+| Source location | Official abstract and PDF opening formulation |
+| Unresolved item | General flow-sampling background. The source abstract does not establish application to an autoregressive visual generator |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37038-9_8.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37038-9_8)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded
+
+<a name="lgtokmotion"></a>
+
+## lgtok_motion
+
+**Language-Guided Transformer Tokenizer for Human Motion Generation**. ECCV, 2026.
+
+| Field | Paper-specific finding |
+|---|---|
+| Decision | pending |
+| Generated output | 3D human motion |
+| Study type | related or unresolved source |
+| Specific object | Compact language-aligned discrete motion tokens |
+| Intervention | Train a language-guided transformer tokenizer with a language-drop scheme |
+| Original-source basis | LG-Tok-mini reduces token count. The main text sends inference-time details to the appendix |
+| Cost boundary | Read the appendix timing and identify the evaluated generator family. Token-count reduction alone is not measured latency |
+| Reading extent | selected primary PDF passages |
+| Source location | Official abstract and PDF p. 9, experimental outline |
+| Unresolved item | Read the appendix timing and identify the evaluated generator family. Token-count reduction alone is not measured latency |
+
+[Reading source](https://link.springer.com/content/pdf/10.1007/978-3-032-37041-9_17.pdf) · [Formal publication record](https://link.springer.com/chapter/10.1007/978-3-032-37041-9_17)
+
+Venue check: Formal ECCV 2026 main proceedings; Workshop excluded

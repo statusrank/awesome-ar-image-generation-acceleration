@@ -8,7 +8,7 @@ Conference year, first-online date and proceedings imprint year are separate. Fo
 
 ## Current admission state
 
-The 186 original records have 103 core, 68 background and 15 pending decisions. The follow-up adds 46 formally published records with 38 core and eight pending decisions. The 232-record catalog therefore contains 141 core papers. Three pre-2022 core studies are historical foundations, not part of the five-year search result.
+The 186 original records have 103 core, 68 background and 15 pending decisions. Follow-up adds 69 formally published records: 49 core, six background and fourteen pending. The current catalog has 255 records and 152 core papers. Three pre-2022 core studies are historical foundations, not part of the five-year search result.
 
 Core admission requires an AR visual-generation object and original-source inference-efficiency evidence. Training results and token length alone do not qualify. Image, video and 3D generation remain separate. Model-evaluation budgets and memory savings are not relabeled complete image-generation latency. See [inclusion criteria](inclusion-criteria.md) and [paper-specific source notes](../papers/paper-notes.md).
 
@@ -80,7 +80,7 @@ Old under-review PDFs are checked against later primary records. Original PDFs a
 
 ## Outstanding candidates and limits
 
-The catalog has 23 pending records. Another [15 earlier search candidates](../data/unresolved_search_candidates.csv) have not been added. Candidate lists and [visual follow-up decisions](../data/visual_candidate_screening.csv) retain the reason for each unresolved admission. Official abstracts support three current core records without a checked full performance table. No such record is described as a proof-verified or reproduced result.
+The catalog has 29 pending records. Another [15 earlier search candidates](../data/unresolved_search_candidates.csv) have not been added. Candidate lists and [visual follow-up decisions](../data/visual_candidate_screening.csv) retain the reason for each unresolved admission. Official abstracts support three current core records without a checked full performance table. No such record is described as a proof-verified or reproduced result.
 
 The remaining source/year gaps prevent a claim of exhaustive five-year CCF coverage. Future corrections should append dated source evidence and update the per-paper decision. They should not retroactively describe failed retrievals as complete searches.
 
@@ -92,4 +92,6 @@ During the 31 October link check, 131 current core download URLs returned PDF he
 
 ## Complete-directory follow-up
 
-[Actual sources, per-entry progress and new source findings](directory-review-20261031.md) cover the ten requested conference directories and 26 journal titles. The metadata export contains 91,731 entries, with 1,355 individually inspected titles and 51 new source-level decisions. This does not establish exhaustive individual screening.
+[Actual sources, per-entry progress and new source findings](directory-review-20261031.md) cover the ten requested conference directories and 26 journal titles. The metadata export contains 91,731 entries, with 4,602 individually inspected titles and 248 source-level decisions. The [local continuation](directory-continuation-review.md) includes complete title reading for ECCV 2026, Computational Visual Media and ACM TACO. This does not establish exhaustive individual screening.
+
+The [213-candidate review](candidate213-review.md) records the current findings and unresolved original-source questions.

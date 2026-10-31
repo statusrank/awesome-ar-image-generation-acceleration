@@ -4,7 +4,7 @@
 
 Parallel evaluation, speculative decoding and generation scheduling.
 
-**30 papers.** Titles link to recorded PDFs or the official paper page.
+**31 papers.** Titles link to recorded PDFs or the official paper page.
 
 ## Contents
 
@@ -130,6 +130,10 @@ Parallel evaluation, speculative decoding and generation scheduling.
 - [**Progressive Checkerboards for Autoregressive Multiscale Image Generation**](https://arxiv.org/pdf/2602.03811) (TMLR, 2026). [Paper](https://openreview.net/forum?id=wkCTCXo1a9) · [PDF](https://arxiv.org/pdf/2602.03811) · [Details](paper-notes.md#tmlrwkctcxo1a9)
   - **Accelerates:** Multiscale AR serial sampling schedule.
   - **Approach:** Progressive checkerboards permit parallel positions within scales.
+
+- [**Unified Multi-plane Autoregressive Diffusion for 3D Multi-contrast MRI Synthesis**](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) (ECCV, 2026). [Paper](https://link.springer.com/chapter/10.1007/978-3-032-37450-9_16) · [PDF](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) · [Details](paper-notes.md#mpadmri)
+  - **Accelerates:** Volumetric denoising and cross-plane sampling in an AR MRI-synthesis generator.
+  - **Approach:** Replace full 3D denoising with plane-wise 2D conditional diffusion. Reuse previous-plane volumes as priors for fewer subsequent-plane updates.
 
 - [**Effective and Efficient Masked Image Generation Models**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/you25d/you25d.pdf) (ICML, 2025). [Paper](https://proceedings.mlr.press/v267/you25d.html) · [PDF](https://raw.githubusercontent.com/mlresearch/v267/main/assets/you25d/you25d.pdf) · [Details](paper-notes.md#emigm)
   - **Accelerates:** Continuous masked image generation including MAR.
