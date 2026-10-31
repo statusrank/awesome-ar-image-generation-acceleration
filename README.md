@@ -2,21 +2,19 @@
 
 **Survey paper: Coming soon...**
 
-A curated list of papers on accelerating autoregressive image and visual generation.
-
-[All papers](papers/core/README.md) · [BibTeX](core_references.bib)
+Papers on accelerating autoregressive image and visual generation.
 
 ## Contents
 
-[Overview](#overview) · [Generated output](#generated-output) · [Categories](#categories) · [Paper list](#paper-list) · [Related work](#related-work) · [Resources](#resources)
+[Overview](#overview) · [By output](#by-output) · [Categories](#categories) · [Papers](#papers) · [License](#license)
 
 ## Overview
 
-Methods include faster sampling and decoding, reduced prediction cost, and efficient generator design. Image, video and 3D tasks have separate collections.
+Methods are organized by the computation they change. Image, video and 3D generation have separate collections.
 
-**152 acceleration papers.** Papers may appear in multiple categories.
+**152 papers.** Papers may appear in multiple categories.
 
-## Generated Output
+## By Output
 
 [Image generation](papers/by-task/image/README.md) · [Video generation](papers/by-task/video/README.md) · [3D and motion generation](papers/by-task/3d/README.md)
 
@@ -25,42 +23,19 @@ Methods include faster sampling and decoding, reduced prediction cost, and effic
 | Category | Focus | Papers |
 |---|---|---:|
 | [Sampling and Decoding](papers/sampling-and-decoding/README.md) | Parallel evaluation, speculative decoding and generation scheduling. | 31 |
-| [Conditional Computation](papers/conditional-computation/README.md) | Feature reuse and selective execution, including attention-state storage. | 32 |
-| [Learning Efficient Generators](papers/efficient-generators/README.md) | Efficient predictors and representations, including learned sampling procedures. | 63 |
-| [AR video-generation acceleration](papers/video-generation/README.md) | Acceleration of autoregressive video generation and streaming synthesis. | 43 |
-| [AR 3D-generation acceleration](papers/3d-generation/README.md) | Acceleration of autoregressive 3D geometry, layouts and human motion. | 8 |
-| [Related Test-Time Search Budgets](papers/related-search-budgets/README.md) | Acceleration under a multi-path generation or test-time search budget. | 1 |
+| [Conditional Computation](papers/conditional-computation/README.md) | Feature reuse, selective execution and reduced attention-state storage. | 32 |
+| [Learning Efficient Generators](papers/efficient-generators/README.md) | Efficient predictors, compact representations and learned sampling procedures. | 63 |
+| [Video Generation Acceleration](papers/video-generation/README.md) | Acceleration of autoregressive video generation and streaming synthesis. | 43 |
+| [3D and Motion Generation Acceleration](papers/3d-generation/README.md) | Acceleration of autoregressive shape, layout and human-motion generation. | 8 |
+| [Test-Time Search](papers/test-time-search/README.md) | Early rejection of generation paths in autoregressive image sampling. | 1 |
 
-### Subcategories
+[All categories](papers/README.md) · [By year](papers/by-year.md) · [By venue](papers/by-venue.md)
 
-- [Sampling and Decoding](papers/sampling-and-decoding/README.md)
-  - [Parallel and Speculative Candidate Generation](papers/sampling-and-decoding/README.md#parallel-and-speculative-candidate-generation)
-  - [Verification and Commitment](papers/sampling-and-decoding/README.md#verification-and-commitment)
-  - [Generation Scheduling and Context Organization](papers/sampling-and-decoding/README.md#generation-scheduling-and-context-organization)
-  - [Other parallel sampling](papers/sampling-and-decoding/README.md#other-parallel-sampling)
-- [Conditional Computation](papers/conditional-computation/README.md)
-  - [Feature Reuse and Refresh](papers/conditional-computation/README.md#feature-reuse-and-refresh)
-  - [KV-cache Management and Sparse Attention](papers/conditional-computation/README.md#kv-cache-management-and-sparse-attention)
-  - [Spatial and Depth-wise Computation Reduction](papers/conditional-computation/README.md#spatial-and-depth-wise-computation-reduction)
-  - [Conditional Guidance Simplification](papers/conditional-computation/README.md#conditional-guidance-simplification)
-  - [Iterative Conditional Sampling](papers/conditional-computation/README.md#iterative-conditional-sampling)
-  - [Numerical Precision and Quantization](papers/conditional-computation/README.md#numerical-precision-and-quantization)
-  - [Hardware and Collaborative Execution](papers/conditional-computation/README.md#hardware-and-collaborative-execution)
-- [Learning Efficient Generators](papers/efficient-generators/README.md)
-  - [Efficient Conditional Predictors](papers/efficient-generators/README.md#efficient-conditional-predictors)
-  - [Learning Generation Orders and Conditioning Structures](papers/efficient-generators/README.md#learning-generation-orders-and-conditioning-structures)
-  - [Hierarchy and Compact Representations](papers/efficient-generators/README.md#hierarchy-and-compact-representations)
-  - [Distillation and Shorter Sampling Processes](papers/efficient-generators/README.md#distillation-and-shorter-sampling-processes)
-  - [Other efficient generator designs](papers/efficient-generators/README.md#other-efficient-generator-designs)
-- [AR video-generation acceleration](papers/video-generation/README.md)
-- [AR 3D-generation acceleration](papers/3d-generation/README.md)
-- [Related Test-Time Search Budgets](papers/related-search-budgets/README.md)
-
-## Paper List
+## Papers
 
 ### Sampling and Decoding
 
-[Mechanisms and papers](papers/sampling-and-decoding/README.md)
+[Mechanisms](papers/sampling-and-decoding/README.md)
 
 - [**Accelerating Inference of Discrete Autoregressive Normalizing Flows by Selective Jacobi Decoding**](https://arxiv.org/pdf/2505.24791) (TMLR, 2026).
 - [**Annealed Relaxation of Speculative Decoding for Faster Autoregressive Image Generation**](https://arxiv.org/pdf/2601.09212) (AAAI, 2026).
@@ -94,11 +69,11 @@ Methods include faster sampling and decoding, reduced prediction cost, and effic
 - [**Autoregressive Diffusion Models**](https://arxiv.org/pdf/2110.02037) (ICLR, 2022).
 - [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017).
 
-[↑ Top](#contents)
+[↑ Contents](#contents)
 
 ### Conditional Computation
 
-[Mechanisms and papers](papers/conditional-computation/README.md)
+[Mechanisms](papers/conditional-computation/README.md)
 
 - [**Adaptive Visual Autoregressive Acceleration via Dual-Linkage Entropy Analysis**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26dq/zhang26dq.pdf) (ICML, 2026).
 - [**AMS-KV: Adaptive KV Caching in Multi-Scale Visual Autoregressive Transformers**](https://arxiv.org/pdf/2511.16047) (AAAI, 2026).
@@ -133,11 +108,11 @@ Methods include faster sampling and decoding, reduced prediction cost, and effic
 - [**Memory-Efficient Visual Autoregressive Modeling with Scale-Aware KV Cache Compression**](https://proceedings.neurips.cc/paper_files/paper/2025/file/14550b451b65682b09f9080026d00a7e-Paper-Conference.pdf) (NeurIPS, 2025).
 - [**Plug-and-Play Context Feature Reuse for Efficient Masked Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/2e628a90ac4accdbcc67e8c960c1817f-Paper-Conference.pdf) (NeurIPS, 2025).
 
-[↑ Top](#contents)
+[↑ Contents](#contents)
 
 ### Learning Efficient Generators
 
-[Mechanisms and papers](papers/efficient-generators/README.md)
+[Mechanisms](papers/efficient-generators/README.md)
 
 - [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC, 2027).
 - [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026).
@@ -203,11 +178,11 @@ Methods include faster sampling and decoding, reduced prediction cost, and effic
 - [**Accelerating Feedforward Computation via Parallel Nonlinear Equation Solving**](https://proceedings.mlr.press/v139/song21a/song21a.pdf) (ICML, 2021).
 - [**Blockwise Parallel Decoding for Deep Autoregressive Models**](https://proceedings.neurips.cc/paper_files/paper/2018/file/c4127b9194fe8562c64dc0f5bf2c93bc-Paper.pdf) (NeurIPS, 2018).
 
-[↑ Top](#contents)
+[↑ Contents](#contents)
 
-### AR video-generation acceleration
+### Video Generation Acceleration
 
-[Mechanisms and papers](papers/video-generation/README.md)
+[Mechanisms](papers/video-generation/README.md)
 
 - [**AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/li26iw/li26iw.pdf) (ICML, 2026).
 - [**Accelerating Autoregressive Video Diffusion via History-Guided Cache and Residual Correction**](https://openaccess.thecvf.com/content/CVPR2026/papers/Nan_Accelerating_Autoregressive_Video_Diffusion_via_History-Guided_Cache_and_Residual_Correction_CVPR_2026_paper.pdf) (CVPR, 2026).
@@ -253,11 +228,11 @@ Methods include faster sampling and decoding, reduced prediction cost, and effic
 - [**Efficiency-optimized Video Diffusion Models**](https://hexiangteng.github.io/papers/ACM%20MM%202023%20EVDM.pdf) (ACM MM, 2023).
 - [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017).
 
-[↑ Top](#contents)
+[↑ Contents](#contents)
 
-### AR 3D-generation acceleration
+### 3D and Motion Generation Acceleration
 
-[Mechanisms and papers](papers/3d-generation/README.md)
+[Mechanisms](papers/3d-generation/README.md)
 
 - [**FlashMesh: Faster and Better Autoregressive Mesh Synthesis via Structured Speculation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Shen_FlashMesh_Faster_and_Better_Autoregressive_Mesh_Synthesis_via_Structured_Speculation_CVPR_2026_paper.pdf) (CVPR, 2026).
 - [**NaLA: A 3D Native LLM Layout Agent for High-Quality 3D Scene Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37627-5_16.pdf) (ECCV, 2026).
@@ -268,33 +243,17 @@ Methods include faster sampling and decoding, reduced prediction cost, and effic
 - [**XSpecMesh: Quality-Preserving Auto-Regressive Mesh Generation Acceleration via Multi-Head Speculative Decoding**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26dn/chen26dn.pdf) (ICML, 2026).
 - [**3D-WAG: Hierarchical Wavelet-Guided Autoregressive Generation for High-Fidelity 3D Shapes**](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_1064/paper.pdf) (BMVC, 2025).
 
-[↑ Top](#contents)
+[↑ Contents](#contents)
 
-### Related Test-Time Search Budgets
+### Test-Time Search
 
-[Mechanisms and papers](papers/related-search-budgets/README.md)
+[Mechanisms](papers/test-time-search/README.md)
 
 - [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/download/25379/25151) (AAAI, 2023).
 
-[↑ Top](#contents)
+[↑ Contents](#contents)
 
-## Related Work
 
-- [Background and related papers](papers/background/README.md) (74).
-- [Related surveys](papers/related-surveys/README.md).
-- [Evaluation resources](papers/evaluation/README.md).
-- [Pending papers](papers/pending/README.md) (29).
+## License
 
-## Resources
-
-- [All collections](papers/README.md) · [By year](papers/by-year.md) · [By venue](papers/by-venue.md).
-- [Catalog](data/papers.csv): 255 records. [Acceleration-paper BibTeX](core_references.bib) · [Complete BibTeX](references.bib).
-- [Reading guide](docs/reading-guide.md) · [Scope](docs/inclusion-criteria.md) · [Contributing](CONTRIBUTING.md).
-
-## Related Awesome Lists
-
-- [Awesome-VAR](https://github.com/zhanghm1995/Awesome-VAR).
-- [Awesome Diffusion Models](https://github.com/diff-usion/Awesome-Diffusion-Models).
-- [Awesome Multimodal Large Language Models](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models).
-
-[CC BY 4.0](LICENSE.md) for documentation and catalog arrangement. [MIT](LICENSE-CODE) for maintenance scripts. Linked works retain their own licenses.
+[CC BY 4.0](LICENSE.md). Linked papers retain their original licenses.

@@ -9,3 +9,10 @@ link_report.json
 *.zip
 .env
 .env.*
+
+# Local research inputs
+data/
+docs/
+scripts/
+*.bib
+README.zh-CN.md

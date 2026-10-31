@@ -1,6 +1,6 @@
 # Papers by Generated Output
 
-[Home](../../README.md) · [Mechanisms](../README.md)
+[Home](../../README.md)
 
 | Output | Papers |
 |---|---:|
@@ -9,3 +9,7 @@
 | [3D and Motion Generation Acceleration](3d/README.md) | 9 |
 
 Multi-task papers appear in each applicable collection.
+
+## License
+
+[CC BY 4.0](../../LICENSE.md). Linked papers retain their original licenses.
