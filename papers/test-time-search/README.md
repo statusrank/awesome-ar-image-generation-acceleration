@@ -9,7 +9,7 @@ Early rejection of generation paths in autoregressive image sampling.
 ## Papers
 
 - [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/download/25379/25151) (AAAI, 2023).
-  Tiny visual-language scorer terminates poor partial paths early.
+  Rejects low-quality partial autoregressive paths early to reduce multi-sample image-search and reranking cost.
 
 
 ## License

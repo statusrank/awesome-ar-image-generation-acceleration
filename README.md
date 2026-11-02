@@ -12,7 +12,7 @@ Papers on accelerating autoregressive image and visual generation.
 
 Methods are organized by the computation they change. Image, video and 3D generation have separate collections.
 
-**149 papers.** Papers may appear in multiple categories.
+**147 papers.** Papers may appear in multiple categories.
 
 ## By Output
 
@@ -24,7 +24,7 @@ Methods are organized by the computation they change. Image, video and 3D genera
 |---|---|---:|
 | [Sampling and Decoding](papers/sampling-and-decoding/README.md) | Parallel evaluation, speculative decoding and generation scheduling. | 31 |
 | [Conditional Computation](papers/conditional-computation/README.md) | Feature reuse, selective execution and reduced attention-state storage. | 30 |
-| [Learning Efficient Generators](papers/efficient-generators/README.md) | Efficient predictors, compact representations and learned sampling procedures. | 61 |
+| [Learning Efficient Generators](papers/efficient-generators/README.md) | Efficient predictors, compact representations and learned sampling procedures. | 59 |
 | [Video Generation Acceleration](papers/video-generation/README.md) | Acceleration of autoregressive video generation and streaming synthesis. | 43 |
 | [3D and Motion Generation Acceleration](papers/3d-generation/README.md) | Acceleration of autoregressive shape, layout and human-motion generation. | 8 |
 | [Test-Time Search](papers/test-time-search/README.md) | Early rejection of generation paths in autoregressive image sampling. | 1 |
@@ -112,12 +112,11 @@ Methods are organized by the computation they change. Image, video and 3D genera
 
 [Mechanisms](papers/efficient-generators/README.md)
 
-- [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC, 2027).
+- [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC 2026, proceedings 2027).
 - [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026).
 - [**Autoregression with Self-Token Prediction**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26du/chen26du.pdf) (ICML, 2026).
 - [**Autoregressive Image Generation with Randomized Parallel Decoding**](https://proceedings.iclr.cc/paper_files/paper/2026/file/267852def1fd0db257622892c7e3be2a-Paper-Conference.pdf) (ICLR, 2026).
 - [**Drift-AR: Single-Step Visual Autoregressive Generation via Anti-Symmetric Drifting**](https://arxiv.org/pdf/2603.28049) (ECCV, 2026).
-- [**End-to-End Autoregressive Image Generation with 1D Semantic Tokenizer**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chu26b/chu26b.pdf) (ICML, 2026).
 - [**EVAR: Edge Visual Autoregressive Models via Principled Pruning**](https://link.springer.com/content/pdf/10.1007/978-3-032-37086-0_31.pdf) (ECCV, 2026).
 - [**FARMER: Flow AutoRegressive Transformer over Pixels**](https://openaccess.thecvf.com/content/CVPR2026/papers/Zheng_FARMER_Flow_AutoRegressive_Transformer_over_Pixels_CVPR_2026_paper.pdf) (CVPR, 2026).
 - [**InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars**](https://link.springer.com/content/pdf/10.1007/978-3-032-37032-7_37.pdf) (ECCV, 2026).
@@ -167,7 +166,6 @@ Methods are organized by the computation they change. Image, video and 3D genera
 - [**Speculative Jacobi-Denoising Decoding for Accelerating Autoregressive Text-to-image Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/726ab29b61a749b36d2593648716ae3c-Paper-Conference.pdf) (NeurIPS, 2025).
 - [**Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction**](https://proceedings.neurips.cc/paper_files/paper/2024/file/9a24e284b187f662681440ba15c416fb-Paper-Conference.pdf) (NeurIPS, 2024).
 - [**Efficiency-optimized Video Diffusion Models**](https://hexiangteng.github.io/papers/ACM%20MM%202023%20EVDM.pdf) (ACM MM, 2023).
-- [**Efficient-VQGAN: Towards High-Resolution Image Generation with Efficient Vision Transformers**](https://openaccess.thecvf.com/content/ICCV2023/papers/Cao_Efficient-VQGAN_Towards_High-Resolution_Image_Generation_with_Efficient_Vision_Transformers_ICCV_2023_paper.pdf) (ICCV, 2023).
 - [**Not All Image Regions Matter: Masked Vector Quantization for Autoregressive Image Generation**](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Not_All_Image_Regions_Matter_Masked_Vector_Quantization_for_Autoregressive_CVPR_2023_paper.pdf) (CVPR, 2023).
 - [**Towards Accurate Image Coding: Improved Autoregressive Image Generation With Dynamic Vector Quantization**](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Towards_Accurate_Image_Coding_Improved_Autoregressive_Image_Generation_With_Dynamic_CVPR_2023_paper.pdf) (CVPR, 2023).
 - [**Autoregressive Image Generation Using Residual Quantization**](https://openaccess.thecvf.com/content/CVPR2022/papers/Lee_Autoregressive_Image_Generation_Using_Residual_Quantization_CVPR_2022_paper.pdf) (CVPR, 2022).

@@ -2,16 +2,16 @@
 
 [Home](../../../README.md) · [By output](../README.md)
 
-**102 papers.**
+**100 papers.**
 
-- [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC, 2027).
-  Routes samples among discrete/hybrid/continuous representation paths.
+- [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC 2026, proceedings 2027).
+  Routes generation through discrete, hybrid or continuous representation paths to reduce inference cost relative to a fixed-path configuration.
 
 - [**Accelerating Inference of Discrete Autoregressive Normalizing Flows by Selective Jacobi Decoding**](https://arxiv.org/pdf/2505.24791) (TMLR, 2026).
-  Selective Jacobi iterations parallelize sequential flow inversions.
+  Selectively applies Jacobi iterations to autoregressive normalizing-flow inversions for image sampling, rather than token-level speculative verification.
 
 - [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026).
-  Block-causal denoising with reusable past context.
+  Caches completed blocks under block-causal attention and samples within each block by diffusion. image and video timings are reported separately.
 
 - [**Adaptive Visual Autoregressive Acceleration via Dual-Linkage Entropy Analysis**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26dq/zhang26dq.pdf) (ICML, 2026).
   Entropy-guided adaptive token reduction and cached residual reuse.
@@ -35,7 +35,7 @@
   Decouples position guidance and content prediction for grouped decoding.
 
 - [**CIAR: Interval-based Collaborative Decoding for Image Generation Acceleration**](https://arxiv.org/pdf/2603.25463v1) (ICLR, 2026).
-  On-device interval verification reduces cloud verification calls.
+  Coordinates device-side proposals and interval-based cloud verification to reduce autoregressive image-generation cost and cloud calls.
 
 - [**Continuous Speculative Decoding for Autoregressive Image Generation**](https://arxiv.org/pdf/2411.11925) (ECCV, 2026).
   Uses continuous speculative proposals and approximate trajectory alignment.
@@ -48,9 +48,6 @@
 
 - [**Enabling 8B Bitwise Autoregressive Image Generation on Edge GPUs**](https://iris.unimore.it/bitstream/11380/1400428/4/2026icpr.pdf) (ICPR, 2026).
   Compresses inference memory for deployment.
-
-- [**End-to-End Autoregressive Image Generation with 1D Semantic Tokenizer**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chu26b/chu26b.pdf) (ICML, 2026).
-  Jointly learns semantic 1D representation and AR generation.
 
 - [**Entropy-Aware Dynamic KV Cache Sparsification for Autoregressive Image Generation and Editing**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/tong26k/tong26k.pdf) (ICML, 2026).
   Entropy-aware cache sparsification.
@@ -113,7 +110,7 @@
   Restricts conditioning to adjacent scales and local neighborhoods.
 
 - [**OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models**](https://link.springer.com/content/pdf/10.1007/978-3-032-37419-6_6.pdf) (ECCV, 2026).
-  Train a unified next-token image/text generator with Mamba-2 and modality-specific vocabularies and adapters.
+  Uses a state-space autoregressive predictor with measured image-generation timing. headline long-sequence gains concern text output.
 
 - [**Parallel Jacobi Decoding for Fast Autoregressive Image Generation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Liao_Parallel_Jacobi_Decoding_for_Fast_Autoregressive_Image_Generation_CVPR_2026_paper.pdf) (CVPR, 2026).
   Spatial parallel drafts with adaptive attention masks.
@@ -122,7 +119,7 @@
   Dense-to-MoE conversion with sparse expert activation.
 
 - [**Progressive Checkerboards for Autoregressive Multiscale Image Generation**](https://arxiv.org/pdf/2602.03811) (TMLR, 2026).
-  Progressive checkerboards permit parallel positions within scales.
+  Combines cross-scale conditioning with progressive checkerboard groups to reduce sequential sampling rounds.
 
 - [**Progressive Supernet Training for Efficient Visual Autoregressive Modeling**](https://arxiv.org/pdf/2511.16546) (CVPR, 2026).
   Progressive supernet training permits scale-dependent subnet execution.
@@ -134,7 +131,7 @@
   Cost-constrained sparse prediction and decoder adaptation.
 
 - [**SCAN: Self-Calibrated AutoregressioN for High-Quality Visual Generation**](https://ojs.aaai.org/index.php/AAAI/article/download/37400/41362) (AAAI, 2026).
-  Coarse generation followed by calibrated local refinement.
+  Uses next-set prediction for fast initial generation and adds selective token refinement at additional inference cost.
 
 - [**Shift-and-Sum Quantization for Visual Autoregressive Models**](https://proceedings.iclr.cc/paper_files/paper/2026/file/89379d5fc6eb34ff98488202fb52b9d0-Paper-Conference.pdf) (ICLR, 2026).
   Shift-and-sum value quantization with calibration resampling.
@@ -161,16 +158,16 @@
   Entropy-guided sparse execution.
 
 - [**Towards Sequence Modeling Alignment between Tokenizer and Autoregressive Model**](https://proceedings.iclr.cc/paper_files/paper/2026/file/d649dd586dba64672a96beff24178125-Paper-Conference.pdf) (ICLR, 2026).
-  Causal decoder constrains tokenizer dependencies.
+  Trains a tokenizer with a causal decoder for efficient autoregressive prediction. throughput comparisons concern separately trained generators.
 
 - [**UniCompress: Token Compression for Unified Vision-Language Understanding and Generation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_UniCompress_Token_Compression_for_Unified_Vision-Language_Understanding_and_Generation_CVPR_2026_paper.pdf) (CVPR, 2026).
-  Token compression/decompression shortens visual generation.
+  Shortens the main autoregressive visual sequence and expands it with a smaller autoregressive decompressor before image decoding.
 
 - [**Unified Multimodal Autoregressive Modeling with Shared Context—Visual Tokenizer is Key to Unification**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/peng26k/peng26k.pdf) (ICML, 2026).
   Channel-bitwise prediction reduces serial autoregressive steps.
 
 - [**VibeToken: Scaling 1D Image Tokenizers and Autoregressive Models for Dynamic Resolution Generations**](https://openaccess.thecvf.com/content/CVPR2026/papers/Patel_VibeToken_Scaling_1D_Image_Tokenizers_and_Autoregressive_Models_for_Dynamic_CVPR_2026_paper.pdf) (CVPR, 2026).
-  Resolution-agnostic 1D tokenization bounds AR sequence burden.
+  Uses short resolution-agnostic codes to reduce autoregressive prediction FLOPs. image reconstruction remains a separate cost.
 
 - [**Visual Implicit Autoregressive Modeling**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/jiang26ah/jiang26ah.pdf) (ICML, 2026).
   Implicit equilibrium layer with variable inference iterations.
@@ -197,7 +194,7 @@
   Deep-compression hybrid tokenizer reduces spatial sequence burden.
 
 - [**Denoising Token Prediction in Masked Autoregressive Models**](https://openaccess.thecvf.com/content/ICCV2025/papers/Yao_Denoising_Token_Prediction_in_Masked_Autoregressive_Models_ICCV_2025_paper.pdf) (ICCV, 2025).
-  Adds denoising refinement of unmasked predictions.
+  Redesigns masked and unmasked token prediction in MAR to improve the inference-time and image-quality trade-off.
 
 - [**Distilled Decoding 1: One-step Sampling of Image Auto-regressive Models with Flow Matching**](https://arxiv.org/pdf/2412.17153v3) (ICLR, 2025).
   Distills AR sampling into a few-step flow generator.
@@ -224,7 +221,7 @@
   Groups spatially related token candidates for verification.
 
 - [**HART: Efficient Visual Generation with Hybrid Autoregressive Transformer**](https://proceedings.iclr.cc/paper_files/paper/2025/file/ab4e1e704c68b0f476c265996f08d283-Paper-Conference.pdf) (ICLR, 2025).
-  Discrete AR structure with a small residual diffusion module.
+  Combines discrete autoregressive structure prediction with lightweight continuous residual sampling. residual sampling adds work relative to discrete-only generation.
 
 - [**Hawk: Leveraging Spatial Context for Faster Autoregressive Text-to-Image Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/cba5f2c37ed6599fb9338e470a05e05a-Paper-Conference.pdf) (NeurIPS, 2025).
   Spatial-context drafting improves candidate prediction.
@@ -251,7 +248,7 @@
   Neighbor expansion with dimension-oriented parallel prediction heads.
 
 - [**NFIG: Multi-Scale Autoregressive Image Generation via Frequency Ordering**](https://proceedings.neurips.cc/paper_files/paper/2025/file/24aa1508f9bdb2c2894c00963ce39f18-Paper-Conference.pdf) (NeurIPS, 2025).
-  Generates low-frequency structure before higher-frequency detail.
+  Organizes multiscale autoregressive generation from low to high frequencies. reported runtime comparisons also vary model capacity.
 
 - [**Numerical Pruning for Efficient Autoregressive Models**](https://arxiv.org/pdf/2412.12441) (AAAI, 2025).
   Numerical-score structured pruning.
@@ -269,7 +266,7 @@
   Randomized-order training yields an AR generator evaluated with KV-cached serving.
 
 - [**SpectralAR: Spectral Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_SpectralAR_Spectral_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
-  Orders tokens by increasing spectral detail.
+  Uses compact spectral tokens with sequential or grouped prediction. grouped configurations trade generation time against image quality.
 
 - [**Speculative Jacobi-Denoising Decoding for Accelerating Autoregressive Text-to-image Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/726ab29b61a749b36d2593648716ae3c-Paper-Conference.pdf) (NeurIPS, 2025).
   Fine-tunes noisy embeddings for next-clean-token prediction.
@@ -283,23 +280,20 @@
 - [**Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction**](https://proceedings.neurips.cc/paper_files/paper/2024/file/9a24e284b187f662681440ba15c416fb-Paper-Conference.pdf) (NeurIPS, 2024).
   Next-scale prediction replaces raster next-token progression.
 
-- [**Efficient-VQGAN: Towards High-Resolution Image Generation with Efficient Vision Transformers**](https://openaccess.thecvf.com/content/ICCV2023/papers/Cao_Efficient-VQGAN_Towards_High-Resolution_Image_Generation_with_Efficient_Vision_Transformers_ICCV_2023_paper.pdf) (ICCV, 2023).
-  Local tokenization with blockwise parallel generation.
-
 - [**Not All Image Regions Matter: Masked Vector Quantization for Autoregressive Image Generation**](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Not_All_Image_Regions_Matter_Masked_Vector_Quantization_for_Autoregressive_CVPR_2023_paper.pdf) (CVPR, 2023).
-  Masks less-important regions and predicts selected/content positions with Stackformer.
+  Omits redundant region codes, predicts retained codes and positions, and restores dense features before image decoding.
 
 - [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/download/25379/25151) (AAAI, 2023).
-  Tiny visual-language scorer terminates poor partial paths early.
+  Rejects low-quality partial autoregressive paths early to reduce multi-sample image-search and reranking cost.
 
 - [**Towards Accurate Image Coding: Improved Autoregressive Image Generation With Dynamic Vector Quantization**](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Towards_Accurate_Image_Coding_Improved_Autoregressive_Image_Generation_With_Dynamic_CVPR_2023_paper.pdf) (CVPR, 2023).
-  Dynamic quantization plus coarse-to-fine position/content prediction.
+  Allocates variable-length codes across image regions and predicts their positions and contents to reduce autoregressive sampling cost.
 
 - [**Autoregressive Diffusion Models**](https://arxiv.org/pdf/2110.02037) (ICLR, 2022).
-  Parallel generation under a selected network-evaluation budget.
+  Supports grouped image sampling under a chosen network-evaluation budget. evaluation counts are distinct from measured latency.
 
 - [**Autoregressive Image Generation Using Residual Quantization**](https://openaccess.thecvf.com/content/CVPR2022/papers/Lee_Autoregressive_Image_Generation_Using_Residual_Quantization_CVPR_2022_paper.pdf) (CVPR, 2022).
-  Residual quantization compresses spatial maps and predicts code stacks.
+  Reduces the spatial code grid through residual quantization and predicts code stacks. reported sampling times exclude image decoding.
 
 - [**Accelerating Feedforward Computation via Parallel Nonlinear Equation Solving**](https://proceedings.mlr.press/v139/song21a/song21a.pdf) (ICML, 2021).
   Parallel nonlinear fixed-point solving.
@@ -308,7 +302,7 @@
   Predicts blocks provisionally and commits the prefix validated by a scoring model.
 
 - [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017).
-  Parallel multiscale density factorization.
+  Uses a learned multiscale pixel-group factorization for parallel image sampling, changing the original PixelCNN dependencies.
 
 
 ## License

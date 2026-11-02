@@ -117,7 +117,7 @@ Feature reuse, selective execution and reduced attention-state storage.
 ## Hardware and Collaborative Execution
 
 - [**CIAR: Interval-based Collaborative Decoding for Image Generation Acceleration**](https://arxiv.org/pdf/2603.25463v1) (ICLR, 2026).
-  On-device interval verification reduces cloud verification calls.
+  Coordinates device-side proposals and interval-based cloud verification to reduce autoregressive image-generation cost and cloud calls.
 
 - [**Live Avatar: Streaming Real-Time Audio-Driven Avatar Generation with Infinite Length**](https://link.springer.com/content/pdf/10.1007/978-3-032-37135-5_5.pdf) (ECCV, 2026).
   Distill WanS2V into a causal few-step generator and pipeline denoising timesteps, with VAE parallelization and kernel optimizations.

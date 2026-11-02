@@ -15,7 +15,7 @@ Acceleration of autoregressive video generation and streaming synthesis.
   History-guided cache timing with enhanced residual correction.
 
 - [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026).
-  Block-causal denoising with reusable past context.
+  Caches completed blocks under block-causal attention and samples within each block by diffusion. image and video timings are reported separately.
 
 - [**Avatar Forcing: Real-Time Interactive Head Avatar Generation for Natural Conversation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Ki_Avatar_Forcing_Real-Time_Interactive_Head_Avatar_Generation_for_Natural_Conversation_CVPR_2026_paper.pdf) (CVPR, 2026).
   Blockwise causal diffusion forcing with KV reuse replaces a bidirectional motion generator.
@@ -135,7 +135,7 @@ Acceleration of autoregressive video generation and streaming synthesis.
   Train smaller denoisers with bottleneck residual paths, channel splitting and a mixed attention algorithm.
 
 - [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017).
-  Parallel multiscale density factorization.
+  Uses a learned multiscale pixel-group factorization for parallel image sampling, changing the original PixelCNN dependencies.
 
 
 ## License

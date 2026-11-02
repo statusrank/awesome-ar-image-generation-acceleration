@@ -9,10 +9,10 @@ Parallel evaluation, speculative decoding and generation scheduling.
 ## Parallel and Speculative Candidate Generation
 
 - [**Accelerating Inference of Discrete Autoregressive Normalizing Flows by Selective Jacobi Decoding**](https://arxiv.org/pdf/2505.24791) (TMLR, 2026).
-  Selective Jacobi iterations parallelize sequential flow inversions.
+  Selectively applies Jacobi iterations to autoregressive normalizing-flow inversions for image sampling, rather than token-level speculative verification.
 
 - [**CIAR: Interval-based Collaborative Decoding for Image Generation Acceleration**](https://arxiv.org/pdf/2603.25463v1) (ICLR, 2026).
-  On-device interval verification reduces cloud verification calls.
+  Coordinates device-side proposals and interval-based cloud verification to reduce autoregressive image-generation cost and cloud calls.
 
 - [**FastHybrid: Accelerating Hybrid Autoregressive Image Generation with Lookahead and Guided Decoding**](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiang_FastHybrid_Accelerating_Hybrid_Autoregressive_Image_Generation_with_Lookahead_and_Guided_CVPR_2026_paper.pdf) (CVPR, 2026).
   Lookahead and guided decoding reduce hybrid generation computation.
@@ -94,7 +94,7 @@ Parallel evaluation, speculative decoding and generation scheduling.
   Spatial parallel drafts with adaptive attention masks.
 
 - [**Progressive Checkerboards for Autoregressive Multiscale Image Generation**](https://arxiv.org/pdf/2602.03811) (TMLR, 2026).
-  Progressive checkerboards permit parallel positions within scales.
+  Combines cross-scale conditioning with progressive checkerboard groups to reduce sequential sampling rounds.
 
 - [**Unified Multi-plane Autoregressive Diffusion for 3D Multi-contrast MRI Synthesis**](https://link.springer.com/content/pdf/10.1007/978-3-032-37450-9_16.pdf) (ECCV, 2026).
   Replace full 3D denoising with plane-wise 2D conditional diffusion. Reuse previous-plane volumes as priors for fewer subsequent-plane updates.
@@ -106,18 +106,18 @@ Parallel evaluation, speculative decoding and generation scheduling.
   Cached token pruning forwards selected tokens and recovers omitted states.
 
 - [**NFIG: Multi-Scale Autoregressive Image Generation via Frequency Ordering**](https://proceedings.neurips.cc/paper_files/paper/2025/file/24aa1508f9bdb2c2894c00963ce39f18-Paper-Conference.pdf) (NeurIPS, 2025).
-  Generates low-frequency structure before higher-frequency detail.
+  Organizes multiscale autoregressive generation from low to high frequencies. reported runtime comparisons also vary model capacity.
 
 - [**ZipAR: Parallel Autoregressive Image Generation through Spatial Locality**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/he25b/he25b.pdf) (ICML, 2025).
   Spatially parallel decoding with local context windows.
 
 - [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017).
-  Parallel multiscale density factorization.
+  Uses a learned multiscale pixel-group factorization for parallel image sampling, changing the original PixelCNN dependencies.
 
 ## Other parallel sampling
 
 - [**Autoregressive Diffusion Models**](https://arxiv.org/pdf/2110.02037) (ICLR, 2022).
-  Parallel generation under a selected network-evaluation budget.
+  Supports grouped image sampling under a chosen network-evaluation budget. evaluation counts are distinct from measured latency.
 
 
 ## License
