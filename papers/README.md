@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [By output](by-task/README.md) · [By year](by-year.md) · [By venue](by-venue.md)
 
-**147 papers.**
+**146 papers.**
 
 | Category | Papers |
 |---|---:|
@@ -11,7 +11,6 @@
 | [Learning Efficient Generators](efficient-generators/README.md) | 59 |
 | [Video Generation Acceleration](video-generation/README.md) | 43 |
 | [3D and Motion Generation Acceleration](3d-generation/README.md) | 8 |
-| [Test-Time Search](test-time-search/README.md) | 1 |
 
 ## License
 

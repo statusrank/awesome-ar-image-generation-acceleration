@@ -12,7 +12,7 @@ Papers on accelerating autoregressive image and visual generation.
 
 Methods are organized by the computation they change. Image, video and 3D generation have separate collections.
 
-**147 papers.** Papers may appear in multiple categories.
+**146 papers.** Papers may appear in multiple categories.
 
 ## By Output
 
@@ -27,7 +27,6 @@ Methods are organized by the computation they change. Image, video and 3D genera
 | [Learning Efficient Generators](papers/efficient-generators/README.md) | Efficient predictors, compact representations and learned sampling procedures. | 59 |
 | [Video Generation Acceleration](papers/video-generation/README.md) | Acceleration of autoregressive video generation and streaming synthesis. | 43 |
 | [3D and Motion Generation Acceleration](papers/3d-generation/README.md) | Acceleration of autoregressive shape, layout and human-motion generation. | 8 |
-| [Test-Time Search](papers/test-time-search/README.md) | Early rejection of generation paths in autoregressive image sampling. | 1 |
 
 [All categories](papers/README.md) · [By year](papers/by-year.md) · [By venue](papers/by-venue.md)
 
@@ -236,14 +235,6 @@ Methods are organized by the computation they change. Image, video and 3D genera
 - [**SuperVoxelGPT: Adaptive and Ordered 3D Tokenization for Autoregressive Shape Generation**](https://link.springer.com/content/pdf/10.1007/978-3-032-37577-3_22.pdf) (ECCV, 2026).
 - [**XSpecMesh: Quality-Preserving Auto-Regressive Mesh Generation Acceleration via Multi-Head Speculative Decoding**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/chen26dn/chen26dn.pdf) (ICML, 2026).
 - [**3D-WAG: Hierarchical Wavelet-Guided Autoregressive Generation for High-Fidelity 3D Shapes**](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_1064/paper.pdf) (BMVC, 2025).
-
-[↑ Contents](#contents)
-
-### Test-Time Search
-
-[Mechanisms](papers/test-time-search/README.md)
-
-- [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/download/25379/25151) (AAAI, 2023).
 
 [↑ Contents](#contents)
 

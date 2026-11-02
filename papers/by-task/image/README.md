@@ -2,7 +2,7 @@
 
 [Home](../../../README.md) · [By output](../README.md)
 
-**100 papers.**
+**99 papers.**
 
 - [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC 2026, proceedings 2027).
   Routes generation through discrete, hybrid or continuous representation paths to reduce inference cost relative to a fixed-path configuration.
@@ -282,9 +282,6 @@
 
 - [**Not All Image Regions Matter: Masked Vector Quantization for Autoregressive Image Generation**](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Not_All_Image_Regions_Matter_Masked_Vector_Quantization_for_Autoregressive_CVPR_2023_paper.pdf) (CVPR, 2023).
   Omits redundant region codes, predicts retained codes and positions, and restores dense features before image decoding.
-
-- [**Reject Decoding via Language-Vision Models for Text-to-Image Synthesis**](https://ojs.aaai.org/index.php/AAAI/article/download/25379/25151) (AAAI, 2023).
-  Rejects low-quality partial autoregressive paths early to reduce multi-sample image-search and reranking cost.
 
 - [**Towards Accurate Image Coding: Improved Autoregressive Image Generation With Dynamic Vector Quantization**](https://openaccess.thecvf.com/content/CVPR2023/papers/Huang_Towards_Accurate_Image_Coding_Improved_Autoregressive_Image_Generation_With_Dynamic_CVPR_2023_paper.pdf) (CVPR, 2023).
   Allocates variable-length codes across image regions and predicts their positions and contents to reduce autoregressive sampling cost.
