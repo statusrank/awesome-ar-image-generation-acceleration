@@ -12,6 +12,10 @@ Papers on accelerating autoregressive image and visual generation.
 
 Methods are organized by the computation they change. Image, video and 3D generation have separate collections.
 
+![Timeline of selected autoregressive image-generation acceleration methods](assets/ar-image-acceleration-timeline.png)
+
+Selected image-generation methods and reference generators. Years indicate formal publication, except the marked LlamaGen preprint.
+
 **146 papers.** Papers may appear in multiple categories.
 
 ## By Output
