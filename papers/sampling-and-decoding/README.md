@@ -4,7 +4,7 @@
 
 Parallel and speculative decoding, followed by generation scheduling.
 
-**28 papers.**
+**34 papers.**
 
 ## 3.1 Parallel and Speculative Decoding
 
@@ -26,6 +26,9 @@ Parallel and speculative decoding, followed by generation scheduling.
 - [**Multi-Scale Local Speculative Decoding for Image Generation**](https://openaccess.thecvf.com/content/CVPR2026/papers/Peruzzo_Multi-Scale_Local_Speculative_Decoding_for_Image_Generation_CVPR_2026_paper.pdf) (CVPR, 2026).
   Low-resolution proposals with upsampling and spatially local verification.
 
+- [**PathRelax: Parallel-Path Relaxed Speculative Jacobi Decoding for Accelerating Auto-Regressive Text-to-Image Generation**](https://arxiv.org/pdf/2606.10492) (arXiv preprint, 2026).
+  Searches multiple draft paths with PathExplore and relaxes verification using cross-path semantic similarity in PathRelax.
+
 - [**SJD++: Improved Speculative Jacobi Decoding for Training-free Acceleration of Discrete Auto-regressive Text-to-Image Generation**](https://arxiv.org/pdf/2512.07503v1) (IEEE TPAMI, 2026).
   Retains high-confidence unaccepted draft states.
 
@@ -38,8 +41,14 @@ Parallel and speculative decoding, followed by generation scheduling.
 - [**SJD-SV: Speculative Jacobi Decoding with Semantics Verification for Autoregressive Image Generation**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26fd/zhang26fd.pdf) (ICML, 2026).
   Semantic subsequence verification changes the tested/committed positions.
 
+- [**SJD-VP: Speculative Jacobi Decoding with Verification Prediction for Autoregressive Image Generation**](https://arxiv.org/pdf/2603.27115v1) (arXiv preprint, 2026).
+  Uses historical probability trajectories to guide candidate construction and verification in Speculative Jacobi Decoding.
+
 - [**Speculative Coupled Decoding for Training-Free Lossless Acceleration of Autoregressive Visual Generation**](https://arxiv.org/pdf/2510.24211v2) (ICML, 2026).
   Couples stochastic draws across Jacobi iterations to stabilize draft candidates.
+
+- [**SSD: Spatially Speculative Decoding Accelerates Autoregressive Image Generation**](https://arxiv.org/pdf/2606.20543) (arXiv preprint, 2026).
+  Proposes horizontal and vertical continuations, then verifies and corrects two-dimensional speculative drafts in parallel.
 
 - [**VVS: Accelerating Speculative Decoding for Visual Autoregressive Generation via Partial Verification Skipping**](https://openaccess.thecvf.com/content/CVPR2026/papers/Dong_VVS_Accelerating_Speculative_Decoding_for_Visual_Autoregressive_Generation_via_Partial_CVPR_2026_paper.pdf) (CVPR, 2026).
   Skips verification for selected provisional positions.
@@ -47,11 +56,17 @@ Parallel and speculative decoding, followed by generation scheduling.
 - [**Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding**](https://proceedings.iclr.cc/paper_files/paper/2025/file/e45c8d054739d31676619e7e11327f68-Paper-Conference.pdf) (ICLR, 2025).
   Jacobi candidate reuse with stochastic verification.
 
+- [**Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees**](https://arxiv.org/pdf/2512.21857) (arXiv preprint, 2025).
+  Adapts draft-tree depth and branching to spatial adjacency during speculative image decoding.
+
 - [**Grouped Speculative Decoding for Autoregressive Image Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/So_Grouped_Speculative_Decoding_for_Autoregressive_Image_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
   Groups spatially related token candidates for verification.
 
 - [**Hawk: Leveraging Spatial Context for Faster Autoregressive Text-to-Image Generation**](https://proceedings.neurips.cc/paper_files/paper/2025/file/cba5f2c37ed6599fb9338e470a05e05a-Paper-Conference.pdf) (NeurIPS, 2025).
   Spatial-context drafting improves candidate prediction.
+
+- [**LANTERN++: Enhancing Relaxed Speculative Decoding with Static Tree Drafting for Visual Auto-regressive Models**](https://arxiv.org/pdf/2502.06352) (ICLR SCOPE Workshop, 2025).
+  Combines static draft trees with relaxed speculative acceptance for visual autoregressive decoding.
 
 - [**LANTERN: Accelerating Visual Autoregressive Models with Relaxed Speculative Decoding**](https://proceedings.iclr.cc/paper_files/paper/2025/file/5e1c255653eb98cef13f45b2d337c882-Paper-Conference.pdf) (ICLR, 2025).
   Latent-neighborhood relaxed acceptance.
@@ -87,6 +102,9 @@ Parallel and speculative decoding, followed by generation scheduling.
 
 - [**NFIG: Multi-Scale Autoregressive Image Generation via Frequency Ordering**](https://proceedings.neurips.cc/paper_files/paper/2025/file/24aa1508f9bdb2c2894c00963ce39f18-Paper-Conference.pdf) (NeurIPS, 2025).
   Organizes multiscale autoregressive generation from low to high frequencies. reported runtime comparisons also vary model capacity.
+
+- [**SkipVAR: Accelerating Visual Autoregressive Modeling via Adaptive Frequency-Aware Skipping**](https://arxiv.org/pdf/2506.08908v3) (arXiv preprint, 2025).
+  Uses sample-dependent frequency statistics to skip later scales or omit selected unconditional guidance evaluations.
 
 - [**ZipAR: Parallel Autoregressive Image Generation through Spatial Locality**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/he25b/he25b.pdf) (ICML, 2025).
   Spatially parallel decoding with local context windows.
