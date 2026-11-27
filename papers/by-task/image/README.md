@@ -2,7 +2,7 @@
 
 [Home](../../../README.md) · [By output](../README.md)
 
-**103 papers.**
+**104 papers.**
 
 - [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC, 2026).
   Routes generation through discrete, hybrid or continuous representation paths to reduce inference cost relative to a fixed-path configuration.
@@ -186,6 +186,9 @@
 
 - [**Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding**](https://proceedings.iclr.cc/paper_files/paper/2025/file/e45c8d054739d31676619e7e11327f68-Paper-Conference.pdf) (ICLR, 2025).
   Jacobi candidate reuse with stochastic verification.
+
+- [**ActVAR: Activating Mixtures of Weights and Tokens for Efficient Visual Autoregressive Generation**](https://arxiv.org/pdf/2511.12893) (arXiv preprint, 2025).
+  Uses token-specific expert routing and gated token selection, with feature reconstruction for skipped tokens. Reported savings concern FLOPs.
 
 - [**Beyond Next-Token: Next-X Prediction for Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Ren_Beyond_Next-Token_Next-X_Prediction_for_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
   Next-X prediction over flexible entities.

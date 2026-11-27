@@ -4,7 +4,7 @@
 
 Generator design changes inference computation and its distribution across generation stages.
 
-**53 papers.**
+**54 papers.**
 
 ## 5.1 Efficient AR Predictors
 
@@ -22,6 +22,9 @@ Generator design changes inference computation and its distribution across gener
 
 - [**Visual Implicit Autoregressive Modeling**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/jiang26ah/jiang26ah.pdf) (ICML, 2026).
   Implicit equilibrium layer with variable inference iterations.
+
+- [**ActVAR: Activating Mixtures of Weights and Tokens for Efficient Visual Autoregressive Generation**](https://arxiv.org/pdf/2511.12893) (arXiv preprint, 2025).
+  Uses token-specific expert routing and gated token selection, with feature reconstruction for skipped tokens. Reported savings concern FLOPs.
 
 - [**FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance**](https://papers.neurips.cc/paper_files/paper/2025/file/95cb60b65d9f2c0cd78b567ffebde9e6-Paper-Conference.pdf) (NeurIPS, 2025).
   Trains frequency-aware early-exit behavior.

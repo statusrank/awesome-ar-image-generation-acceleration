@@ -12,7 +12,7 @@ Papers on accelerating autoregressive image generation.
 
 Methods follow the survey’s sampling, conditional-computation, and generator-design sections.
 
-**103 papers.** Papers may appear in multiple categories.
+**104 papers.** Papers may appear in multiple categories.
 
 ## By Output
 
@@ -24,7 +24,7 @@ Methods follow the survey’s sampling, conditional-computation, and generator-d
 |---|---|---:|
 | [Accelerating Sampling and Decoding](papers/sampling-and-decoding/README.md) | Parallel and speculative decoding, followed by generation scheduling. | 28 |
 | [Reducing Conditional Computation](papers/conditional-computation/README.md) | Methods reduce the work and resource demands within conditional prediction. | 26 |
-| [Designing Efficient Autoregressive Generators](papers/efficient-generators/README.md) | Generator design changes inference computation and its distribution across generation stages. | 53 |
+| [Designing Efficient Autoregressive Generators](papers/efficient-generators/README.md) | Generator design changes inference computation and its distribution across generation stages. | 54 |
 | [Video Generation Acceleration](papers/video-generation/README.md) | Acceleration of autoregressive video generation and streaming synthesis. | 5 |
 
 [All categories](papers/README.md) · [By year](papers/by-year.md) · [By venue](papers/by-venue.md)
@@ -128,6 +128,7 @@ Methods follow the survey’s sampling, conditional-computation, and generator-d
 - [**Unified Multimodal Autoregressive Modeling with Shared Context—Visual Tokenizer is Key to Unification**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/peng26k/peng26k.pdf) (ICML, 2026).
 - [**VibeToken: Scaling 1D Image Tokenizers and Autoregressive Models for Dynamic Resolution Generations**](https://openaccess.thecvf.com/content/CVPR2026/papers/Patel_VibeToken_Scaling_1D_Image_Tokenizers_and_Autoregressive_Models_for_Dynamic_CVPR_2026_paper.pdf) (CVPR, 2026).
 - [**Visual Implicit Autoregressive Modeling**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/jiang26ah/jiang26ah.pdf) (ICML, 2026).
+- [**ActVAR: Activating Mixtures of Weights and Tokens for Efficient Visual Autoregressive Generation**](https://arxiv.org/pdf/2511.12893) (arXiv preprint, 2025).
 - [**Beyond Next-Token: Next-X Prediction for Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Ren_Beyond_Next-Token_Next-X_Prediction_for_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
 - [**Collaborative Decoding Makes Visual Auto-Regressive Modeling Efficient**](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Collaborative_Decoding_Makes_Visual_Auto-Regressive_Modeling_Efficient_CVPR_2025_paper.pdf) (CVPR, 2025).
 - [**Continuous Visual Autoregressive Generation via Score Maximization**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/shao25b/shao25b.pdf) (ICML, 2025).
