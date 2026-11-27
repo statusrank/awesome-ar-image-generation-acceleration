@@ -4,12 +4,9 @@
 
 Generator design changes inference computation and its distribution across generation stages.
 
-**56 papers.**
+**53 papers.**
 
-## 5.1 Efficient Conditional Predictors
-
-- [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC 2026, proceedings 2027).
-  Routes generation through discrete, hybrid or continuous representation paths to reduce inference cost relative to a fixed-path configuration.
+## 5.1 Efficient AR Predictors
 
 - [**EVAR: Edge Visual Autoregressive Models via Principled Pruning**](https://link.springer.com/content/pdf/10.1007/978-3-032-37086-0_31.pdf) (ECCV, 2026).
   Structured pruning with scale-aware compensation and distillation.
@@ -29,14 +26,8 @@ Generator design changes inference computation and its distribution across gener
 - [**Collaborative Decoding Makes Visual Auto-Regressive Modeling Efficient**](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Collaborative_Decoding_Makes_Visual_Auto-Regressive_Modeling_Efficient_CVPR_2025_paper.pdf) (CVPR, 2025).
   Large model predicts coarse scales and a smaller model refines later scales.
 
-- [**Denoising Token Prediction in Masked Autoregressive Models**](https://openaccess.thecvf.com/content/ICCV2025/papers/Yao_Denoising_Token_Prediction_in_Masked_Autoregressive_Models_ICCV_2025_paper.pdf) (ICCV, 2025).
-  Redesigns masked and unmasked token prediction in MAR to improve the inference-time and image-quality trade-off.
-
 - [**FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance**](https://papers.neurips.cc/paper_files/paper/2025/file/95cb60b65d9f2c0cd78b567ffebde9e6-Paper-Conference.pdf) (NeurIPS, 2025).
   Trains frequency-aware early-exit behavior.
-
-- [**Infinity: Scaling Bitwise AutoRegressive Modeling for High-Resolution Image Synthesis**](https://openaccess.thecvf.com/content/CVPR2025/papers/Han_Infinity_Scaling_Bitwise_AutoRegressive_Modeling_for_High-Resolution_Image_Synthesis_CVPR_2025_paper.pdf) (CVPR, 2025).
-  Bitwise prediction avoids a very large categorical classifier.
 
 - [**Numerical Pruning for Efficient Autoregressive Models**](https://arxiv.org/pdf/2412.12441) (AAAI, 2025).
   Numerical-score structured pruning.
@@ -47,7 +38,7 @@ Generator design changes inference computation and its distribution across gener
 - [**Blockwise Parallel Decoding for Deep Autoregressive Models**](https://proceedings.neurips.cc/paper_files/paper/2018/file/c4127b9194fe8562c64dc0f5bf2c93bc-Paper.pdf) (NeurIPS, 2018).
   Predicts blocks provisionally and commits the prefix validated by a scoring model.
 
-## 5.2 Learned Generation Schedules and Conditioning Structures
+## 5.2 Efficient Generation Structures and Conditioning
 
 - [**ACDiT: Interpolating Autoregressive Conditional Modeling and Diffusion Transformer**](https://arxiv.org/pdf/2412.07720) (TMLR, 2026).
   Caches completed blocks under block-causal attention and samples within each block by diffusion. image and video timings are reported separately.
@@ -76,14 +67,11 @@ Generator design changes inference computation and its distribution across gener
 - [**Progressive Checkerboards for Autoregressive Multiscale Image Generation**](https://arxiv.org/pdf/2602.03811) (TMLR, 2026).
   Combines cross-scale conditioning with progressive checkerboard groups to reduce sequential sampling rounds.
 
-- [**SCAN: Self-Calibrated AutoregressioN for High-Quality Visual Generation**](https://ojs.aaai.org/index.php/AAAI/article/download/37400/41362) (AAAI, 2026).
-  Uses next-set prediction for fast initial generation and adds selective token refinement at additional inference cost.
-
-- [**XYZFlow: Scaling Multidimensional Shortcut Flows for Efficient Generative Modeling**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26ck/liu26ck.pdf) (ICML, 2026).
-  Shortcut flow modeling with multidimensional prediction.
-
 - [**Beyond Next-Token: Next-X Prediction for Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Ren_Beyond_Next-Token_Next-X_Prediction_for_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
   Next-X prediction over flexible entities.
+
+- [**FlexVAR: Flexible Visual Autoregressive Modeling without Residual Prediction**](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d0d75da30e2d81b928d793afe389ad4-Paper-Conference.pdf) (NeurIPS, 2025).
+  Ground-truth scale prediction supports variable inference-stage budgets.
 
 - [**Hierarchical Masked Autoregressive Models with Low-Resolution Token Pivots**](https://raw.githubusercontent.com/mlresearch/v267/main/assets/zheng25i/zheng25i.pdf) (ICML, 2025).
   Low-resolution pivots condition later high-resolution groups.
@@ -94,20 +82,11 @@ Generator design changes inference computation and its distribution across gener
 - [**Neighboring Autoregressive Modeling for Efficient Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/He_Neighboring_Autoregressive_Modeling_for_Efficient_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
   Neighbor expansion with dimension-oriented parallel prediction heads.
 
-- [**NFIG: Multi-Scale Autoregressive Image Generation via Frequency Ordering**](https://proceedings.neurips.cc/paper_files/paper/2025/file/24aa1508f9bdb2c2894c00963ce39f18-Paper-Conference.pdf) (NeurIPS, 2025).
-  Organizes multiscale autoregressive generation from low to high frequencies. reported runtime comparisons also vary model capacity.
-
 - [**Parallelized Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Parallelized_Autoregressive_Visual_Generation_CVPR_2025_paper.pdf) (CVPR, 2025).
   Generates spatially distant groups concurrently.
 
 - [**RandAR: Decoder-only Autoregressive Visual Generation in Random Orders**](https://openaccess.thecvf.com/content/CVPR2025/papers/Pang_RandAR_Decoder-only_Autoregressive_Visual_Generation_in_Random_Orders_CVPR_2025_paper.pdf) (CVPR, 2025).
   Position instruction tokens enable parallel decoding.
-
-- [**Randomized Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Yu_Randomized_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
-  Randomized-order training yields an AR generator evaluated with KV-cached serving.
-
-- [**SpectralAR: Spectral Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_SpectralAR_Spectral_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
-  Uses compact spectral tokens with sequential or grouped prediction. grouped configurations trade generation time against image quality.
 
 - [**Locally Hierarchical Auto-Regressive Modeling for Image Generation**](https://proceedings.neurips.cc/paper_files/paper/2022/file/67d60c2694f4fecd18fa04d1fa8c0a5c-Paper-Conference.pdf) (NeurIPS, 2022).
   Models local code pyramids and samples fine-code groups in parallel after their coarse code is generated.
@@ -115,7 +94,13 @@ Generator design changes inference computation and its distribution across gener
 - [**PixelPyramids: Exact Inference Models from Lossless Image Pyramids**](https://openaccess.thecvf.com/content/ICCV2021/papers/Mahajan_PixelPyramids_Exact_Inference_Models_From_Lossless_Image_Pyramids_ICCV_2021_paper.pdf) (ICCV, 2021).
   Uses lossless image pyramids and local conditional dependencies to parallelize block-autoregressive pixel generation.
 
+- [**Parallel Multiscale Autoregressive Density Estimation**](https://proceedings.mlr.press/v70/reed17a/reed17a.pdf) (ICML, 2017).
+  Uses a learned multiscale pixel-group factorization for parallel image sampling, changing the original PixelCNN dependencies.
+
 ## 5.3 Efficient Visual Representations and Reconstruction
+
+- [**DynamicVAR: Multimodal-Routing-Based Adaptive Visual Autoregressive Image Generation**](https://link.springer.com/content/pdf/10.1007/978-981-92-3378-6_16.pdf) (ICIC, 2026).
+  Routes generation through discrete, hybrid or continuous representation paths to reduce inference cost relative to a fixed-path configuration.
 
 - [**Autoregressive Image Generation with Masked Bit Modeling**](https://raw.githubusercontent.com/mlresearch/v306/main/assets/yu26z/yu26z.pdf) (ICML, 2026).
   Masked bit modeling supports efficient prediction of large-vocabulary image representations.
@@ -144,14 +129,17 @@ Generator design changes inference computation and its distribution across gener
 - [**DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer**](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_DC-AR_Efficient_Masked_Autoregressive_Image_Generation_with_Deep_Compression_Hybrid_ICCV_2025_paper.pdf) (ICCV, 2025).
   Deep-compression hybrid tokenizer reduces spatial sequence burden.
 
-- [**FlexVAR: Flexible Visual Autoregressive Modeling without Residual Prediction**](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d0d75da30e2d81b928d793afe389ad4-Paper-Conference.pdf) (NeurIPS, 2025).
-  Ground-truth scale prediction supports variable inference-stage budgets.
-
 - [**HART: Efficient Visual Generation with Hybrid Autoregressive Transformer**](https://proceedings.iclr.cc/paper_files/paper/2025/file/ab4e1e704c68b0f476c265996f08d283-Paper-Conference.pdf) (ICLR, 2025).
   Combines discrete autoregressive structure prediction with lightweight continuous residual sampling. residual sampling adds work relative to discrete-only generation.
 
 - [**ImageFolder: Autoregressive Image Generation with Folded Tokens**](https://proceedings.iclr.cc/paper_files/paper/2025/file/82519a9d318f39096ea507615c61c340-Paper-Conference.pdf) (ICLR, 2025).
   Folds spatially aligned token streams and predicts paired codes from shared AR states, reducing inference FLOPs with latency close to VAR in the reported configuration.
+
+- [**Infinity: Scaling Bitwise AutoRegressive Modeling for High-Resolution Image Synthesis**](https://openaccess.thecvf.com/content/CVPR2025/papers/Han_Infinity_Scaling_Bitwise_AutoRegressive_Modeling_for_High-Resolution_Image_Synthesis_CVPR_2025_paper.pdf) (CVPR, 2025).
+  Bitwise prediction avoids a very large categorical classifier.
+
+- [**NFIG: Multi-Scale Autoregressive Image Generation via Frequency Ordering**](https://proceedings.neurips.cc/paper_files/paper/2025/file/24aa1508f9bdb2c2894c00963ce39f18-Paper-Conference.pdf) (NeurIPS, 2025).
+  Organizes multiscale autoregressive generation from low to high frequencies. reported runtime comparisons also vary model capacity.
 
 - [**SpectralAR: Spectral Autoregressive Visual Generation**](https://openaccess.thecvf.com/content/ICCV2025/papers/Huang_SpectralAR_Spectral_Autoregressive_Visual_Generation_ICCV_2025_paper.pdf) (ICCV, 2025).
   Uses compact spectral tokens with sequential or grouped prediction. grouped configurations trade generation time against image quality.

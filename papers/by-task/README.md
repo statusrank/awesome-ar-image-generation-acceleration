@@ -4,9 +4,8 @@
 
 | Output | Papers |
 |---|---:|
-| [Image Generation Acceleration](image/README.md) | 109 |
-| [Video Generation Acceleration](video/README.md) | 43 |
-| [3D and Motion Generation Acceleration](3d/README.md) | 9 |
+| [Image Generation Acceleration](image/README.md) | 103 |
+| [Video Generation Acceleration](video/README.md) | 5 |
 
 Multi-task papers appear in each applicable collection.
 

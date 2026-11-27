@@ -4,12 +4,9 @@
 
 Parallel and speculative decoding, followed by generation scheduling.
 
-**30 papers.**
+**28 papers.**
 
 ## 3.1 Parallel and Speculative Decoding
-
-- [**Accelerating Inference of Discrete Autoregressive Normalizing Flows by Selective Jacobi Decoding**](https://arxiv.org/pdf/2505.24791) (TMLR, 2026).
-  Selectively applies Jacobi iterations to autoregressive normalizing-flow inversions for image sampling, rather than token-level speculative verification.
 
 - [**Annealed Relaxation of Speculative Decoding for Faster Autoregressive Image Generation**](https://arxiv.org/pdf/2601.09212) (AAAI, 2026).
   Anneals relaxed acceptance with a specified resampling distribution.
@@ -64,9 +61,6 @@ Parallel and speculative decoding, followed by generation scheduling.
 
 - [**Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy**](https://proceedings.neurips.cc/paper_files/paper/2025/file/2d1c26fa38f31aca8712055758194bac-Paper-Conference.pdf) (NeurIPS, 2025).
   Entropy controls temperature and relaxed acceptance.
-
-- [**Autoregressive Diffusion Models**](https://arxiv.org/pdf/2110.02037) (ICLR, 2022).
-  Supports grouped image sampling under a chosen network-evaluation budget. evaluation counts are distinct from measured latency.
 
 - [**Accelerating Feedforward Computation via Parallel Nonlinear Equation Solving**](https://proceedings.mlr.press/v139/song21a/song21a.pdf) (ICML, 2021).
   Parallel nonlinear fixed-point solving.
